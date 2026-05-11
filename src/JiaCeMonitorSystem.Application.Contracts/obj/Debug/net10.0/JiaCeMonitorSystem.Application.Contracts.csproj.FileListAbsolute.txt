@@ -1,0 +1,17 @@
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.deps.json
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.pdb
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.xml
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\bin\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.pdb
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.csproj.AssemblyReference.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.AssemblyInfoInputs.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.AssemblyInfo.cs
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.csproj.CoreCompileInputs.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMon.972CD5FA.Up2Date
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\refint\JiaCeMonitorSystem.Application.Contracts.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.xml
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\JiaCeMonitorSystem.Application.Contracts.pdb
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Application.Contracts\obj\Debug\net10.0\ref\JiaCeMonitorSystem.Application.Contracts.dll

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>JiaCeMonitorSystem</RootNamespace>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <NoWarn>$(NoWarn);1591</NoWarn>
+	  <!-- 忽略缺少 XML 注释的警告 -->
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JiaCeMonitorSystem.Application.Contracts\JiaCeMonitorSystem.Application.Contracts.csproj" />
+    <ProjectReference Include="..\JiaCeMonitorSystem.Domain\JiaCeMonitorSystem.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="10.0.0" />
+    <PackageReference Include="OpenIddict.Abstractions" Version="6.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.1" />
+  </ItemGroup>
+
+</Project>

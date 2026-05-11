@@ -1,0 +1,2102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JiaCeMonitorSystem.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:JiaCeMonitorSystem.AppRoles.AppRole">
+            <summary>
+            业务角色聚合根
+            表名：JC_AppRoles
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.CompanyId">
+            <summary>
+            所属公司ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.CompanyName">
+            <summary>
+            所属公司名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.EnCode">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.FullName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.Category">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.Type">
+            <summary>
+            角色类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.PermissionButtonIds">
+            <summary>
+            权限按钮ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.AppRoles.AppRole.PermissionFieldsIds">
+            <summary>
+            权限字段ID
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.AppRoles.AppRole.#ctor(System.Guid,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Nullable{System.Guid},System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            创建业务角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.AppRoles.AppRole.UpdateInfo(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Nullable{System.Guid},System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            更新角色信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.AppRoles.AppRole.SetPermissionButtonIds(System.String)">
+            <summary>
+            设置权限按钮ID
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.AppRoles.AppRole.SetPermissionFieldsIds(System.String)">
+            <summary>
+            设置权限字段ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Data.IJiaCeMonitorSystemDbSchemaMigrator">
+            <summary>
+            数据库架构迁移器接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Data.IJiaCeMonitorSystemDbSchemaMigrator.MigrateAsync">
+            <summary>
+            执行数据库架构迁移
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Data.NullJiaCeMonitorSystemDbSchemaMigrator">
+            <summary>
+            空实现的数据库架构迁移器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Data.NullJiaCeMonitorSystemDbSchemaMigrator.MigrateAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.Devices.CompanyDevice">
+            <summary>
+            单位设备聚合根，管理仪器设备全生命周期档案
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.CompanyId">
+            <summary>
+            所属单位ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.Model">
+            <summary>
+            设备型号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.Manufacturer">
+            <summary>
+            生产厂家
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.PurchaseDate">
+            <summary>
+            购置日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.UseDate">
+            <summary>
+            启用日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.Accuracy">
+            <summary>
+            设备精度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.MeasurementRange">
+            <summary>
+            量程范围
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.CalibrationDate">
+            <summary>
+            最近校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.NextCalibrationDate">
+            <summary>
+            下次校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.DeviceStatus">
+            <summary>
+            设备状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.Location">
+            <summary>
+            存放位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.ResponsiblePersonId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.ResponsiblePersonName">
+            <summary>
+            负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.CompanyDevice.Description">
+            <summary>
+            设备描述
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.#ctor(System.Guid,System.String,System.String,JiaCeMonitorSystem.Enums.DeviceType,System.Nullable{System.Guid},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.String)">
+            <summary>
+            创建设备实体
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.UpdateInfo(System.String,JiaCeMonitorSystem.Enums.DeviceType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新设备基础信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.LendOut">
+            <summary>
+            借出设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Return">
+            <summary>
+            归还设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Calibrate(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            执行校准
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Scrap(System.String)">
+            <summary>
+            报废设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Repair">
+            <summary>
+            送修
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.FinishRepair">
+            <summary>
+            维修完成
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Deactivate">
+            <summary>
+            停用设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.CompanyDevice.Activate">
+            <summary>
+            恢复使用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Devices.DeviceAssignment">
+            <summary>
+            设备分配实体，记录设备从单位借出到项目使用的分配关系
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.AssignmentDate">
+            <summary>
+            分配日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.ExpectedReturnDate">
+            <summary>
+            预计归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.ActualReturnDate">
+            <summary>
+            实际归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.AssignerId">
+            <summary>
+            分配人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.AssignerName">
+            <summary>
+            分配人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.ReceiverId">
+            <summary>
+            领用人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.ReceiverName">
+            <summary>
+            领用人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.UsageDescription">
+            <summary>
+            用途说明
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.AssignmentStatus">
+            <summary>
+            分配状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Devices.DeviceAssignment.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.DeviceAssignment.#ctor(System.Guid,System.Guid,System.Guid,System.DateTime,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.DateTime},System.String,System.String)">
+            <summary>
+            创建设备调配记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.DeviceAssignment.MarkInUse">
+            <summary>
+            标记为使用中
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.DeviceAssignment.ExtendReturnDate(System.DateTime,System.String)">
+            <summary>
+            延期归还
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.DeviceAssignment.ReturnDevice(System.DateTime,System.String)">
+            <summary>
+            归还设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Devices.DeviceAssignment.ReportDamage(System.String)">
+            <summary>
+            报告损坏
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.DeviceManager">
+            <summary>
+            设备管理领域服务，负责设备状态流转校验与业务规则执行
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.Devices.CompanyDevice,System.Guid},Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.Devices.DeviceAssignment,System.Guid})">
+            <summary>
+            初始化设备管理领域服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.CreateDeviceAsync(System.String,System.String,JiaCeMonitorSystem.Enums.DeviceType,System.Nullable{System.Guid})">
+            <summary>
+            创建设备档案
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.LendDeviceAsync(System.Guid,System.Guid,System.DateTime,System.Nullable{System.DateTime},System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            借出设备到项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.ReturnDeviceAsync(System.Guid,System.DateTime,System.String)">
+            <summary>
+            归还设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.CalibrateDeviceAsync(System.Guid,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            执行设备校准
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.ScrapDeviceAsync(System.Guid,System.String)">
+            <summary>
+            报废设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.DeviceManager.CanCalibrateAsync(System.Guid)">
+            <summary>
+            检查设备是否允许校准（业务规则校验入口）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.MonitoringItemTypeManager">
+            <summary>
+            监测项目类型领域服务
+            负责级联保存Type与Properties，校验PropertyCode唯一性
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.MonitoringItemTypeManager.CreateAsync(JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType,System.Collections.Generic.List{JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty})">
+            <summary>
+            校验并创建监测项目类型（含属性集合）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.MonitoringItemTypeManager.UpdateAsync(JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType,System.Collections.Generic.List{JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty})">
+            <summary>
+            校验并更新监测项目类型（含属性集合增删改）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.MonitoringItemTypeManager.ValidatePropertyCodes(System.Collections.Generic.List{JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty})">
+            <summary>
+            校验属性编码列表是否重复
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.ProjectManager">
+            <summary>
+            项目管理领域服务，负责项目状态机校验与跨实体业务逻辑
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.Projects.Project,System.Guid},Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.Points.Point,System.Guid})">
+            <summary>
+            初始化项目管理领域服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectManager.CreateProjectAsync(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)">
+            <summary>
+            创建监测工程
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectManager.DeleteProjectAsync(System.Guid)">
+            <summary>
+            删除项目（仅筹备中且下无任何测点时允许）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectManager.ArchiveProjectAsync(System.Guid)">
+            <summary>
+            归档项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectManager.CanAddPointAsync(System.Guid)">
+            <summary>
+            校验项目是否允许添加测点
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.ProjectPersonnelManager">
+            <summary>
+            项目人员安排领域服务
+            校验人员项目时段冲突
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectPersonnelManager.ValidateTimeConflictAsync(System.Guid,System.Guid,System.DateTime,System.Nullable{System.DateTime},System.Nullable{System.Guid})">
+            <summary>
+            校验同一项目同一时段内，同一人员不能重复安排
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.ProjectPersonnelManager.IsTimeOverlap(System.DateTime,System.Nullable{System.DateTime},System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            判断两个时间段是否重叠
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.SystemModuleManager">
+            <summary>
+            系统菜单模块领域服务
+            校验树形结构层级与删除约束
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.SystemModuleManager.ValidateCanDeleteAsync(System.Guid)">
+            <summary>
+            校验是否可以删除（无子节点）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.SystemModuleManager.CalculateLayersAsync(System.Nullable{System.Guid})">
+            <summary>
+            计算层级
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.DomainServices.WarningDomainService">
+            <summary>
+            预警领域服务，负责阈值判定与预警生成逻辑
+            【重构】支持按监测属性（Property）级别阈值判定，解决同一测点不同属性阈值差异问题
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.WarningDomainService.#ctor(Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.Points.Point,System.Guid},Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty,System.Guid},Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.MonitoringData.MonitoringData,System.Guid},Volo.Abp.Domain.Repositories.IRepository{JiaCeMonitorSystem.WarningRecords.WarningRecord,System.Guid},Volo.Abp.EventBus.Distributed.IDistributedEventBus)">
+            <summary>
+            初始化预警领域服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.DomainServices.WarningDomainService.EvaluateAsync(JiaCeMonitorSystem.MonitoringData.MonitoringData)">
+            <summary>
+            判定监测数据是否触发预警
+            【重构】优先使用Property级别阈值，无则回退到Point级别阈值
+            【重构】按PropertyId分别查询历史数据，确保不同属性独立判定
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.DeviceStatusChangedDomainEvent">
+            <summary>
+            设备状态变更领域事件，当设备状态发生流转时发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.DeviceStatusChangedDomainEvent.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.DeviceStatusChangedDomainEvent.OldStatus">
+            <summary>
+            变更前状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.DeviceStatusChangedDomainEvent.NewStatus">
+            <summary>
+            变更后状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.DeviceStatusChangedDomainEvent.Reason">
+            <summary>
+            变更原因
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent">
+            <summary>
+            监测数据采集领域事件，新监测数据入库后发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent.MonitoringDataId">
+            <summary>
+            监测数据ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent.MonitoringTime">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.MonitoringDataCollectedDomainEvent.MonitoringValue">
+            <summary>
+            监测值
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.ProjectArchivedDomainEvent">
+            <summary>
+            项目归档领域事件，监测工程归档时发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectArchivedDomainEvent.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.ProjectCreatedDomainEvent">
+            <summary>
+            项目创建领域事件，新监测工程创建后发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectCreatedDomainEvent.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectCreatedDomainEvent.ProjectCode">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectCreatedDomainEvent.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.ProjectStatusChangedDomainEvent">
+            <summary>
+            项目状态变更领域事件，监测工程状态流转时发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectStatusChangedDomainEvent.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectStatusChangedDomainEvent.OldStatus">
+            <summary>
+            变更前状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.ProjectStatusChangedDomainEvent.NewStatus">
+            <summary>
+            变更后状态
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.TenantInitializedDomainEvent">
+            <summary>
+            租户初始化领域事件，新租户创建后发布，用于异步初始化默认数据
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.TenantInitializedDomainEvent.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.TenantInitializedDomainEvent.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.TenantInitializedDomainEvent.AdminUserId">
+            <summary>
+            管理员用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.TenantInitializedDomainEvent.AdminAccount">
+            <summary>
+            管理员账号
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent">
+            <summary>
+            预警触发领域事件，当测点监测值超过阈值时发布
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.WarningRecordId">
+            <summary>
+            预警记录ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.PropertyId">
+            <summary>
+            监测属性ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.PropertyName">
+            <summary>
+            监测属性名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.WarningLevel">
+            <summary>
+            预警级别
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.WarningType">
+            <summary>
+            预警类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.MonitoringValue">
+            <summary>
+            触发监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.TriggerTime">
+            <summary>
+            触发时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Events.WarningTriggeredDomainEvent.ThresholdValue">
+            <summary>
+            阈值设定值
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.FileManages.UploadFile">
+            <summary>
+            文件管理聚合根（仅保存元数据）
+            表名：JC_UploadFiles
+            文件流存储到 wwwroot/uploads/{tenantId}/{date}/{hash}{ext}
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.Hash">
+            <summary>
+            文件Hash（MD5）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FileSize">
+            <summary>
+            文件大小（字节）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FileExtension">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.FileBy">
+            <summary>
+            上传人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.OrganizeId">
+            <summary>
+            所属组织ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.FileManages.UploadFile.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.FileManages.UploadFile.#ctor(System.Guid,System.String,System.String,System.String,JiaCeMonitorSystem.Enums.FileType,System.Int64,System.String,System.String,System.String,System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            创建文件记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.FileManages.UploadFile.UpdateInfo(System.String,System.String,System.Boolean)">
+            <summary>
+            更新文件信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.JiaCeMonitorSystemDomainModule">
+            <summary>
+            领域层模块，配置多租户、审计与系统时钟
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemDomainModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.MultiTenancyConsts">
+            <summary>
+            多租户配置常量
+            </summary>
+        </member>
+        <member name="F:JiaCeMonitorSystem.MultiTenancyConsts.IsEnabled">
+            <summary>
+            是否启用多租户
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.ModuleButtons.ModuleButton">
+            <summary>
+            系统菜单按钮聚合根
+            表名：JC_ModuleButtons
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.ModuleId">
+            <summary>
+            所属模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.Location">
+            <summary>
+            按钮位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.JsEvent">
+            <summary>
+            JS事件
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.Split">
+            <summary>
+            是否有分割线
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ModuleButtons.ModuleButton.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.ModuleButtons.ModuleButton.#ctor(System.Guid,System.Guid,System.String,System.String,System.Int32,System.Boolean,JiaCeMonitorSystem.Enums.ModuleButtonLocation,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            创建菜单按钮
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.ModuleButtons.ModuleButton.UpdateInfo(System.String,System.String,System.Int32,System.Boolean,JiaCeMonitorSystem.Enums.ModuleButtonLocation,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            更新按钮信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.MonitoringData.MonitoringData">
+            <summary>
+            监测数据实体，存储单次监测采集的原始数据
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.PointName">
+            <summary>
+            测点名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.ProjectName">
+            <summary>
+            项目名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.ItemTypeName">
+            <summary>
+            监测项目类型名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.PropertyId">
+            <summary>
+            监测属性ID（外键，关联MonitoringItemProperty）
+            【重构新增】解决同一测点下多属性数据无法区分的问题（如水平位移 vs 垂直位移）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.PropertyCode">
+            <summary>
+            属性编码（冗余，如 DISPLACEMENT_X）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.PropertyName">
+            <summary>
+            属性名称（冗余，如"水平位移"）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.Unit">
+            <summary>
+            单位（冗余，如 mm，直接从属性继承，避免历史数据展示时联表）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.MonitoringTime">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.MonitoringValue">
+            <summary>
+            监测数值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.DataQuality">
+            <summary>
+            数据质量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.DataState">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.DeviceId">
+            <summary>
+            采集设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.DeviceName">
+            <summary>
+            采集设备名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.CollectorId">
+            <summary>
+            采集人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.CollectorName">
+            <summary>
+            采集人姓名（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.CollectionMethod">
+            <summary>
+            采集方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.ExtendedData">
+            <summary>
+            扩展监测数据 - JSON格式存储的扩展监测参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringData.MonitoringData.DataRemark">
+            <summary>
+            数据备注
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringData.MonitoringData.#ctor(System.Guid,System.Guid,System.String,System.Guid,System.String,System.DateTime,System.Decimal,System.Guid,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,JiaCeMonitorSystem.Enums.DataQuality,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.String,JiaCeMonitorSystem.Enums.CollectionMethod,System.Text.Json.JsonDocument,System.String)">
+            <summary>
+            创建监测数据实体
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringData.MonitoringData.ValidateData">
+            <summary>
+            数据校验（范围检查、时间有效性）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringData.MonitoringData.MarkQuality(JiaCeMonitorSystem.Enums.DataQuality,System.String)">
+            <summary>
+            标记数据质量
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringData.MonitoringData.ApproveData">
+            <summary>
+            审核数据（原始→已审核）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringData.MonitoringData.ArchiveData">
+            <summary>
+            归档数据
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty">
+            <summary>
+            监测项目属性实体
+            表名：JC_MonitoringItemProperties
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.ItemTypeId">
+            <summary>
+            所属监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.PropertyCode">
+            <summary>
+            属性编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.WarningThreshold">
+            <summary>
+            预警阈值 - 当监测值达到此值时触发一级预警
+            【属性级阈值】解决同一测点不同属性阈值差异问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.AlarmThreshold">
+            <summary>
+            报警阈值 - 当监测值达到此值时触发二级报警
+            【属性级阈值】解决同一测点不同属性阈值差异问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.ChangeRateThreshold">
+            <summary>
+            变化率阈值 - 监测值单位时间内的变化率超过此值时触发预警
+            【属性级阈值】解决同一测点不同属性阈值差异问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.CumulativeThreshold">
+            <summary>
+            累计变化阈值 - 从初始值开始的累计变化量超过此值时触发预警
+            【属性级阈值】解决同一测点不同属性阈值差异问题
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.#ctor(System.Guid,System.Guid,System.String,System.String,JiaCeMonitorSystem.Enums.PropertyDataType,System.String,System.Boolean,System.Int32,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            创建监测项目属性
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemProperty.UpdateInfo(System.String,System.String,JiaCeMonitorSystem.Enums.PropertyDataType,System.String,System.Boolean,System.Int32,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            更新属性信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType">
+            <summary>
+            监测项目类型聚合根
+            表名：JC_MonitoringItemTypes
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.TypeCode">
+            <summary>
+            类型编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.TypeName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.Category">
+            <summary>
+            监测分类
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.Properties">
+            <summary>
+            属性集合
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.#ctor(System.Guid,System.String,System.String,JiaCeMonitorSystem.Enums.MonitoringCategory,System.Int32,System.Boolean,System.String)">
+            <summary>
+            创建监测项目类型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.UpdateInfo(System.String,System.String,JiaCeMonitorSystem.Enums.MonitoringCategory,System.Int32,System.Boolean,System.String)">
+            <summary>
+            更新类型信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.AddProperty(System.Guid,System.String,System.String,JiaCeMonitorSystem.Enums.PropertyDataType,System.String,System.Boolean,System.Int32,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            添加属性
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.MonitoringItemTypes.MonitoringItemType.ClearProperties">
+            <summary>
+            清除所有属性
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Notices.Notice">
+            <summary>
+            系统通知聚合根
+            表名：JC_Notices
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Notices.Notice.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Notices.Notice.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Notices.Notice.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Notices.Notice.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Notices.Notice.#ctor(System.Guid,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            创建系统通知
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Notices.Notice.UpdateInfo(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            更新通知信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Organizes.Organize">
+            <summary>
+            系统组织聚合根
+            表名：JC_Organizes
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.ShortName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.ManagerId">
+            <summary>
+            负责人ID（关联IdentityUser）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.TelePhone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.MobilePhone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.WeChat">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Organizes.Organize.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Organizes.Organize.#ctor(System.Guid,System.String,System.String,System.Int32,System.Boolean,System.Nullable{System.Guid},System.Int32,System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            创建系统组织
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Organizes.Organize.UpdateInfo(System.String,System.String,System.Int32,System.Boolean,System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            更新组织信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Organizes.Organize.SetLayers(System.Int32)">
+            <summary>
+            设置层级
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Points.Point">
+            <summary>
+            测点聚合根，管理监测点配置、当前状态与统计信息
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ProjectId">
+            <summary>
+            所属项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.PointCode">
+            <summary>
+            监测点编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.PointName">
+            <summary>
+            监测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ItemTypeName">
+            <summary>
+            监测项目类型名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.LocationX">
+            <summary>
+            X坐标/经度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.LocationY">
+            <summary>
+            Y坐标/纬度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.LocationZ">
+            <summary>
+            Z坐标/高程
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.CurrentValue">
+            <summary>
+            当前监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.LastMonitoringTime">
+            <summary>
+            最后监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.MonitoringFrequency">
+            <summary>
+            监测频率（天）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.MaxValue">
+            <summary>
+            历史最大值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.MinValue">
+            <summary>
+            历史最小值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.AverageValue">
+            <summary>
+            历史平均值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.DataCount">
+            <summary>
+            数据点数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.WarningThreshold">
+            <summary>
+            预警阈值 - 当监测值达到此值时触发一级预警
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.AlarmThreshold">
+            <summary>
+            报警阈值 - 当监测值达到此值时触发二级报警
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ChangeRateThreshold">
+            <summary>
+            变化率阈值 - 监测值单位时间内的变化率超过此值时触发预警
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.CumulativeThreshold">
+            <summary>
+            累计变化阈值 - 从初始值开始的累计变化量超过此值时触发预警
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.CurrentWarningLevel">
+            <summary>
+            当前预警级别 - 0:无预警 1:一级预警 2:二级预警 3:三级预警
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.LastWarningTime">
+            <summary>
+            最后预警时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.TotalWarningCount">
+            <summary>
+            总预警次数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ActiveWarningCount">
+            <summary>
+            当前活跃预警数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.ExtendedProperties">
+            <summary>
+            扩展属性 - JSON格式存储的监测点扩展属性
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Points.Point.Description">
+            <summary>
+            点位描述
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.#ctor(System.Guid,System.Guid,System.String,System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Text.Json.JsonDocument,System.String)">
+            <summary>
+            创建测点实体
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.UpdateInfo(System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.String)">
+            <summary>
+            更新测点基础信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.ConfigureThresholds(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            配置预警阈值
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.UpdateMonitoringValue(System.Decimal,System.DateTime)">
+            <summary>
+            更新监测值与最后监测时间
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.UpdateStatistics(System.Decimal)">
+            <summary>
+            更新测点统计值（最大/最小/平均/计数）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.SetWarningLevel(JiaCeMonitorSystem.Enums.WarningLevel)">
+            <summary>
+            设置当前预警级别
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.ResetWarningStatus">
+            <summary>
+            预警解除后重置当前预警级别
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Points.Point.CheckCanDelete">
+            <summary>
+            校验是否允许删除（存在活跃预警时禁止删除）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel">
+            <summary>
+            项目人员安排聚合根
+            表名：JC_ProjectPersonnels
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.UserId">
+            <summary>
+            用户ID（关联IdentityUser）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.RoleType">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.Responsibility">
+            <summary>
+            职责描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.WorkStatus">
+            <summary>
+            工作状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.#ctor(System.Guid,System.Guid,System.Guid,JiaCeMonitorSystem.Enums.RoleType,System.String,System.DateTime,System.Nullable{System.DateTime},System.String,System.String,JiaCeMonitorSystem.Enums.WorkStatus,System.String)">
+            <summary>
+            创建项目人员安排
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.UpdateInfo(JiaCeMonitorSystem.Enums.RoleType,System.String,System.DateTime,System.Nullable{System.DateTime},System.String,System.String,JiaCeMonitorSystem.Enums.WorkStatus,System.String)">
+            <summary>
+            更新人员安排信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.ProjectPersonnels.ProjectPersonnel.UpdateWorkStatus(JiaCeMonitorSystem.Enums.WorkStatus)">
+            <summary>
+            更新工作状态
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Projects.Project">
+            <summary>
+            监测工程聚合根，管理项目生命周期与测点集合
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.ProjectCode">
+            <summary>
+            项目编号（业务唯一标识）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.ProjectLocation">
+            <summary>
+            项目地点
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.StartDate">
+            <summary>
+            项目开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.EndDate">
+            <summary>
+            项目结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.ResponsiblePerson">
+            <summary>
+            项目负责人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.ContactInfo">
+            <summary>
+            负责人联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.Status">
+            <summary>
+            项目状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.Description">
+            <summary>
+            项目描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Projects.Project.Points">
+            <summary>
+            项目测点集合（导航属性）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.#ctor(System.Guid,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)">
+            <summary>
+            创建监测工程项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.UpdateInfo(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)">
+            <summary>
+            变更项目信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.ChangeStatus(JiaCeMonitorSystem.Enums.ProjectStatus)">
+            <summary>
+            变更项目状态，包含状态机校验
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.Archive">
+            <summary>
+            归档项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.AddPoint(JiaCeMonitorSystem.Points.Point)">
+            <summary>
+            向项目添加测点
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Projects.Project.RemovePoint(JiaCeMonitorSystem.Points.Point)">
+            <summary>
+            移除测点
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.ActiveProjectPersonnelSpecification">
+            <summary>
+            筛选在职且未过期的项目人员规约
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.ActiveProjectSpecification">
+            <summary>
+            活跃项目规约，筛选进行中的项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Specifications.ActiveProjectSpecification.ToExpression">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.EnabledModuleSpecification">
+            <summary>
+            筛选启用的菜单规约
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.OverdueDeviceSpecification">
+            <summary>
+            超期未校准设备规约，筛选下次校准日期已过期或即将过期（7天内）的设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Specifications.OverdueDeviceSpecification.#ctor(System.Nullable{System.DateTime})">
+            <summary>
+            初始化超期设备规约
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Specifications.OverdueDeviceSpecification.ToExpression">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.UnhandledWarningSpecification">
+            <summary>
+            未处理预警规约，筛选未处理或处理中的预警记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Specifications.UnhandledWarningSpecification.ToExpression">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.Specifications.ValidMonitoringItemTypeSpecification">
+            <summary>
+            筛选启用的监测类型规约
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary">
+            <summary>
+            系统字典聚合根
+            表名：JC_SystemDictionaries
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.ItemId">
+            <summary>
+            字典类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.ItemCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.ItemName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.SimpleSpelling">
+            <summary>
+            简拼
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.#ctor(System.Guid,System.Guid,System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.Int32,System.String,System.String)">
+            <summary>
+            创建系统字典
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemDictionaries.SystemDictionary.UpdateInfo(System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            更新字典信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType">
+            <summary>
+            系统字典类型聚合根
+            表名：JC_SystemDictionaryTypes
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.IsTree">
+            <summary>
+            是否树形
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.#ctor(System.Guid,System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.Nullable{System.Guid},System.Int32,System.String)">
+            <summary>
+            创建字典类型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.UpdateInfo(System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            更新字典类型信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemDictionaries.SystemDictionaryType.SetLayers(System.Int32)">
+            <summary>
+            设置层级
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.SystemModules.SystemModule">
+            <summary>
+            系统菜单模块聚合根
+            表名：JC_SystemModules
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.Target">
+            <summary>
+            打开目标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.IsExpand">
+            <summary>
+            是否展开
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.IsFields">
+            <summary>
+            是否字段
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.SystemModules.SystemModule.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemModules.SystemModule.#ctor(System.Guid,System.String,System.String,System.Int32,System.Boolean,System.Nullable{System.Guid},System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            创建系统菜单模块
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemModules.SystemModule.UpdateInfo(System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            更新基础信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.SystemModules.SystemModule.SetLayers(System.Int32)">
+            <summary>
+            设置层级
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.WarningRecords.WarningRecord">
+            <summary>
+            预警记录实体，记录单次预警的完整生命周期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PointId">
+            <summary>
+            监测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PointName">
+            <summary>
+            测点名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ProjectName">
+            <summary>
+            项目名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ItemTypeName">
+            <summary>
+            监测项目类型名称（冗余，便于列表展示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PropertyId">
+            <summary>
+            监测属性ID（外键，关联MonitoringItemProperty）
+            【重构新增】解决同一测点下多属性数据无法区分的问题（如水平位移 vs 垂直位移）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PropertyCode">
+            <summary>
+            属性编码（冗余，如 DISPLACEMENT_X）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PropertyName">
+            <summary>
+            属性名称（冗余，如"水平位移"）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.Unit">
+            <summary>
+            单位（冗余，如 mm，直接从属性继承，避免历史数据展示时联表）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.MonitoringDataId">
+            <summary>
+            触发该预警的监测数据ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.DataState">
+            <summary>
+            数据状态（冗余，来自监测数据）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.CollectorName">
+            <summary>
+            采集人姓名（冗余，来自监测数据）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.DataRemark">
+            <summary>
+            数据备注（冗余，来自监测数据）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.WarningTime">
+            <summary>
+            预警时间（通常等于监测时间）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.MonitoringTime">
+            <summary>
+            触发监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.MonitoringValue">
+            <summary>
+            触发监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.WarningType">
+            <summary>
+            预警类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.WarningLevel">
+            <summary>
+            预警级别
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.TriggerValue">
+            <summary>
+            触发值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ThresholdValue">
+            <summary>
+            阈值设定值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.PreviousValue">
+            <summary>
+            前次监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ChangeRate">
+            <summary>
+            变化率（%）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.CumulativeChange">
+            <summary>
+            累计变化量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.WarningContent">
+            <summary>
+            预警内容描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.SuggestedAction">
+            <summary>
+            建议措施
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandlerId">
+            <summary>
+            处理负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandlerName">
+            <summary>
+            处理负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandleStatus">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandleTime">
+            <summary>
+            处理完成时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandleSolution">
+            <summary>
+            处理方案
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.HandleResult">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ConfirmerId">
+            <summary>
+            确认人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ConfirmerName">
+            <summary>
+            确认人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ConfirmTime">
+            <summary>
+            确认时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.WarningRecords.WarningRecord.ConfirmRemark">
+            <summary>
+            确认备注
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.#ctor(System.Guid,System.Guid,System.String,System.Guid,System.String,System.DateTime,System.Decimal,JiaCeMonitorSystem.Enums.WarningType,JiaCeMonitorSystem.Enums.WarningLevel,System.Decimal,System.Decimal,System.String,System.Guid,System.String,System.String,System.String,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String,JiaCeMonitorSystem.Enums.DataState,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String)">
+            <summary>
+            创建预警记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.AssignHandler(System.Guid,System.String)">
+            <summary>
+            分配处理人（未处理→处理中）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.SubmitSolution(System.String,System.String)">
+            <summary>
+            提交处理方案（处理中→已处理）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.Confirm(System.Guid,System.String,System.String)">
+            <summary>
+            管理员确认（已处理→已确认）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.Close(System.String)">
+            <summary>
+            关闭预警（未处理/处理中→已关闭）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.WarningRecords.WarningRecord.Reject(System.String)">
+            <summary>
+            驳回处理结果（已处理→处理中）
+            </summary>
+        </member>
+    </members>
+</doc>

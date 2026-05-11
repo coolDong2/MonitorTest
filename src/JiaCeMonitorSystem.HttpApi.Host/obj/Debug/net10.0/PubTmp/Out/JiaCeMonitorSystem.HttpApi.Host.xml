@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JiaCeMonitorSystem.HttpApi.Host</name>
+    </assembly>
+    <members>
+        <member name="T:JiaCeMonitorSystem.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Swagger.SwaggerXmlCommentsOperationFilter">
+            <summary>
+            自定义 Swagger XML 注释 OperationFilter
+            支持从应用服务接口 XML 注释中读取 Summary 和 Param 描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Swagger.SwaggerXmlCommentsSchemaFilter">
+            <summary>
+            自定义 Swagger XML 注释 SchemaFilter
+            支持从 XML 注释中读取 DTO 类型的 Summary 和属性注释
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\bin\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.deps.json
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\bin\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\bin\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.pdb
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.csproj.AssemblyReference.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.AssemblyInfoInputs.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.AssemblyInfo.cs
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.csproj.CoreCompileInputs.cache
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\refint\JiaCeMonitorSystem.Domain.Shared.dll
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\JiaCeMonitorSystem.Domain.Shared.pdb
+E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.Domain.Shared\obj\Debug\net10.0\ref\JiaCeMonitorSystem.Domain.Shared.dll

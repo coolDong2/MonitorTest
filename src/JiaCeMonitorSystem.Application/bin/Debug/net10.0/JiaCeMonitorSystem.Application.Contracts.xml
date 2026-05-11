@@ -1,0 +1,4926 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JiaCeMonitorSystem.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto">
+            <summary>
+            当前用户信息数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.HeadIcon">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.MobilePhone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.IsAdmin">
+            <summary>
+            是否管理员
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto">
+            <summary>
+            登录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto.Account">
+            <summary>
+            用户名/账号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto.Password">
+            <summary>
+            密码（支持 AES 加密传输，密文为 Base64 格式）
+            </summary>
+            <remarks>
+            前端应使用 AES 加密后传输，加密密钥通过 /api/app/account/encrypt-key 获取。
+            也可直接传输明文（兼容模式），但生产环境强烈建议加密。
+            </remarks>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto.TenantName">
+            <summary>
+            租户标识（Header优先级高于此字段）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto">
+            <summary>
+            登录输出参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.LoginToken">
+            <summary>
+            登录令牌
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.RefreshToken">
+            <summary>
+            刷新令牌
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.ExpiresIn">
+            <summary>
+            令牌过期时间（秒）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.IsAdmin">
+            <summary>
+            是否管理员
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.DisplayName">
+            <summary>
+            用户显示名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.LoginOutputDto.Permissions">
+            <summary>
+            当前用户权限列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput">
+            <summary>
+            重置密码输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput.OldPassword">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput.NewPassword">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput.ConfirmPassword">
+            <summary>
+            确认新密码
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto">
+            <summary>
+            创建业务角色输入
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.CompanyId">
+            <summary>
+            所属公司ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.CompanyName">
+            <summary>
+            所属公司名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.EnCode">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.FullName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Category">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Type">
+            <summary>
+            角色类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.PermissionButtonIds">
+            <summary>
+            权限按钮ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.PermissionFieldsIds">
+            <summary>
+            权限字段ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto">
+            <summary>
+            业务角色数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.CompanyId">
+            <summary>
+            所属公司ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.CompanyName">
+            <summary>
+            所属公司名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.EnCode">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.FullName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Category">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Type">
+            <summary>
+            角色类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.PermissionButtonIds">
+            <summary>
+            权限按钮ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.PermissionFieldsIds">
+            <summary>
+            权限字段ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto">
+            <summary>
+            更新业务角色输入
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.CompanyId">
+            <summary>
+            所属公司ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.CompanyName">
+            <summary>
+            所属公司名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.EnCode">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.FullName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Category">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Type">
+            <summary>
+            角色类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.PermissionButtonIds">
+            <summary>
+            权限按钮ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.PermissionFieldsIds">
+            <summary>
+            权限字段ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput">
+            <summary>
+            获取业务角色列表输入
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.Keyword">
+            <summary>
+            关键字（角色名称/编号）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.CompanyId">
+            <summary>
+            所属公司ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.Category">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto">
+            <summary>
+            权限树数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.Id">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.Checked">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ClientCaches.CurrentUserInfoDto">
+            <summary>
+            当前用户信息数据传输对象
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ClientCaches.InitializeDictionaryDto">
+            <summary>
+            初始化字典数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.InitializeDictionaryDto.KeyValuePairs">
+            <summary>
+            字段信息（系统字典键值对）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.InitializeDictionaryDto.ModuleButtons">
+            <summary>
+            菜单按钮
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.InitializeDictionaryDto.ModelFields">
+            <summary>
+            模块字段
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.InitializeDictionaryDto.MenuFields">
+            <summary>
+            菜单字段
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ClientCaches.DictionaryItemDto">
+            <summary>
+            字典项DTO
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ClientCaches.QuickModuleDto">
+            <summary>
+            首页快捷菜单数据传输对象
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ClientCaches.SysSatisfyDto">
+            <summary>
+            系统信息统计数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.SysSatisfyDto.UserCount">
+            <summary>
+            已注册用户数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.SysSatisfyDto.LoginCount">
+            <summary>
+            已登录数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.SysSatisfyDto.ModuleCount">
+            <summary>
+            系统模块数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ClientCaches.SysSatisfyDto.LogCount">
+            <summary>
+            日志总数
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput">
+            <summary>
+            设备校准输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput.CalibrationDate">
+            <summary>
+            校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput.NextCalibrationDate">
+            <summary>
+            下次校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput.Accuracy">
+            <summary>
+            校准后精度
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto">
+            <summary>
+            创建设备输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.CompanyId">
+            <summary>
+            所属单位ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.Model">
+            <summary>
+            设备型号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.Manufacturer">
+            <summary>
+            生产厂家
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.PurchaseDate">
+            <summary>
+            购置日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.UseDate">
+            <summary>
+            启用日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.Accuracy">
+            <summary>
+            设备精度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.MeasurementRange">
+            <summary>
+            量程范围
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.Location">
+            <summary>
+            存放位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.ResponsiblePersonId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.ResponsiblePersonName">
+            <summary>
+            负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto.Description">
+            <summary>
+            设备描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto">
+            <summary>
+            单位设备数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.CompanyId">
+            <summary>
+            所属单位ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.CompanyName">
+            <summary>
+            所属单位名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceTypeText">
+            <summary>
+            设备类型文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.Model">
+            <summary>
+            设备型号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.Manufacturer">
+            <summary>
+            生产厂家
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.PurchaseDate">
+            <summary>
+            购置日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.UseDate">
+            <summary>
+            启用日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.Accuracy">
+            <summary>
+            设备精度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.MeasurementRange">
+            <summary>
+            量程范围
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.CalibrationDate">
+            <summary>
+            最近校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.NextCalibrationDate">
+            <summary>
+            下次校准日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceStatus">
+            <summary>
+            设备状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.DeviceStatusText">
+            <summary>
+            设备状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.Location">
+            <summary>
+            存放位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.ResponsiblePersonName">
+            <summary>
+            负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceDto.Description">
+            <summary>
+            设备描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto">
+            <summary>
+            更新设备输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.Model">
+            <summary>
+            设备型号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.Manufacturer">
+            <summary>
+            生产厂家
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.Location">
+            <summary>
+            存放位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.ResponsiblePersonId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.ResponsiblePersonName">
+            <summary>
+            负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto.Description">
+            <summary>
+            设备描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto">
+            <summary>
+            设备分配详情DTO（包含借出统计计算字段）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.DeviceTypeName">
+            <summary>
+            设备类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.AssignmentDate">
+            <summary>
+            分配日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.ExpectedReturnDate">
+            <summary>
+            预计归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.ActualReturnDate">
+            <summary>
+            实际归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.AssignerName">
+            <summary>
+            分配人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.ReceiverName">
+            <summary>
+            领用人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.UsageDescription">
+            <summary>
+            用途说明
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.AssignmentStatus">
+            <summary>
+            分配状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.AssignmentStatusText">
+            <summary>
+            分配状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.BorrowedDays">
+            <summary>
+            借用天数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.RemainingDays">
+            <summary>
+            剩余天数（如果未归还）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.IsOverdue">
+            <summary>
+            是否已过期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.OverdueDays">
+            <summary>
+            过期天数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDetailDto.IsCurrentlyBorrowed">
+            <summary>
+            是否当前借用中
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto">
+            <summary>
+            设备分配数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.DeviceId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.AssignmentDate">
+            <summary>
+            分配日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.ExpectedReturnDate">
+            <summary>
+            预计归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.ActualReturnDate">
+            <summary>
+            实际归还日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.AssignerName">
+            <summary>
+            分配人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.ReceiverName">
+            <summary>
+            领用人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.UsageDescription">
+            <summary>
+            用途说明
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.AssignmentStatus">
+            <summary>
+            分配状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.AssignmentStatusText">
+            <summary>
+            分配状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.DeviceAssignmentDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput">
+            <summary>
+            获取设备列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput.Filter">
+            <summary>
+            模糊查询关键字（匹配设备编号/名称/型号）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput.CompanyId">
+            <summary>
+            所属单位ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput.DeviceType">
+            <summary>
+            设备类型筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput.DeviceStatus">
+            <summary>
+            设备状态筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput.CheckCalibration">
+            <summary>
+            是否需要检查校准有效期
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput">
+            <summary>
+            获取文件管理列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.Filter">
+            <summary>
+            模糊查询（文件名称）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.Keyword">
+            <summary>
+            关键字（文件选择列表用）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.FileName">
+            <summary>
+            文件名称筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.FileType">
+            <summary>
+            文件类型筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.FileBy">
+            <summary>
+            文件归属筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.OrganizeId">
+            <summary>
+            所属组织ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput.EnabledMark">
+            <summary>
+            是否启用筛选
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto">
+            <summary>
+            创建文件记录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto.FileBy">
+            <summary>
+            文件归属
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileCreateDto.OrganizeId">
+            <summary>
+            所属组织ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto">
+            <summary>
+            文件管理数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.Hash">
+            <summary>
+            文件Hash（MD5）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileTypeText">
+            <summary>
+            文件类型文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileSize">
+            <summary>
+            文件大小（字节）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileSizeDisplay">
+            <summary>
+            文件大小显示文本（如"1.5 MB"）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileExtension">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.FileBy">
+            <summary>
+            上传人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.OrganizeId">
+            <summary>
+            所属组织ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.OrganizeName">
+            <summary>
+            所属组织名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.FileManages.UploadFileUpdateDto">
+            <summary>
+            更新文件记录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileUpdateDto.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.FileManages.UploadFileUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput">
+            <summary>
+            获取系统菜单按钮列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput.ModuleId">
+            <summary>
+            所属模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto">
+            <summary>
+            创建系统菜单按钮输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.ModuleId">
+            <summary>
+            所属模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.Location">
+            <summary>
+            按钮位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.JsEvent">
+            <summary>
+            JS事件
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.Split">
+            <summary>
+            是否有分割线
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto">
+            <summary>
+            系统菜单按钮数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.ModuleId">
+            <summary>
+            所属模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.ModuleName">
+            <summary>
+            模块名称（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.Location">
+            <summary>
+            按钮位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.LocationText">
+            <summary>
+            按钮位置文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.JsEvent">
+            <summary>
+            JS事件
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.Split">
+            <summary>
+            是否有分割线
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto">
+            <summary>
+            更新系统菜单按钮输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.Location">
+            <summary>
+            按钮位置
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.JsEvent">
+            <summary>
+            JS事件
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.Split">
+            <summary>
+            是否有分割线
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto">
+            <summary>
+            创建监测数据输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.MonitoringTime">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.MonitoringValue">
+            <summary>
+            监测数值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.PropertyId">
+            <summary>
+            监测属性ID（必填）
+            【重构新增】解决同一测点下多属性数据无法区分的问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.PropertyCode">
+            <summary>
+            属性编码（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.PropertyName">
+            <summary>
+            属性名称（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.Unit">
+            <summary>
+            单位（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.DeviceId">
+            <summary>
+            采集设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.DeviceName">
+            <summary>
+            采集设备名称（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.CollectorId">
+            <summary>
+            采集人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.CollectorName">
+            <summary>
+            采集人姓名（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.CollectionMethod">
+            <summary>
+            采集方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.ExtendedData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto.DataRemark">
+            <summary>
+            数据备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput">
+            <summary>
+            获取监测数据列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.PointId">
+            <summary>
+            测点ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.ProjectId">
+            <summary>
+            项目ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.DataQuality">
+            <summary>
+            数据质量筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.PropertyId">
+            <summary>
+            监测属性ID筛选
+            【重构新增】支持按属性筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput.Filter">
+            <summary>
+            模糊查询（测点名称、属性名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto">
+            <summary>
+            监测数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.PointName">
+            <summary>
+            测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.PropertyId">
+            <summary>
+            监测属性ID（外键，关联MonitoringItemProperty）
+            【重构新增】解决同一测点下多属性数据无法区分的问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.PropertyCode">
+            <summary>
+            属性编码（冗余，如 DISPLACEMENT_X）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.PropertyName">
+            <summary>
+            属性名称（冗余，如"水平位移"）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.Unit">
+            <summary>
+            单位（冗余，如 mm）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.MonitoringTime">
+            <summary>
+            监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.MonitoringValue">
+            <summary>
+            监测数值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DataQuality">
+            <summary>
+            数据质量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DataQualityText">
+            <summary>
+            数据质量文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DataState">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DataStateText">
+            <summary>
+            数据状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DeviceId">
+            <summary>
+            采集设备ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DeviceName">
+            <summary>
+            采集设备名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.CollectorId">
+            <summary>
+            采集人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.CollectorName">
+            <summary>
+            采集人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.CollectionMethod">
+            <summary>
+            采集方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.CollectionMethodText">
+            <summary>
+            采集方式文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.ExtendedData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataDto.DataRemark">
+            <summary>
+            数据备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto">
+            <summary>
+            监测数据历史记录DTO（用于测点历史数据查询）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.PointId">
+            <summary>
+            测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.SnapshotTime">
+            <summary>
+            快照时间（即监测时间）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.FormattedSnapshotTime">
+            <summary>
+            格式化快照时间（用于显示）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.MonitoringValue">
+            <summary>
+            监测数值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.DataState">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.DataStateText">
+            <summary>
+            数据状态显示文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.Collector">
+            <summary>
+            收集人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.CreatorTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.CreatorUserName">
+            <summary>
+            创建人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.MonitoringDataHistoryDto.FormattedCreatorTime">
+            <summary>
+            格式化创建时间（用于显示）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto">
+            <summary>
+            更新监测数据输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.MonitoringValue">
+            <summary>
+            监测数值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.DataQuality">
+            <summary>
+            数据质量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.PropertyId">
+            <summary>
+            监测属性ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.PropertyCode">
+            <summary>
+            属性编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.ExtendedData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto.DataRemark">
+            <summary>
+            数据备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput">
+            <summary>
+            获取监测项目类型列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput.Category">
+            <summary>
+            监测分类筛选
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto">
+            <summary>
+            创建监测项目类型输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.TypeCode">
+            <summary>
+            类型编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.TypeName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.Category">
+            <summary>
+            监测分类
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto.PropertyList">
+            <summary>
+            属性列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto">
+            <summary>
+            创建监测项目属性输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.PropertyCode">
+            <summary>
+            属性编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto">
+            <summary>
+            监测项目类型数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.TypeCode">
+            <summary>
+            类型编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.TypeName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.Category">
+            <summary>
+            监测分类
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.CategoryText">
+            <summary>
+            监测分类文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeDto.Properties">
+            <summary>
+            属性集合
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto">
+            <summary>
+            监测项目属性数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.ItemTypeId">
+            <summary>
+            所属监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.PropertyCode">
+            <summary>
+            属性编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.DataTypeText">
+            <summary>
+            数据类型文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemPropertyDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto">
+            <summary>
+            更新监测项目类型输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.TypeCode">
+            <summary>
+            类型编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.TypeName">
+            <summary>
+            类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.Category">
+            <summary>
+            监测分类
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto.PropertyList">
+            <summary>
+            属性列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Notices.GetNoticeListInput">
+            <summary>
+            获取系统通知列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.GetNoticeListInput.Filter">
+            <summary>
+            模糊查询（标题、内容）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto">
+            <summary>
+            创建系统通知输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Notices.NoticeDto">
+            <summary>
+            系统通知数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto">
+            <summary>
+            更新系统通知输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Organizes.GetOrganizeListInput">
+            <summary>
+            获取系统组织列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.GetOrganizeListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto">
+            <summary>
+            创建系统组织输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.ShortName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.ManagerId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.TelePhone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.MobilePhone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.WeChat">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto">
+            <summary>
+            系统组织数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.ShortName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.ManagerId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.ManagerName">
+            <summary>
+            负责人姓名（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.TelePhone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.MobilePhone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.WeChat">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeDto.Children">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto">
+            <summary>
+            系统组织树形数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeTreeDto.Children">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto">
+            <summary>
+            更新系统组织输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.ShortName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.ManagerId">
+            <summary>
+            负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.TelePhone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.MobilePhone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.WeChat">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.AreaId">
+            <summary>
+            区域ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto">
+            <summary>
+            保存权限授权输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto.ProviderName">
+            <summary>
+            权限提供者名称（Role/User）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto.ProviderKey">
+            <summary>
+            权限提供者Key（角色ID或用户ID）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto.Permissions">
+            <summary>
+            要授权的权限名称列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto">
+            <summary>
+            权限树节点数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto.ParentName">
+            <summary>
+            父级权限名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto.IsGranted">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto.Children">
+            <summary>
+            子权限列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Points.GetPointListInput">
+            <summary>
+            获取测点列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.GetPointListInput.Filter">
+            <summary>
+            模糊查询关键字（匹配测点编号/名称）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.GetPointListInput.ProjectId">
+            <summary>
+            所属项目ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.GetPointListInput.CurrentWarningLevel">
+            <summary>
+            当前预警级别筛选
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Points.PointCreateDto">
+            <summary>
+            创建测点输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.ProjectId">
+            <summary>
+            所属项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.PointCode">
+            <summary>
+            监测点编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.PointName">
+            <summary>
+            监测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.LocationX">
+            <summary>
+            X坐标/经度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.LocationY">
+            <summary>
+            Y坐标/纬度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.LocationZ">
+            <summary>
+            Z坐标/高程
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.MonitoringFrequency">
+            <summary>
+            监测频率（天）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.WarningThreshold">
+            <summary>
+            预警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.AlarmThreshold">
+            <summary>
+            报警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.ChangeRateThreshold">
+            <summary>
+            变化率阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.CumulativeThreshold">
+            <summary>
+            累计变化阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.ExtendedProperties">
+            <summary>
+            扩展属性
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointCreateDto.Description">
+            <summary>
+            点位描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Points.PointDto">
+            <summary>
+            测点数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ProjectId">
+            <summary>
+            所属项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ProjectName">
+            <summary>
+            所属项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.PointCode">
+            <summary>
+            监测点编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.PointName">
+            <summary>
+            监测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ItemTypeName">
+            <summary>
+            监测项目类型名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ItemCategory">
+            <summary>
+            监测项目分类
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ItemCategoryName">
+            <summary>
+            监测项目分类名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.LocationX">
+            <summary>
+            X坐标/经度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.LocationY">
+            <summary>
+            Y坐标/纬度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.LocationZ">
+            <summary>
+            Z坐标/高程
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.CurrentValue">
+            <summary>
+            当前监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.LastMonitoringTime">
+            <summary>
+            最后监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.MonitoringFrequency">
+            <summary>
+            监测频率（天）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.WarningThreshold">
+            <summary>
+            预警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.AlarmThreshold">
+            <summary>
+            报警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ChangeRateThreshold">
+            <summary>
+            变化率阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.CumulativeThreshold">
+            <summary>
+            累计变化阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.CurrentWarningLevel">
+            <summary>
+            当前预警级别
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.CurrentWarningLevelText">
+            <summary>
+            当前预警级别文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.LastWarningTime">
+            <summary>
+            最后预警时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.TotalWarningCount">
+            <summary>
+            总预警次数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.ActiveWarningCount">
+            <summary>
+            当前活跃预警数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.Description">
+            <summary>
+            点位描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointDto.Properties">
+            <summary>
+            测点属性列表（关联的监测项目属性）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto">
+            <summary>
+            更新测点输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.PointName">
+            <summary>
+            监测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.ItemTypeId">
+            <summary>
+            监测项目类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.LocationX">
+            <summary>
+            X坐标/经度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.LocationY">
+            <summary>
+            Y坐标/纬度
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.LocationZ">
+            <summary>
+            Z坐标/高程
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.MonitoringFrequency">
+            <summary>
+            监测频率（天）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.WarningThreshold">
+            <summary>
+            预警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.AlarmThreshold">
+            <summary>
+            报警阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.ChangeRateThreshold">
+            <summary>
+            变化率阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.CumulativeThreshold">
+            <summary>
+            累计变化阈值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.ExtendedProperties">
+            <summary>
+            扩展属性
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Points.PointUpdateDto.Description">
+            <summary>
+            点位描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput">
+            <summary>
+            获取项目人员安排列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput.ProjectId">
+            <summary>
+            项目ID（必填）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput.RoleType">
+            <summary>
+            角色类型筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput.Filter">
+            <summary>
+            模糊查询（角色名称、用户名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto">
+            <summary>
+            创建项目人员安排输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.UserName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.RoleType">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.Responsibility">
+            <summary>
+            职责描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.WorkStatus">
+            <summary>
+            工作状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto">
+            <summary>
+            项目人员安排数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.ProjectName">
+            <summary>
+            项目名称（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.UserName">
+            <summary>
+            用户姓名（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.RoleType">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.RoleTypeText">
+            <summary>
+            角色类型文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.Responsibility">
+            <summary>
+            职责描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.WorkStatus">
+            <summary>
+            工作状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.WorkStatusText">
+            <summary>
+            工作状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.IsActive">
+            <summary>
+            是否在职且未过期（计算属性）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.ServiceDays">
+            <summary>
+            服务天数（计算属性）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.IsEnded">
+            <summary>
+            是否已结束（计算属性）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.RemainingDays">
+            <summary>
+            剩余天数（如果设置了结束时间）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.IsExpired">
+            <summary>
+            是否已过期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelDto.StatusDescription">
+            <summary>
+            当前状态描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto">
+            <summary>
+            更新项目人员安排输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.RoleType">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.Responsibility">
+            <summary>
+            职责描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.ContactInfo">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.WorkStatus">
+            <summary>
+            工作状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Projects.GetProjectListInput">
+            <summary>
+            获取监测工程列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.GetProjectListInput.Filter">
+            <summary>
+            模糊查询关键字（匹配项目编号/名称/地点）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.GetProjectListInput.Status">
+            <summary>
+            项目状态筛选
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto">
+            <summary>
+            创建监测工程输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.ProjectCode">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.ProjectLocation">
+            <summary>
+            项目地点
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.StartDate">
+            <summary>
+            项目开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.EndDate">
+            <summary>
+            项目结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.ResponsiblePerson">
+            <summary>
+            项目负责人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.ContactInfo">
+            <summary>
+            负责人联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto.Description">
+            <summary>
+            项目描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Projects.ProjectDto">
+            <summary>
+            监测工程数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.ProjectCode">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.ProjectLocation">
+            <summary>
+            项目地点
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.StartDate">
+            <summary>
+            项目开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.EndDate">
+            <summary>
+            项目结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.ResponsiblePerson">
+            <summary>
+            项目负责人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.ContactInfo">
+            <summary>
+            负责人联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.Status">
+            <summary>
+            项目状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.StatusText">
+            <summary>
+            项目状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.Description">
+            <summary>
+            项目描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectDto.PointCount">
+            <summary>
+            测点数量
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto">
+            <summary>
+            更新监测工程输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.ProjectLocation">
+            <summary>
+            项目地点
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.StartDate">
+            <summary>
+            项目开始日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.EndDate">
+            <summary>
+            项目结束日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.ResponsiblePerson">
+            <summary>
+            项目负责人
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.ContactInfo">
+            <summary>
+            负责人联系方式
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto.Description">
+            <summary>
+            项目描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Roles.RoleDto">
+            <summary>
+            角色数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.IsDefault">
+            <summary>
+            是否默认角色
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.IsPublic">
+            <summary>
+            是否公开角色
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.Description">
+            <summary>
+            角色描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto">
+            <summary>
+            角色用户简要信息DTO
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.PhoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput">
+            <summary>
+            获取系统字典列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput.ItemId">
+            <summary>
+            字典类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryTypeListInput">
+            <summary>
+            获取系统字典类型列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryTypeListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto">
+            <summary>
+            创建系统字典输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.ItemId">
+            <summary>
+            字典类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.ItemCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.ItemName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.SimpleSpelling">
+            <summary>
+            简拼
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto">
+            <summary>
+            系统字典数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.ItemId">
+            <summary>
+            字典类型ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.TypeName">
+            <summary>
+            字典类型名称（冗余）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.ItemCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.ItemName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.SimpleSpelling">
+            <summary>
+            简拼
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto">
+            <summary>
+            创建系统字典类型输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.IsTree">
+            <summary>
+            是否树形
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto">
+            <summary>
+            系统字典类型数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.IsTree">
+            <summary>
+            是否树形
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeDto.Children">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto">
+            <summary>
+            系统字典类型树形数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.IsTree">
+            <summary>
+            是否树形
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeTreeDto.Children">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto">
+            <summary>
+            更新系统字典类型输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.IsTree">
+            <summary>
+            是否树形
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto">
+            <summary>
+            更新系统字典输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.ItemCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.ItemName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.SimpleSpelling">
+            <summary>
+            简拼
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput">
+            <summary>
+            获取系统菜单模块列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput.Filter">
+            <summary>
+            模糊查询（编码、名称）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto">
+            <summary>
+            创建系统菜单模块输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.Target">
+            <summary>
+            打开目标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.IsExpand">
+            <summary>
+            是否展开
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.IsFields">
+            <summary>
+            是否字段
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto">
+            <summary>
+            系统菜单模块数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Target">
+            <summary>
+            打开目标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.IsExpand">
+            <summary>
+            是否展开
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.IsFields">
+            <summary>
+            是否字段
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Layers">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleDto.Children">
+            <summary>
+            子节点列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto">
+            <summary>
+            系统菜单模块树形数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.Id">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleTreeDto.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto">
+            <summary>
+            更新系统菜单模块输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.Target">
+            <summary>
+            打开目标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.IsExpand">
+            <summary>
+            是否展开
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.IsFields">
+            <summary>
+            是否字段
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.EnabledMark">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto.Authorize">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput">
+            <summary>
+            获取租户列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput.Filter">
+            <summary>
+            租户名称模糊查询
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput.IsExpired">
+            <summary>
+            是否已过期筛选
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto">
+            <summary>
+            创建租户输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.AdminAccount">
+            <summary>
+            管理员账号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.AdminPassword">
+            <summary>
+            管理员密码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.AdminEmail">
+            <summary>
+            管理员邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.ExpireDate">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto.ConnectionString">
+            <summary>
+            数据库连接字符串（可选，独立数据库时使用）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.Tenants.TenantDto">
+            <summary>
+            租户数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantDto.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantDto.IsActive">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantDto.ExpireDate">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantDto.ConnectionString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.Tenants.TenantDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput">
+            <summary>
+            确认预警记录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput.Id">
+            <summary>
+            预警记录ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput.ConfirmRemark">
+            <summary>
+            确认备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput">
+            <summary>
+            获取预警记录列表输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.ProjectId">
+            <summary>
+            项目ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.PointId">
+            <summary>
+            测点ID筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.WarningLevel">
+            <summary>
+            预警级别筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.HandleStatus">
+            <summary>
+            处理状态筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.PropertyId">
+            <summary>
+            监测属性ID筛选
+            【重构新增】支持按属性筛选
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput.Filter">
+            <summary>
+            模糊查询
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput">
+            <summary>
+            处理预警记录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput.Id">
+            <summary>
+            预警记录ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput.HandlerId">
+            <summary>
+            处理负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput.HandlerName">
+            <summary>
+            处理负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput.HandleSolution">
+            <summary>
+            处理方案
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput.HandleResult">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto">
+            <summary>
+            预警记录数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PointId">
+            <summary>
+            监测点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PointName">
+            <summary>
+            监测点名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PropertyId">
+            <summary>
+            监测属性ID（外键，关联MonitoringItemProperty）
+            【重构新增】解决同一测点下多属性数据无法区分的问题
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PropertyCode">
+            <summary>
+            属性编码（冗余，如 DISPLACEMENT_X）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PropertyName">
+            <summary>
+            属性名称（冗余，如"水平位移"）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.Unit">
+            <summary>
+            单位（冗余，如 mm）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.MonitoringDataId">
+            <summary>
+            监测数据ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.DataState">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.CollectorName">
+            <summary>
+            采集人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.DataRemark">
+            <summary>
+            数据备注
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningTime">
+            <summary>
+            预警时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.MonitoringTime">
+            <summary>
+            触发监测时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.MonitoringValue">
+            <summary>
+            触发监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningType">
+            <summary>
+            预警类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningTypeText">
+            <summary>
+            预警类型文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningLevel">
+            <summary>
+            预警级别
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningLevelText">
+            <summary>
+            预警级别文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.TriggerValue">
+            <summary>
+            触发值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ThresholdValue">
+            <summary>
+            阈值设定值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.PreviousValue">
+            <summary>
+            前次监测值
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ChangeRate">
+            <summary>
+            变化率
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.CumulativeChange">
+            <summary>
+            累计变化量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.WarningContent">
+            <summary>
+            预警内容
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.SuggestedAction">
+            <summary>
+            建议措施
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandlerId">
+            <summary>
+            处理负责人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandlerName">
+            <summary>
+            处理负责人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandleStatus">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandleStatusText">
+            <summary>
+            处理状态文本
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandleTime">
+            <summary>
+            处理时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandleSolution">
+            <summary>
+            处理方案
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.HandleResult">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ConfirmerId">
+            <summary>
+            确认人ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ConfirmerName">
+            <summary>
+            确认人姓名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ConfirmTime">
+            <summary>
+            确认时间
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningRecordDto.ConfirmRemark">
+            <summary>
+            确认备注
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto">
+            <summary>
+            预警统计数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.TotalCount">
+            <summary>
+            总预警数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.UnhandledCount">
+            <summary>
+            未处理数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.HandlingCount">
+            <summary>
+            处理中数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.HandledCount">
+            <summary>
+            已处理数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.ConfirmedCount">
+            <summary>
+            已确认数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.ClosedCount">
+            <summary>
+            已关闭数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.Level1Count">
+            <summary>
+            一级预警数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.Level2Count">
+            <summary>
+            二级预警数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.WarningRecords.WarningStatisticsDto.Level3Count">
+            <summary>
+            三级预警数
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IAccountAppService">
+            <summary>
+            账号应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAccountAppService.LoginAsync(JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto)">
+            <summary>
+            登录验证
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAccountAppService.GetCurrentUserAsync">
+            <summary>
+            获取当前登录用户信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAccountAppService.ResetPasswordAsync(JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput)">
+            <summary>
+            当前用户重置密码
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAccountAppService.GetEncryptKeyAsync">
+            <summary>
+            获取密码加密密钥（供前端 AES 加密使用）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IAppRoleAppService">
+            <summary>
+            业务角色应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetListAsync(System.String)">
+            <summary>
+            获取列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.AddAndEditRoleAsync(JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto)">
+            <summary>
+            新增或编辑角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto)">
+            <summary>
+            更新角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPermissionTreeAsync(System.Guid)">
+            <summary>
+            获取权限树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPermissionFieldsTreeAsync(System.Guid,System.String)">
+            <summary>
+            获取权限字段树
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IClientCacheAppService">
+            <summary>
+            初始化缓存应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.InitializeDictionaryAsync">
+            <summary>
+            初始数据加载（系统字典、模块按钮、模型字段、菜单字段）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.ClearCacheAsync">
+            <summary>
+            清空缓存
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.GetNoticeListAsync(System.Nullable{System.Int32})">
+            <summary>
+            获取公告列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.GetCurrentUserInfoAsync">
+            <summary>
+            获取当前用户信息
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.GetQuickModuleAsync">
+            <summary>
+            获取首页快捷菜单
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IClientCacheAppService.GetSysSatisfyAsync">
+            <summary>
+            获取系统信息统计
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService">
+            <summary>
+            单位设备应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.GetListAsync(System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})">
+            <summary>
+            获取设备列表（非分页，支持筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.GetSendDeviceAsync(System.Guid)">
+            <summary>
+            获取设备分配信息（已借出记录）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.CalibrateAsync(JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput)">
+            <summary>
+            设备校准
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.LendAsync(System.Guid,System.Guid,System.DateTime,System.Nullable{System.Guid},System.String)">
+            <summary>
+            借出设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.ReturnAsync(System.Guid,System.DateTime,System.String)">
+            <summary>
+            归还设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService.ScrapAsync(System.Guid,System.String)">
+            <summary>
+            报废设备
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IFileManageAppService">
+            <summary>
+            文件管理应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.GetListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
+            <summary>
+            获取列表（不分页）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.UploadAsync(System.String,System.IO.Stream,System.String,System.Nullable{System.Guid})">
+            <summary>
+            文件上传
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.DownloadAsync(System.Guid)">
+            <summary>
+            文件下载（返回元数据）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.DownloadFileAsync(System.Guid)">
+            <summary>
+            文件下载（返回文件内容字节流）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService">
+            <summary>
+            系统菜单按钮应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService.CreateAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService">
+            <summary>
+            监测数据应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService.GetHistoryListByPointIdAsync(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            根据测点ID获取历史数据
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService.BatchImportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto[])">
+            <summary>
+            批量导入监测数据
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService.ApproveAsync(System.Guid)">
+            <summary>
+            审核数据
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService.ExportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput)">
+            <summary>
+            数据导出
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService">
+            <summary>
+            监测项目类型应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.GetListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
+            <summary>
+            获取列表（不分页）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.CreateAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto)">
+            <summary>
+            创建（级联保存属性）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto)">
+            <summary>
+            更新（级联更新属性）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.INoticeAppService">
+            <summary>
+            系统通知应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.INoticeAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.INoticeAppService.CreateAsync(JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.INoticeAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.INoticeAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IOrganizeAppService">
+            <summary>
+            系统组织应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IOrganizeAppService.GetOrganizeTreeAsync">
+            <summary>
+            获取组织树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IOrganizeAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IOrganizeAppService.CreateAsync(JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IOrganizeAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IOrganizeAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IPermissionAppService">
+            <summary>
+            权限管理应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPermissionAppService.GetPermissionTreeAsync(System.String,System.String)">
+            <summary>
+            获取权限树
+            </summary>
+            <param name="providerName">提供者名称（Role/User）</param>
+            <param name="providerKey">提供者Key（角色ID或用户ID）</param>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPermissionAppService.GrantAsync(JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto)">
+            <summary>
+            保存权限授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IPointAppService">
+            <summary>
+            测点管理应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPointAppService.ConfigureThresholdAsync(System.Guid,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            配置测点阈值
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPointAppService.GetListAsync(System.Nullable{System.Guid})">
+            <summary>
+            获取测点列表（非分页，按项目筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPointAppService.GetHistoryAsync(System.Guid)">
+            <summary>
+            获取测点历史数据简要
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IPointAppService.GetPropertiesAsync(System.Guid)">
+            <summary>
+            获取测点可用属性列表
+            根据测点关联的监测项目类型，返回所有属性
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IProjectAppService">
+            <summary>
+            监测工程应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectAppService.GetParticipatedListAsync">
+            <summary>
+            获取已参加项目列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectAppService.ArchiveAsync(System.Guid)">
+            <summary>
+            归档项目
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectAppService.ChangeStatusAsync(System.Guid,System.Int32)">
+            <summary>
+            变更项目状态
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService">
+            <summary>
+            项目人员安排应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.GetListByProjectAsync(System.Guid)">
+            <summary>
+            按项目获取列表（非分页）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.GetListAsync(System.Guid,System.Nullable{System.Int32})">
+            <summary>
+            获取项目人员列表（非分页，支持角色筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.CreateAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService">
+            <summary>
+            角色管理应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
+            <summary>
+            获取角色列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetAsync(System.Guid)">
+            <summary>
+            获取单个角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.CreateAsync(System.String)">
+            <summary>
+            创建角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.UpdateAsync(System.Guid,System.String)">
+            <summary>
+            更新角色名称
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除角色
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetRoleUsersAsync(System.Guid)">
+            <summary>
+            获取角色用户列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService">
+            <summary>
+            系统字典应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.GetListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
+            <summary>
+            获取列表（不分页）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService">
+            <summary>
+            系统字典类型应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.GetDictionaryTreeAsync">
+            <summary>
+            获取字典树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryTypeListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService">
+            <summary>
+            系统菜单模块应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.GetTreeListAsync">
+            <summary>
+            获取树形列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.GetListAsync(JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.CreateAsync(JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ISystemModuleAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ITenantAppService">
+            <summary>
+            租户管理应用服务接口（Host端专用）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.CreateAsync(JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto)">
+            <summary>
+            创建租户
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.GetListAsync(JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput)">
+            <summary>
+            获取租户列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.GetAsync(System.Guid)">
+            <summary>
+            获取单个租户
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.UpdateConnectionStringAsync(System.Guid,System.String)">
+            <summary>
+            更新租户连接字符串
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除租户
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService">
+            <summary>
+            预警记录应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService.AssignHandlerAsync(System.Guid,System.Guid,System.String)">
+            <summary>
+            分配处理人
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService.HandleAsync(JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput)">
+            <summary>
+            处理预警记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService.ConfirmAsync(JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput)">
+            <summary>
+            确认预警处理结果
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService.CloseAsync(System.Guid,System.String)">
+            <summary>
+            关闭预警
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService.GetStatisticsAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            获取预警统计
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.JiaCeMonitorSystemApplicationContractsModule">
+            <summary>
+            应用契约层模块，定义DTO、接口与权限常量
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemApplicationContractsModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:JiaCeMonitorSystem.Permissions.JiaCeMonitorSystemPermissionDefinitionProvider">
+            <summary>
+            监测云平台权限定义提供者
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Permissions.JiaCeMonitorSystemPermissionDefinitionProvider.Define(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,409 @@
+2026-05-09 09:13:37.445 +08:00 [INF] Starting JiaCeMonitorSystem.HttpApi.Host.
+2026-05-09 09:13:47.905 +08:00 [DBG] Loaded ABP modules:
+2026-05-09 09:13:47.906 +08:00 [DBG] - JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule
+2026-05-09 09:13:47.906 +08:00 [DBG]   - JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - JiaCeMonitorSystem.JiaCeMonitorSystemApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - JiaCeMonitorSystem.JiaCeMonitorSystemDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Data.AbpDataModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]               - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Security.AbpSecurityModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Settings.AbpSettingsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Localization.AbpLocalizationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]               - Volo.Abp.Threading.AbpThreadingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Validation.AbpValidationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Http.AbpHttpModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Minify.AbpMinifyModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]   - JiaCeMonitorSystem.JiaCeMonitorSystemApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - JiaCeMonitorSystem.JiaCeMonitorSystemDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-05-09 09:13:47.906 +08:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-05-09 09:13:47.906 +08:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-05-09 09:13:47.906 +08:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.Identity.AbpIdentityApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.Account.AbpAccountApplicationModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2026-05-09 09:13:47.906 +08:00 [DBG]   - JiaCeMonitorSystem.EntityFrameworkCore.JiaCeMonitorSystemEntityFrameworkCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+2026-05-09 09:13:47.906 +08:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2026-05-09 09:13:47.906 +08:00 [DBG]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.BackgroundJobs.Hangfire.AbpBackgroundJobsHangfireModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.Hangfire.AbpHangfireModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.Account.Web.AbpAccountWebModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.Identity.AspNetCore.AbpIdentityAspNetCoreModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2026-05-09 09:13:47.907 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2026-05-09 09:13:47.907 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2026-05-09 09:13:47.907 +08:00 [DBG]           - Volo.Abp.AspNetCore.Bundling.AbpAspNetCoreBundlingModule
+2026-05-09 09:13:47.907 +08:00 [DBG]   - Volo.Abp.EventBus.RabbitMq.AbpEventBusRabbitMqModule
+2026-05-09 09:13:47.907 +08:00 [DBG]     - Volo.Abp.RabbitMQ.AbpRabbitMqModule
+2026-05-09 09:13:48.199 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2026-05-09 09:13:48.211 +08:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2026-05-09 09:13:48.554 +08:00 [INF] Start installing Hangfire SQL objects...
+2026-05-09 09:13:48.652 +08:00 [INF] Hangfire SQL objects installed.
+2026-05-09 09:13:48.674 +08:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: 10.10.101.62, DB: JiaCeMonitorPGDB, Schema: hangfire'
+2026-05-09 09:13:48.674 +08:00 [INF] Using the following options for PostgreSQL job storage:
+2026-05-09 09:13:48.674 +08:00 [INF]     Queue poll interval: 00:00:15.
+2026-05-09 09:13:48.674 +08:00 [INF]     Invisibility timeout: 00:30:00.
+2026-05-09 09:13:48.674 +08:00 [INF]     Use sliding invisibility timeout: False.
+2026-05-09 09:13:48.674 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-05-09 09:13:48.695 +08:00 [DBG] Execution loop BackgroundServerProcess:79322230 has started in 9.1518 ms
+2026-05-09 09:17:15.745 +08:00 [INF] Starting JiaCeMonitorSystem.HttpApi.Host.
+2026-05-09 09:17:25.081 +08:00 [DBG] Loaded ABP modules:
+2026-05-09 09:17:25.083 +08:00 [DBG] - JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - JiaCeMonitorSystem.JiaCeMonitorSystemApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - JiaCeMonitorSystem.JiaCeMonitorSystemDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Data.AbpDataModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]               - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]               - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Uow.AbpUnitOfWorkModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Security.AbpSecurityModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Settings.AbpSettingsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Localization.AbpLocalizationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]               - Volo.Abp.Threading.AbpThreadingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Validation.AbpValidationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Users.AbpUsersAbstractionModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Http.AbpHttpModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Minify.AbpMinifyModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.UI.AbpUiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - JiaCeMonitorSystem.JiaCeMonitorSystemApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - JiaCeMonitorSystem.JiaCeMonitorSystemDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Mapperly.AbpMapperlyModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Identity.AbpIdentityDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.Users.AbpUsersDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.TenantManagement.AbpTenantManagementApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2026-05-09 09:17:25.083 +08:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Identity.AbpIdentityApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Account.AbpAccountApplicationModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - JiaCeMonitorSystem.EntityFrameworkCore.JiaCeMonitorSystemEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.FeatureManagement.EntityFrameworkCore.AbpFeatureManagementEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.OpenIddict.EntityFrameworkCore.AbpOpenIddictEntityFrameworkCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.BackgroundJobs.Hangfire.AbpBackgroundJobsHangfireModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Hangfire.AbpHangfireModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.Account.Web.AbpAccountWebModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.Identity.AspNetCore.AbpIdentityAspNetCoreModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2026-05-09 09:17:25.083 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]           - Volo.Abp.AspNetCore.Bundling.AbpAspNetCoreBundlingModule
+2026-05-09 09:17:25.083 +08:00 [DBG]   - Volo.Abp.EventBus.RabbitMq.AbpEventBusRabbitMqModule
+2026-05-09 09:17:25.083 +08:00 [DBG]     - Volo.Abp.RabbitMQ.AbpRabbitMqModule
+2026-05-09 09:17:25.311 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2026-05-09 09:17:25.339 +08:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2026-05-09 09:17:25.659 +08:00 [INF] Start installing Hangfire SQL objects...
+2026-05-09 09:17:25.757 +08:00 [INF] Hangfire SQL objects installed.
+2026-05-09 09:17:25.775 +08:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: 10.10.101.62, DB: JiaCeMonitorPGDB, Schema: hangfire'
+2026-05-09 09:17:25.775 +08:00 [INF] Using the following options for PostgreSQL job storage:
+2026-05-09 09:17:25.776 +08:00 [INF]     Queue poll interval: 00:00:15.
+2026-05-09 09:17:25.776 +08:00 [INF]     Invisibility timeout: 00:30:00.
+2026-05-09 09:17:25.776 +08:00 [INF]     Use sliding invisibility timeout: False.
+2026-05-09 09:17:25.776 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-05-09 09:17:25.793 +08:00 [DBG] Execution loop BackgroundServerProcess:5e7c28f4 has started in 9.3617 ms
+2026-05-09 09:17:26.377 +08:00 [INF] Server 东方神机:23312:91cfd46d successfully announced in 575.2257 ms
+2026-05-09 09:17:26.467 +08:00 [DBG] Execution loop ServerHeartbeatProcess:59519464 has started in 58.7277 ms
+2026-05-09 09:17:26.468 +08:00 [INF] Server 东方神机:23312:91cfd46d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-05-09 09:17:26.498 +08:00 [DBG] Execution loop ServerJobCancellationWatcher:976a6e6a has started in 29.6756 ms
+2026-05-09 09:17:26.498 +08:00 [DBG] Execution loop ServerWatchdog:c48a6bf5 has started in 30.0908 ms
+2026-05-09 09:17:26.531 +08:00 [DBG] Execution loop ExpirationManager:275dc19d has started in 32.1931 ms
+2026-05-09 09:17:26.557 +08:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-05-09 09:17:26.558 +08:00 [DBG] Execution loop CountersAggregator:d006a8c4 has started in 26.851 ms
+2026-05-09 09:17:26.558 +08:00 [DBG] Aggregating records in 'Counter' table...
+2026-05-09 09:17:26.561 +08:00 [DBG] Execution loop Worker:bbe7ec10 has started in 28.9468 ms
+2026-05-09 09:17:26.602 +08:00 [DBG] Execution loop Worker:d7092833 has started in 69.6792 ms
+2026-05-09 09:17:26.602 +08:00 [DBG] Execution loop Worker:d29fa551 has started in 69.8716 ms
+2026-05-09 09:17:26.613 +08:00 [DBG] Execution loop Worker:81e511fe has started in 80.7423 ms
+2026-05-09 09:17:26.647 +08:00 [DBG] Execution loop Worker:4ebeb3b6 has started in 114.6478 ms
+2026-05-09 09:17:26.647 +08:00 [DBG] Execution loop Worker:beb7891f has started in 114.6125 ms
+2026-05-09 09:17:26.677 +08:00 [DBG] Execution loop Worker:6da772ae has started in 144.316 ms
+2026-05-09 09:17:26.677 +08:00 [DBG] Execution loop Worker:53b8c7f4 has started in 144.2988 ms
+2026-05-09 09:17:26.707 +08:00 [DBG] Execution loop Worker:16ff1c2e has started in 174.643 ms
+2026-05-09 09:17:26.707 +08:00 [DBG] Execution loop Worker:572095a3 has started in 174.6431 ms
+2026-05-09 09:17:26.738 +08:00 [DBG] Execution loop Worker:b8572d82 has started in 205.5361 ms
+2026-05-09 09:17:26.738 +08:00 [DBG] Execution loop Worker:af569dac has started in 205.5413 ms
+2026-05-09 09:17:26.743 +08:00 [DBG] Execution loop Worker:c8ef1641 has started in 210.2923 ms
+2026-05-09 09:17:26.783 +08:00 [DBG] Execution loop Worker:7f1af8e7 has started in 250.4783 ms
+2026-05-09 09:17:26.811 +08:00 [DBG] Execution loop Worker:5ed872e5 has started in 254.1808 ms
+2026-05-09 09:17:26.811 +08:00 [DBG] Execution loop Worker:92c5fc8d has started in 278.9099 ms
+2026-05-09 09:17:26.811 +08:00 [DBG] Execution loop Worker:b6030d14 has started in 278.9249 ms
+2026-05-09 09:17:26.844 +08:00 [DBG] Execution loop Worker:49b88da0 has started in 311.1854 ms
+2026-05-09 09:17:26.844 +08:00 [DBG] Execution loop Worker:c2af1d1a has started in 311.1745 ms
+2026-05-09 09:17:26.886 +08:00 [DBG] Execution loop Worker:e62c7092 has started in 353.8244 ms
+2026-05-09 09:17:26.886 +08:00 [DBG] Execution loop DelayedJobScheduler:b5b66875 has started in 42.0996 ms
+2026-05-09 09:17:26.887 +08:00 [INF] Server 东方神机:23312:91cfd46d all the dispatchers started
+2026-05-09 09:17:26.917 +08:00 [DBG] Execution loop RecurringJobScheduler:ac6005f3 has started in 30.1771 ms
+2026-05-09 09:17:27.430 +08:00 [DBG] Removing outdated records from table 'counter'...
+2026-05-09 09:17:27.526 +08:00 [DBG] Removing outdated records from table 'job'...
+2026-05-09 09:17:27.562 +08:00 [DBG] Removing outdated records from table 'list'...
+2026-05-09 09:17:27.634 +08:00 [DBG] Removing outdated records from table 'set'...
+2026-05-09 09:17:27.728 +08:00 [DBG] Removing outdated records from table 'hash'...
+2026-05-09 09:17:28.268 +08:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-09 09:17:28.574 +08:00 [INF] Initialized all ABP modules.
+2026-05-09 09:17:29.109 +08:00 [INF] Now listening on: https://localhost:63936
+2026-05-09 09:17:29.109 +08:00 [INF] Now listening on: http://localhost:63937
+2026-05-09 09:17:29.291 +08:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: 10.10.101.62, DB: JiaCeMonitorPGDB, Schema: hangfire'
+2026-05-09 09:17:29.291 +08:00 [INF] Using the following options for PostgreSQL job storage:
+2026-05-09 09:17:29.291 +08:00 [INF]     Queue poll interval: 00:00:15.
+2026-05-09 09:17:29.291 +08:00 [INF]     Invisibility timeout: 00:30:00.
+2026-05-09 09:17:29.291 +08:00 [INF]     Use sliding invisibility timeout: False.
+2026-05-09 09:17:29.291 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-05-09 09:17:29.296 +08:00 [DBG] Execution loop BackgroundServerProcess:733e610b has started in 4.6291 ms
+2026-05-09 09:17:29.296 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-09 09:17:29.297 +08:00 [INF] Hosting environment: Development
+2026-05-09 09:17:29.297 +08:00 [INF] Content root path: E:\CODEWORK\JiaCeMonitorSystem\JiaCeMonitorSystem\src\JiaCeMonitorSystem.HttpApi.Host
+2026-05-09 09:17:29.302 +08:00 [INF] Server 东方神机:23312:ffd5e5f9 successfully announced in 5.1756 ms
+2026-05-09 09:17:29.303 +08:00 [INF] Server 东方神机:23312:ffd5e5f9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-05-09 09:17:29.307 +08:00 [DBG] Execution loop ServerHeartbeatProcess:2e6924f0 has started in 5.0067 ms
+2026-05-09 09:17:29.315 +08:00 [DBG] Execution loop ServerWatchdog:4d455d10 has started in 12.4226 ms
+2026-05-09 09:17:29.341 +08:00 [DBG] Execution loop ServerJobCancellationWatcher:8c293e73 has started in 33.8703 ms
+2026-05-09 09:17:29.345 +08:00 [DBG] Execution loop ExpirationManager:8343ca03 has started in 4.7223 ms
+2026-05-09 09:17:29.346 +08:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-05-09 09:17:29.349 +08:00 [DBG] Execution loop CountersAggregator:c5e320a5 has started in 7.7824 ms
+2026-05-09 09:17:29.350 +08:00 [DBG] Aggregating records in 'Counter' table...
+2026-05-09 09:17:29.387 +08:00 [DBG] Execution loop Worker:4adf2d08 has started in 41.3182 ms
+2026-05-09 09:17:29.387 +08:00 [DBG] Execution loop Worker:cd4e29b8 has started in 41.1806 ms
+2026-05-09 09:17:29.418 +08:00 [DBG] Execution loop Worker:34f8dfcb has started in 72.4657 ms
+2026-05-09 09:17:29.418 +08:00 [DBG] Execution loop Worker:c9ba4733 has started in 72.4456 ms
+2026-05-09 09:17:29.448 +08:00 [DBG] Execution loop Worker:fbb1162a has started in 102.6894 ms
+2026-05-09 09:17:29.448 +08:00 [DBG] Execution loop Worker:a5a32874 has started in 102.6782 ms
+2026-05-09 09:17:29.478 +08:00 [DBG] Execution loop Worker:057bdff9 has started in 132.6551 ms
+2026-05-09 09:17:29.478 +08:00 [DBG] Execution loop Worker:3cd35ebc has started in 132.6415 ms
+2026-05-09 09:17:29.485 +08:00 [DBG] Execution loop Worker:0298bfa9 has started in 139.0586 ms
+2026-05-09 09:17:29.524 +08:00 [DBG] Removing outdated records from table 'counter'...
+2026-05-09 09:17:29.524 +08:00 [DBG] Execution loop Worker:d07beea0 has started in 178.0681 ms
+2026-05-09 09:17:29.524 +08:00 [DBG] Execution loop Worker:55d8be2d has started in 178.3347 ms
+2026-05-09 09:17:29.553 +08:00 [DBG] Execution loop Worker:2a8bff3b has started in 207.0376 ms
+2026-05-09 09:17:29.553 +08:00 [DBG] Execution loop Worker:9b019175 has started in 207.0245 ms
+2026-05-09 09:17:29.557 +08:00 [DBG] Execution loop Worker:5eef9e81 has started in 211.8798 ms
+2026-05-09 09:17:29.563 +08:00 [DBG] Execution loop Worker:ab0b2686 has started in 216.9742 ms
+2026-05-09 09:17:29.599 +08:00 [DBG] Execution loop Worker:01c0e20a has started in 228.3788 ms
+2026-05-09 09:17:29.599 +08:00 [DBG] Execution loop Worker:b27ea5d7 has started in 253.4477 ms
+2026-05-09 09:17:29.599 +08:00 [DBG] Execution loop Worker:95bcaf16 has started in 253.4476 ms
+2026-05-09 09:17:29.600 +08:00 [DBG] Removing outdated records from table 'job'...
+2026-05-09 09:17:29.852 +08:00 [DBG] Execution loop Worker:5c0b1afc has started in 506.5484 ms
+2026-05-09 09:17:29.852 +08:00 [DBG] Execution loop Worker:9cfd0c4f has started in 506.5704 ms
+2026-05-09 09:17:29.859 +08:00 [INF] Server 东方神机:23312:ffd5e5f9 all the dispatchers started
+2026-05-09 09:17:29.860 +08:00 [DBG] Execution loop DelayedJobScheduler:39a27d2f has started in 6.6213 ms
+2026-05-09 09:17:29.889 +08:00 [DBG] Execution loop RecurringJobScheduler:eeb818f0 has started in 35.6764 ms
+2026-05-09 09:17:29.891 +08:00 [DBG] Removing outdated records from table 'list'...
+2026-05-09 09:17:29.900 +08:00 [DBG] Removing outdated records from table 'set'...
+2026-05-09 09:17:29.910 +08:00 [DBG] Removing outdated records from table 'hash'...
+2026-05-09 09:17:30.245 +08:00 [INF] Request starting HTTP/2 GET https://localhost:63936/ - null null
+2026-05-09 09:17:34.403 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2026-05-09 09:17:34.406 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2026-05-09 09:17:34.408 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2026-05-09 09:17:34.462 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessRequestContext was successfully processed by OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreHandlers+ResolveRequestUri.
+2026-05-09 09:17:36.563 +08:00 [DBG] Security stamp validation failed, rejecting cookie.
+2026-05-09 09:17:36.571 +08:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-05-09 09:17:36.572 +08:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-05-09 09:17:36.572 +08:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2026-05-09 09:17:36.572 +08:00 [INF] AuthenticationScheme: Identity.TwoFactorRememberMe signed out.
+2026-05-09 09:17:36.579 +08:00 [INF] Identity.Application was not authenticated. Failure message: No principal.
+2026-05-09 09:17:36.585 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreHandlers+ValidateHostHeader.
+2026-05-09 09:17:36.586 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.OpenIddictValidationHandlers+EvaluateValidatedTokens.
+2026-05-09 09:17:36.588 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreHandlers+ExtractAccessTokenFromAuthorizationHeader.
+2026-05-09 09:17:36.590 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreHandlers+ExtractAccessTokenFromBodyForm.
+2026-05-09 09:17:36.591 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreHandlers+ExtractAccessTokenFromQueryString.
+2026-05-09 09:17:36.593 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was successfully processed by OpenIddict.Validation.OpenIddictValidationHandlers+ValidateRequiredTokens.
+2026-05-09 09:17:36.593 +08:00 [DBG] The event OpenIddict.Validation.OpenIddictValidationEvents+ProcessAuthenticationContext was marked as rejected by OpenIddict.Validation.OpenIddictValidationHandlers+ValidateRequiredTokens.
+2026-05-09 09:17:36.594 +08:00 [DBG] AuthenticationScheme: OpenIddict.Validation.AspNetCore was not authenticated.
+2026-05-09 09:17:36.692 +08:00 [INF] Request finished HTTP/2 GET https://localhost:63936/ - 404 null null 6460.5116ms
+2026-05-09 09:17:36.695 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:63936/, Response status code: 404
