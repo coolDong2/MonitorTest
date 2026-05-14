@@ -68,6 +68,16 @@ namespace JiaCeMonitorSystem.Permissions
             tenants.AddChild(Permissions.Tenants_Edit, L("Permission:Edit"));
             tenants.AddChild(Permissions.Tenants_Delete, L("Permission:Delete"));
             tenants.AddChild(Permissions.Tenants_ManageConnectionString, L("Permission:ManageConnectionString"));
+            tenants.AddChild(TenantManagementPermissions.Tenants_Configure, L("Permission:Configure"));
+
+            // 套餐管理权限（SaaS 化重构新增）
+            var packages = monitoringGroup.AddPermission(TenantManagementPermissions.Packages, L("Permission:Packages"));
+            packages.AddChild(TenantManagementPermissions.Packages_Create, L("Permission:Create"));
+            packages.AddChild(TenantManagementPermissions.Packages_Edit, L("Permission:Edit"));
+
+            // 数据库管理权限（SaaS 化重构新增）
+            var database = monitoringGroup.AddPermission(TenantManagementPermissions.Database, L("Permission:Database"));
+            database.AddChild(TenantManagementPermissions.Database_Manage, L("Permission:Manage"));
 
             // 角色管理权限
             var roles = monitoringGroup.AddPermission(Permissions.Roles_Default, L("Permission:Roles"));

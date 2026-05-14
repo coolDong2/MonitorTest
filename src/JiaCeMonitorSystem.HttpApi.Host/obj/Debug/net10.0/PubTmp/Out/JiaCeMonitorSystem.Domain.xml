@@ -6,7 +6,7 @@
     <members>
         <member name="T:JiaCeMonitorSystem.AppRoles.AppRole">
             <summary>
-            业务角色聚合根
+            业务角色聚合根（已废弃，请使用 ABP IdentityRole）
             表名：JC_AppRoles
             </summary>
         </member>
@@ -1880,6 +1880,314 @@
         <member name="M:JiaCeMonitorSystem.SystemModules.SystemModule.SetLayers(System.Int32)">
             <summary>
             设置层级
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.Events.TenantInitializedEvent">
+            <summary>
+            租户初始化完成领域事件
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.Events.TenantInitializedEvent.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.Events.TenantInitializedEvent.UnitCode">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.Events.TenantInitializedEvent.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.ITenantConfigurationRepository">
+            <summary>
+            租户配置仓储接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantConfigurationRepository.GetByTenantIdAsync(System.Guid)">
+            <summary>
+            根据租户Id获取配置
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantConfigurationRepository.GetByUnitCodeAsync(System.String)">
+            <summary>
+            根据单位编码获取配置
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantConfigurationRepository.GetExpiringTenantsAsync(System.DateTime)">
+            <summary>
+            获取即将到期的租户列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.ITenantDatabaseManager">
+            <summary>
+            租户数据库管理器接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantDatabaseManager.CreateDatabaseAsync(System.Guid,System.String)">
+            <summary>
+            为指定租户创建独立数据库
+            </summary>
+            <param name="tenantId">租户Id</param>
+            <param name="tenantName">租户名称</param>
+            <returns>新数据库的连接字符串</returns>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.ITenantDataCleaner">
+            <summary>
+            租户数据清理器接口（回滚用）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantDataCleaner.CleanAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            清理目标独立数据库
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.ITenantDataExporter">
+            <summary>
+            租户数据导出器接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantDataExporter.ExportAsync(System.Guid,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            将指定租户的数据从共享库导出到独立库
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.ITenantDataValidator">
+            <summary>
+            租户数据验证器接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.TenantManagement.ITenantDataValidator.ValidateAsync(System.Guid,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            验证共享库与独立库中租户数据的一致性
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantButtonPermission">
+            <summary>
+            租户按钮权限实体，记录租户下角色对按钮的权限
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantButtonPermission.TenantId">
+            <summary>
+            关联租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantButtonPermission.ButtonId">
+            <summary>
+            按钮Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantButtonPermission.RoleId">
+            <summary>
+            角色Id（可选）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantButtonPermission.IsGranted">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantConfiguration">
+            <summary>
+            租户配置聚合根，管理租户的生命周期、数据库策略与许可证配额
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.TenantId">
+            <summary>
+            关联租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.IsIndependentDatabase">
+            <summary>
+            是否使用独立数据库
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.IndependentConnectionString">
+            <summary>
+            独立数据库连接字符串（加密存储）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.MaxUserCount">
+            <summary>
+            最大用户数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.MaxStorageBytes">
+            <summary>
+            最大存储容量（字节）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.MaxProjectCount">
+            <summary>
+            最大工程数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.MaxPointCount">
+            <summary>
+            最大测点数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.ExpireDate">
+            <summary>
+            到期日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.RemindDate">
+            <summary>
+            提醒日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.Status">
+            <summary>
+            租户状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.LicenseKey">
+            <summary>
+            许可证密钥
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.CertificateInfo">
+            <summary>
+            证书信息
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantConfiguration.UnitCode">
+            <summary>
+            单位编码，用于租户用户登录
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult">
+            <summary>
+            租户数据导出结果
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityUserCount">
+            <summary>IdentityUser 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityRoleCount">
+            <summary>IdentityRole 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityUserRoleCount">
+            <summary>IdentityUserRole 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityUserClaimCount">
+            <summary>IdentityUserClaim 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityRoleClaimCount">
+            <summary>IdentityRoleClaim 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityUserLoginCount">
+            <summary>IdentityUserLogin 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.IdentityUserTokenCount">
+            <summary>IdentityUserToken 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.PermissionGrantCount">
+            <summary>PermissionGrant 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.TenantModuleGrantCount">
+            <summary>TenantModuleGrant 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.TenantButtonPermissionCount">
+            <summary>TenantButtonPermission 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.TenantUserExtensionCount">
+            <summary>TenantUserExtension 迁移数量</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.Succeeded">
+            <summary>是否成功</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataExportResult.ErrorMessage">
+            <summary>错误信息</summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantDataValidationResult">
+            <summary>
+            租户数据验证结果
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationResult.IsValid">
+            <summary>是否通过验证</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationResult.Items">
+            <summary>验证详情</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationResult.ErrorMessage">
+            <summary>错误信息</summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantDataValidationItem">
+            <summary>
+            单表数据验证项
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationItem.TableName">
+            <summary>表名</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationItem.SourceCount">
+            <summary>源库行数</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationItem.TargetCount">
+            <summary>目标库行数</summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantDataValidationItem.IsMatched">
+            <summary>是否匹配</summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant">
+            <summary>
+            租户模块授权实体，记录租户被授予的系统模块权限
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant.TenantId">
+            <summary>
+            关联租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant.ModuleId">
+            <summary>
+            系统模块Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant.IsGranted">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant.GrantDate">
+            <summary>
+            授权日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantModuleGrant.ExpireDate">
+            <summary>
+            授权到期日期
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.TenantManagement.TenantUserExtension">
+            <summary>
+            租户用户扩展实体，存储用户的租户相关扩展信息
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantUserExtension.UserId">
+            <summary>
+            关联用户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantUserExtension.UnitCode">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantUserExtension.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.TenantManagement.TenantUserExtension.TenantId">
+            <summary>
+            关联租户Id
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.WarningRecords.WarningRecord">

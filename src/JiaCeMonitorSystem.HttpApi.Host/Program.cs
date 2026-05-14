@@ -54,7 +54,17 @@ namespace JiaCeMonitorSystem
                 await app.InitializeApplicationAsync();
                 
                 await app.RunAsync();
-                
+                // 2. HTTPS 重定向（如果不用 HTTPS 可注释掉）
+                // app.UseHttpsRedirection();
+
+                // 3. 关键：启用默认文件（让 / 自动找 index.html）
+                app.UseDefaultFiles();
+
+                // 4. 关键：启用静态文件（提供 wwwroot 下的前端文件）
+                app.UseStaticFiles();
+
+                // 5. 路由
+                app.UseRouting();
                 return 0;
             }
             catch (Exception ex)

@@ -12,6 +12,7 @@ using JiaCeMonitorSystem.ProjectPersonnels;
 using JiaCeMonitorSystem.Projects;
 using JiaCeMonitorSystem.SystemDictionaries;
 using JiaCeMonitorSystem.SystemModules;
+using JiaCeMonitorSystem.TenantManagement;
 using JiaCeMonitorSystem.WarningRecords;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -117,6 +118,26 @@ namespace JiaCeMonitorSystem.EntityFrameworkCore
         /// </summary>
         public DbSet<AppRole> AppRoles => Set<AppRole>();
 
+        /// <summary>
+        /// 租户配置
+        /// </summary>
+        public DbSet<TenantConfiguration> TenantConfigurations => Set<TenantConfiguration>();
+
+        /// <summary>
+        /// 租户模块授权
+        /// </summary>
+        public DbSet<TenantModuleGrant> TenantModuleGrants => Set<TenantModuleGrant>();
+
+        /// <summary>
+        /// 租户按钮权限
+        /// </summary>
+        public DbSet<TenantButtonPermission> TenantButtonPermissions => Set<TenantButtonPermission>();
+
+        /// <summary>
+        /// 租户用户扩展
+        /// </summary>
+        public DbSet<TenantUserExtension> TenantUserExtensions => Set<TenantUserExtension>();
+
         #endregion
 
         public JiaCeMonitorSystemDbContext(DbContextOptions<JiaCeMonitorSystemDbContext> options)
@@ -158,6 +179,12 @@ namespace JiaCeMonitorSystem.EntityFrameworkCore
             builder.ApplyConfiguration(new SystemDictionaryConfiguration());
             builder.ApplyConfiguration(new UploadFileConfiguration());
             builder.ApplyConfiguration(new AppRoleConfiguration());
+
+            // Phase 2 租户管理实体配置
+            builder.ApplyConfiguration(new TenantConfigurationConfiguration());
+            builder.ApplyConfiguration(new TenantModuleGrantConfiguration());
+            builder.ApplyConfiguration(new TenantButtonPermissionConfiguration());
+            builder.ApplyConfiguration(new TenantUserExtensionConfiguration());
         }
     }
 }

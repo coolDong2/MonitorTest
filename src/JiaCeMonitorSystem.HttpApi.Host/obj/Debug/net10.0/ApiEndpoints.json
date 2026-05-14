@@ -1087,7 +1087,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AccountController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.AccountController",
     "Method": "GetCurrentUserAsync",
     "RelativePath": "api/app/account/current-user",
     "HttpMethod": "GET",
@@ -1107,7 +1107,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AccountController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.AccountController",
     "Method": "GetEncryptKeyAsync",
     "RelativePath": "api/app/account/encrypt-key",
     "HttpMethod": "GET",
@@ -1127,7 +1127,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AccountController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.AccountController",
     "Method": "LoginAsync",
     "RelativePath": "api/app/account/login",
     "HttpMethod": "POST",
@@ -1153,7 +1153,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AccountController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.AccountController",
     "Method": "ResetPasswordAsync",
     "RelativePath": "api/app/account/reset-password",
     "HttpMethod": "POST",
@@ -1175,7 +1175,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "ClearCacheAsync",
     "RelativePath": "api/app/client-cache/clear-cache",
     "HttpMethod": "POST",
@@ -1191,7 +1191,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "GetCurrentUserInfoAsync",
     "RelativePath": "api/app/client-cache/current-user-info",
     "HttpMethod": "GET",
@@ -1211,7 +1211,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "InitializeDictionaryAsync",
     "RelativePath": "api/app/client-cache/initialize-dictionary",
     "HttpMethod": "GET",
@@ -1231,7 +1231,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "GetNoticeListAsync",
     "RelativePath": "api/app/client-cache/notice-list",
     "HttpMethod": "GET",
@@ -1257,7 +1257,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "GetQuickModuleAsync",
     "RelativePath": "api/app/client-cache/quick-module",
     "HttpMethod": "GET",
@@ -1277,7 +1277,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController",
     "Method": "GetSysSatisfyAsync",
     "RelativePath": "api/app/client-cache/sys-satisfy",
     "HttpMethod": "GET",
@@ -1297,7 +1297,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/company-device",
     "HttpMethod": "GET",
@@ -1358,7 +1358,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/company-device",
     "HttpMethod": "POST",
@@ -1384,7 +1384,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "ReturnAsync",
     "RelativePath": "api/app/company-device/{assignmentId}/return",
     "HttpMethod": "POST",
@@ -1416,7 +1416,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "LendAsync",
     "RelativePath": "api/app/company-device/{deviceId}/lend",
     "HttpMethod": "POST",
@@ -1462,7 +1462,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "GetAsync",
     "RelativePath": "api/app/company-device/{id}",
     "HttpMethod": "GET",
@@ -1488,7 +1488,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/company-device/{id}",
     "HttpMethod": "PUT",
@@ -1519,7 +1519,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/company-device/{id}",
     "HttpMethod": "DELETE",
@@ -1541,7 +1541,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "ScrapAsync",
     "RelativePath": "api/app/company-device/{id}/scrap",
     "HttpMethod": "POST",
@@ -1568,7 +1568,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "CalibrateAsync",
     "RelativePath": "api/app/company-device/calibrate",
     "HttpMethod": "POST",
@@ -1590,7 +1590,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "GetDeviceListAsync",
     "RelativePath": "api/app/company-device/list",
     "HttpMethod": "GET",
@@ -1636,7 +1636,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.CompanyDeviceController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController",
     "Method": "GetSendDeviceAsync",
     "RelativePath": "api/app/company-device/send-device/{deviceId}",
     "HttpMethod": "GET",
@@ -1662,7 +1662,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/file-manage/{id}",
     "HttpMethod": "GET",
@@ -1688,7 +1688,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/file-manage/{id}",
     "HttpMethod": "DELETE",
@@ -1710,7 +1710,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "DownloadFileAsync",
     "RelativePath": "api/app/file-manage/download/{id}",
     "HttpMethod": "GET",
@@ -1726,7 +1726,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/file-manage/list",
     "HttpMethod": "GET",
@@ -1797,7 +1797,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/file-manage/page-list",
     "HttpMethod": "GET",
@@ -1868,7 +1868,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.FileManageController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.FileManageController",
     "Method": "UploadAsync",
     "RelativePath": "api/app/file-manage/upload",
     "HttpMethod": "POST",
@@ -1909,7 +1909,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/module",
     "HttpMethod": "GET",
@@ -1955,7 +1955,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/module",
     "HttpMethod": "POST",
@@ -1981,7 +1981,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ModuleButtonController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.ModuleButtonController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/module-button",
     "HttpMethod": "GET",
@@ -2027,7 +2027,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ModuleButtonController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.ModuleButtonController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/module-button",
     "HttpMethod": "POST",
@@ -2053,7 +2053,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ModuleButtonController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.ModuleButtonController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/module-button/{id}",
     "HttpMethod": "GET",
@@ -2079,7 +2079,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ModuleButtonController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.ModuleButtonController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/module-button/{id}",
     "HttpMethod": "PUT",
@@ -2110,7 +2110,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ModuleButtonController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.ModuleButtonController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/module-button/{id}",
     "HttpMethod": "DELETE",
@@ -2132,7 +2132,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/module/{id}",
     "HttpMethod": "GET",
@@ -2158,7 +2158,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/module/{id}",
     "HttpMethod": "PUT",
@@ -2189,7 +2189,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/module/{id}",
     "HttpMethod": "DELETE",
@@ -2211,7 +2211,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemModuleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemModuleController",
     "Method": "GetTreeListAsync",
     "RelativePath": "api/app/module/tree-list",
     "HttpMethod": "GET",
@@ -2231,7 +2231,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/monitoring-data",
     "HttpMethod": "GET",
@@ -2302,7 +2302,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/monitoring-data",
     "HttpMethod": "POST",
@@ -2328,7 +2328,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "GetAsync",
     "RelativePath": "api/app/monitoring-data/{id}",
     "HttpMethod": "GET",
@@ -2354,7 +2354,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/monitoring-data/{id}",
     "HttpMethod": "PUT",
@@ -2385,7 +2385,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/monitoring-data/{id}",
     "HttpMethod": "DELETE",
@@ -2407,7 +2407,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "ApproveAsync",
     "RelativePath": "api/app/monitoring-data/{id}/approve",
     "HttpMethod": "POST",
@@ -2429,7 +2429,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "BatchImportAsync",
     "RelativePath": "api/app/monitoring-data/batch-import",
     "HttpMethod": "POST",
@@ -2451,7 +2451,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "ExportAsync",
     "RelativePath": "api/app/monitoring-data/export",
     "HttpMethod": "GET",
@@ -2522,7 +2522,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringDataController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController",
     "Method": "GetHistoryListByPointIdAsync",
     "RelativePath": "api/app/monitoring-data/history/{pointId}",
     "HttpMethod": "GET",
@@ -2558,7 +2558,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/monitoring-item-type",
     "HttpMethod": "GET",
@@ -2604,7 +2604,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/monitoring-item-type",
     "HttpMethod": "POST",
@@ -2630,7 +2630,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/monitoring-item-type/{id}",
     "HttpMethod": "GET",
@@ -2656,7 +2656,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/monitoring-item-type/{id}",
     "HttpMethod": "PUT",
@@ -2687,7 +2687,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/monitoring-item-type/{id}",
     "HttpMethod": "DELETE",
@@ -2709,7 +2709,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.MonitoringItemTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/monitoring-item-type/page-list",
     "HttpMethod": "GET",
@@ -2755,7 +2755,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.NoticeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.NoticeController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/notice",
     "HttpMethod": "POST",
@@ -2781,7 +2781,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.NoticeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.NoticeController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/notice/{id}",
     "HttpMethod": "GET",
@@ -2807,7 +2807,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.NoticeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.NoticeController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/notice/{id}",
     "HttpMethod": "PUT",
@@ -2838,7 +2838,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.NoticeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.NoticeController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/notice/{id}",
     "HttpMethod": "DELETE",
@@ -2860,7 +2860,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.OrganizeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.OrganizeController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/organize",
     "HttpMethod": "POST",
@@ -2886,7 +2886,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.OrganizeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.OrganizeController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/organize/{id}",
     "HttpMethod": "GET",
@@ -2912,7 +2912,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.OrganizeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.OrganizeController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/organize/{id}",
     "HttpMethod": "PUT",
@@ -2943,7 +2943,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.OrganizeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.OrganizeController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/organize/{id}",
     "HttpMethod": "DELETE",
@@ -2965,7 +2965,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.OrganizeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.OrganizeController",
     "Method": "GetOrganizeTreeAsync",
     "RelativePath": "api/app/organize/tree",
     "HttpMethod": "GET",
@@ -2985,7 +2985,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PermissionController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Authorization.PermissionController",
     "Method": "GrantAsync",
     "RelativePath": "api/app/permission/grant",
     "HttpMethod": "POST",
@@ -3007,7 +3007,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PermissionController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Authorization.PermissionController",
     "Method": "GetPermissionTreeAsync",
     "RelativePath": "api/app/permission/permission-tree",
     "HttpMethod": "GET",
@@ -3038,7 +3038,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/point",
     "HttpMethod": "GET",
@@ -3089,7 +3089,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/point",
     "HttpMethod": "POST",
@@ -3115,7 +3115,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "GetAsync",
     "RelativePath": "api/app/point/{id}",
     "HttpMethod": "GET",
@@ -3141,7 +3141,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/point/{id}",
     "HttpMethod": "PUT",
@@ -3172,7 +3172,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/point/{id}",
     "HttpMethod": "DELETE",
@@ -3194,7 +3194,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "ConfigureThresholdAsync",
     "RelativePath": "api/app/point/{id}/configure-threshold",
     "HttpMethod": "POST",
@@ -3236,7 +3236,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "GetPropertiesAsync",
     "RelativePath": "api/app/point/{id}/properties",
     "HttpMethod": "GET",
@@ -3262,7 +3262,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "GetHistoryAsync",
     "RelativePath": "api/app/point/history",
     "HttpMethod": "GET",
@@ -3288,7 +3288,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.PointController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Monitoring.PointController",
     "Method": "GetPointListAsync",
     "RelativePath": "api/app/point/list",
     "HttpMethod": "GET",
@@ -3314,7 +3314,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/project",
     "HttpMethod": "GET",
@@ -3360,7 +3360,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/project",
     "HttpMethod": "POST",
@@ -3386,7 +3386,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/project-personnel",
     "HttpMethod": "GET",
@@ -3437,7 +3437,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/project-personnel",
     "HttpMethod": "POST",
@@ -3463,7 +3463,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/project-personnel/{id}",
     "HttpMethod": "GET",
@@ -3489,7 +3489,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/project-personnel/{id}",
     "HttpMethod": "PUT",
@@ -3520,7 +3520,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/project-personnel/{id}",
     "HttpMethod": "DELETE",
@@ -3542,7 +3542,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "GetListByProjectAsync",
     "RelativePath": "api/app/project-personnel/by-project/{projectId}",
     "HttpMethod": "GET",
@@ -3568,7 +3568,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectPersonnelController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/project-personnel/list",
     "HttpMethod": "GET",
@@ -3599,7 +3599,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "GetAsync",
     "RelativePath": "api/app/project/{id}",
     "HttpMethod": "GET",
@@ -3625,7 +3625,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/project/{id}",
     "HttpMethod": "PUT",
@@ -3656,7 +3656,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/project/{id}",
     "HttpMethod": "DELETE",
@@ -3678,7 +3678,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "ArchiveAsync",
     "RelativePath": "api/app/project/{id}/archive",
     "HttpMethod": "POST",
@@ -3700,7 +3700,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "ChangeStatusAsync",
     "RelativePath": "api/app/project/{id}/change-status",
     "HttpMethod": "POST",
@@ -3727,7 +3727,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.ProjectController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Engineering.ProjectController",
     "Method": "GetParticipatedListAsync",
     "RelativePath": "api/app/project/participated-list",
     "HttpMethod": "GET",
@@ -3747,418 +3747,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleAuthorizeController",
-    "Method": "GetPermissionFieldsTreeAsync",
-    "RelativePath": "api/app/role-authorize/permission-fields-tree",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roleId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "moduleIds",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleAuthorizeController",
-    "Method": "GetPermissionTreeAsync",
-    "RelativePath": "api/app/role-authorize/permission-tree",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roleId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "GetListAsync",
-    "RelativePath": "api/app/role-management",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Sorting",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SkipCount",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "MaxResultCount",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Volo.Abp.Application.Dtos.PagedResultDto\u00601[[JiaCeMonitorSystem.Dtos.Roles.RoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "CreateAsync",
-    "RelativePath": "api/app/role-management",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.Roles.RoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "GetAsync",
-    "RelativePath": "api/app/role-management/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.Roles.RoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "UpdateAsync",
-    "RelativePath": "api/app/role-management/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.Roles.RoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "DeleteAsync",
-    "RelativePath": "api/app/role-management/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.RoleManagementController",
-    "Method": "GetRoleUsersAsync",
-    "RelativePath": "api/app/role-management/{roleId}/users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roleId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.Roles.RoleUserDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "AddAndEditRoleAsync",
-    "RelativePath": "api/app/role/add-and-edit",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "input",
-        "Type": "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "DeleteAsync",
-    "RelativePath": "api/app/role/delete",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "GetListAsync",
-    "RelativePath": "api/app/role/list",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "keyword",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "GetModelAsync",
-    "RelativePath": "api/app/role/model",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "GetPageListAsync",
-    "RelativePath": "api/app/role/page-list",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Keyword",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CompanyId",
-        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Category",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "EnabledMark",
-        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Sorting",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SkipCount",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "MaxResultCount",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Volo.Abp.Application.Dtos.PagedResultDto\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.AppRoles.RoleController",
-    "Method": "UpdateAsync",
-    "RelativePath": "api/app/role/update",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "input",
-        "Type": "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/system-dictionary",
     "HttpMethod": "GET",
@@ -4204,7 +3793,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/system-dictionary",
     "HttpMethod": "POST",
@@ -4230,7 +3819,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/system-dictionary-type",
     "HttpMethod": "GET",
@@ -4271,7 +3860,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/system-dictionary-type",
     "HttpMethod": "POST",
@@ -4297,7 +3886,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/system-dictionary-type/{id}",
     "HttpMethod": "GET",
@@ -4323,7 +3912,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/system-dictionary-type/{id}",
     "HttpMethod": "PUT",
@@ -4354,7 +3943,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/system-dictionary-type/{id}",
     "HttpMethod": "DELETE",
@@ -4376,7 +3965,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController",
     "Method": "GetDictionaryTreeAsync",
     "RelativePath": "api/app/system-dictionary-type/tree",
     "HttpMethod": "GET",
@@ -4396,7 +3985,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "GetModelAsync",
     "RelativePath": "api/app/system-dictionary/{id}",
     "HttpMethod": "GET",
@@ -4422,7 +4011,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/system-dictionary/{id}",
     "HttpMethod": "PUT",
@@ -4453,7 +4042,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/system-dictionary/{id}",
     "HttpMethod": "DELETE",
@@ -4475,7 +4064,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.SystemDictionaryController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.SystemDictionaryController",
     "Method": "GetPageListAsync",
     "RelativePath": "api/app/system-dictionary/page-list",
     "HttpMethod": "GET",
@@ -4521,7 +4110,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/tenant",
     "HttpMethod": "GET",
@@ -4567,7 +4156,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/tenant",
     "HttpMethod": "POST",
@@ -4593,7 +4182,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "GetAsync",
     "RelativePath": "api/app/tenant/{id}",
     "HttpMethod": "GET",
@@ -4619,7 +4208,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/tenant/{id}",
     "HttpMethod": "DELETE",
@@ -4641,7 +4230,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "UpdateConnectionStringAsync",
     "RelativePath": "api/app/tenant/{id}/connection-string",
     "HttpMethod": "PUT",
@@ -4668,7 +4257,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "GetListAsync",
     "RelativePath": "api/app/warning-record",
     "HttpMethod": "GET",
@@ -4744,7 +4333,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "CreateAsync",
     "RelativePath": "api/app/warning-record",
     "HttpMethod": "POST",
@@ -4770,7 +4359,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "GetAsync",
     "RelativePath": "api/app/warning-record/{id}",
     "HttpMethod": "GET",
@@ -4796,7 +4385,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "UpdateAsync",
     "RelativePath": "api/app/warning-record/{id}",
     "HttpMethod": "PUT",
@@ -4827,7 +4416,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "DeleteAsync",
     "RelativePath": "api/app/warning-record/{id}",
     "HttpMethod": "DELETE",
@@ -4849,7 +4438,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "AssignHandlerAsync",
     "RelativePath": "api/app/warning-record/{id}/assign-handler",
     "HttpMethod": "POST",
@@ -4881,7 +4470,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "CloseAsync",
     "RelativePath": "api/app/warning-record/{id}/close",
     "HttpMethod": "POST",
@@ -4908,7 +4497,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "ConfirmAsync",
     "RelativePath": "api/app/warning-record/confirm",
     "HttpMethod": "POST",
@@ -4916,9 +4505,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "input",
-        "Type": "JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmRemark",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -4930,7 +4524,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "HandleAsync",
     "RelativePath": "api/app/warning-record/handle",
     "HttpMethod": "POST",
@@ -4952,7 +4546,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.WarningRecordController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Warning.WarningRecordController",
     "Method": "GetStatisticsAsync",
     "RelativePath": "api/app/warning-record/statistics",
     "HttpMethod": "GET",
@@ -5235,7 +4829,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "GetListAsync",
     "RelativePath": "api/identity/roles",
     "HttpMethod": "GET",
@@ -5281,7 +4875,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "CreateAsync",
     "RelativePath": "api/identity/roles",
     "HttpMethod": "POST",
@@ -5487,7 +5081,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "GetAsync",
     "RelativePath": "api/identity/roles/{id}",
     "HttpMethod": "GET",
@@ -5513,7 +5107,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "UpdateAsync",
     "RelativePath": "api/identity/roles/{id}",
     "HttpMethod": "PUT",
@@ -5544,7 +5138,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "DeleteAsync",
     "RelativePath": "api/identity/roles/{id}",
     "HttpMethod": "DELETE",
@@ -5807,7 +5401,143 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityRoleController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
+    "Method": "GetRoleFieldPermissionsAsync",
+    "RelativePath": "api/identity/roles/{id}/field-permissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleIds",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
+    "Method": "GetRoleModulePermissionsAsync",
+    "RelativePath": "api/identity/roles/{id}/module-permissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
+    "Method": "GetPermissionsAsync",
+    "RelativePath": "api/identity/roles/{id}/permissions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
+    "Method": "UpdatePermissionsAsync",
+    "RelativePath": "api/identity/roles/{id}/permissions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "permissions",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
+    "Method": "GetRoleUsersAsync",
+    "RelativePath": "api/identity/roles/{id}/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Volo.Abp.Identity.IdentityUserDto, Volo.Abp.Identity.Application.Contracts, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController",
     "Method": "GetAllListAsync",
     "RelativePath": "api/identity/roles/all",
     "HttpMethod": "GET",
@@ -5901,7 +5631,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "GetListAsync",
     "RelativePath": "api/identity/users",
     "HttpMethod": "GET",
@@ -5947,7 +5677,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "CreateAsync",
     "RelativePath": "api/identity/users",
     "HttpMethod": "POST",
@@ -6153,7 +5883,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "GetAsync",
     "RelativePath": "api/identity/users/{id}",
     "HttpMethod": "GET",
@@ -6179,7 +5909,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "UpdateAsync",
     "RelativePath": "api/identity/users/{id}",
     "HttpMethod": "PUT",
@@ -6210,7 +5940,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "DeleteAsync",
     "RelativePath": "api/identity/users/{id}",
     "HttpMethod": "DELETE",
@@ -6473,7 +6203,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "GetRolesAsync",
     "RelativePath": "api/identity/users/{id}/roles",
     "HttpMethod": "GET",
@@ -6499,7 +6229,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "UpdateRolesAsync",
     "RelativePath": "api/identity/users/{id}/roles",
     "HttpMethod": "PUT",
@@ -6687,7 +6417,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "GetAssignableRolesAsync",
     "RelativePath": "api/identity/users/assignable-roles",
     "HttpMethod": "GET",
@@ -6941,7 +6671,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "FindByEmailAsync",
     "RelativePath": "api/identity/users/find-by-email",
     "HttpMethod": "GET",
@@ -6967,7 +6697,7 @@
     ]
   },
   {
-    "ContainingType": "JiaCeMonitorSystem.Controllers.IdentityUserController",
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Identity.IdentityUserController",
     "Method": "FindByUsernameAsync",
     "RelativePath": "api/identity/users/find-by-username",
     "HttpMethod": "GET",
@@ -8693,6 +8423,58 @@
           "text/json"
         ],
         "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.TenantAuthController",
+    "Method": "TenantLoginAsync",
+    "RelativePath": "api/tenant-auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.Common.TenantAuthController",
+    "Method": "RefreshTokenAsync",
+    "RelativePath": "api/tenant-auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
     ]
   }

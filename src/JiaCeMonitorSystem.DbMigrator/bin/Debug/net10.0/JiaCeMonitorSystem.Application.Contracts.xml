@@ -158,241 +158,6 @@
             确认新密码
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto">
-            <summary>
-            创建业务角色输入
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.CompanyId">
-            <summary>
-            所属公司ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.CompanyName">
-            <summary>
-            所属公司名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.EnCode">
-            <summary>
-            角色编号
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.FullName">
-            <summary>
-            角色名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Category">
-            <summary>
-            角色类型
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Type">
-            <summary>
-            角色类型名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.AllowEdit">
-            <summary>
-            允许编辑
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.AllowDelete">
-            <summary>
-            允许删除
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.SortCode">
-            <summary>
-            排序码
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.EnabledMark">
-            <summary>
-            是否启用
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.Description">
-            <summary>
-            描述
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.PermissionButtonIds">
-            <summary>
-            权限按钮ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto.PermissionFieldsIds">
-            <summary>
-            权限字段ID
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto">
-            <summary>
-            业务角色数据传输对象
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.CompanyId">
-            <summary>
-            所属公司ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.CompanyName">
-            <summary>
-            所属公司名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.EnCode">
-            <summary>
-            角色编号
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.FullName">
-            <summary>
-            角色名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Category">
-            <summary>
-            角色类型
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Type">
-            <summary>
-            角色类型名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.AllowEdit">
-            <summary>
-            允许编辑
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.AllowDelete">
-            <summary>
-            允许删除
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.SortCode">
-            <summary>
-            排序码
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.EnabledMark">
-            <summary>
-            是否启用
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.Description">
-            <summary>
-            描述
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.PermissionButtonIds">
-            <summary>
-            权限按钮ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto.PermissionFieldsIds">
-            <summary>
-            权限字段ID
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto">
-            <summary>
-            更新业务角色输入
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.CompanyId">
-            <summary>
-            所属公司ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.CompanyName">
-            <summary>
-            所属公司名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.EnCode">
-            <summary>
-            角色编号
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.FullName">
-            <summary>
-            角色名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Category">
-            <summary>
-            角色类型
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Type">
-            <summary>
-            角色类型名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.AllowEdit">
-            <summary>
-            允许编辑
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.AllowDelete">
-            <summary>
-            允许删除
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.SortCode">
-            <summary>
-            排序码
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.EnabledMark">
-            <summary>
-            是否启用
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.Description">
-            <summary>
-            描述
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.PermissionButtonIds">
-            <summary>
-            权限按钮ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto.PermissionFieldsIds">
-            <summary>
-            权限字段ID
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput">
-            <summary>
-            获取业务角色列表输入
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.Keyword">
-            <summary>
-            关键字（角色名称/编号）
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.CompanyId">
-            <summary>
-            所属公司ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.Category">
-            <summary>
-            角色类型
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput.EnabledMark">
-            <summary>
-            是否启用
-            </summary>
-        </member>
         <member name="T:JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto">
             <summary>
             权限树数据传输对象
@@ -3141,61 +2906,6 @@
             项目描述
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.Roles.RoleDto">
-            <summary>
-            角色数据传输对象
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.Name">
-            <summary>
-            角色名称
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.IsDefault">
-            <summary>
-            是否默认角色
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.IsPublic">
-            <summary>
-            是否公开角色
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleDto.Description">
-            <summary>
-            角色描述
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto">
-            <summary>
-            角色用户简要信息DTO
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Id">
-            <summary>
-            用户ID
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.UserName">
-            <summary>
-            用户名
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Name">
-            <summary>
-            姓名
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.Email">
-            <summary>
-            邮箱
-            </summary>
-        </member>
-        <member name="P:JiaCeMonitorSystem.Dtos.Roles.RoleUserDto.PhoneNumber">
-            <summary>
-            手机号
-            </summary>
-        </member>
         <member name="T:JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput">
             <summary>
             获取系统字典列表输入参数
@@ -3866,6 +3576,76 @@
             授权
             </summary>
         </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.TenantManagement.TenantDatabaseSwitchArgs">
+            <summary>
+            租户数据库切换任务参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantDatabaseSwitchArgs.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantDatabaseSwitchArgs.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto">
+            <summary>
+            租户菜单数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.Id">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.ParentId">
+            <summary>
+            父节点ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.EnCode">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.FullName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.UrlAddress">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.Target">
+            <summary>
+            打开目标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.IsMenu">
+            <summary>
+            是否菜单
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.SortCode">
+            <summary>
+            排序码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Dtos.TenantManagement.TenantMenuDto.Children">
+            <summary>
+            子菜单列表
+            </summary>
+        </member>
         <member name="T:JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput">
             <summary>
             获取租户列表输入参数
@@ -4278,6 +4058,426 @@
             三级预警数
             </summary>
         </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto">
+            <summary>
+            按钮权限数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto.ButtonId">
+            <summary>
+            按钮ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto.EnCode">
+            <summary>
+            按钮编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto.FullName">
+            <summary>
+            按钮名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto.ModuleId">
+            <summary>
+            所属模块ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto.IsGranted">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto">
+            <summary>
+            创建租户并附带配置信息的输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.Name">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.UnitCode">
+            <summary>
+            单位编码，用于租户用户登录
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.AdminEmail">
+            <summary>
+            管理员邮箱
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.AdminPassword">
+            <summary>
+            管理员初始密码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.ExpireDate">
+            <summary>
+            到期日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.UseIndependentDatabase">
+            <summary>
+            是否使用独立数据库
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.GrantedModuleIds">
+            <summary>
+            授予的模块Id列表
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto.License">
+            <summary>
+            许可证配额信息
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantAuthAppService">
+            <summary>
+            租户认证应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantAuthAppService.TenantLoginAsync(JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto)">
+            <summary>
+            租户用户登录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantAuthAppService.RefreshTokenAsync(System.String)">
+            <summary>
+            刷新令牌
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService">
+            <summary>
+            租户按钮权限应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService.GrantButtonsAsync(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量授予角色按钮权限（幂等）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService.RevokeButtonsAsync(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量撤销角色按钮权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService.GetRoleButtonPermissionsAsync(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取角色的按钮权限列表（可按模块筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService.GetMyAvailableButtonsAsync(System.Guid)">
+            <summary>
+            获取当前用户在指定模块下的可用按钮
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService">
+            <summary>
+            租户配置应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService.CreateAsync(JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto)">
+            <summary>
+            创建租户并初始化配置
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService.GetConfigurationAsync(System.Guid)">
+            <summary>
+            获取租户配置详情
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService.UpdateLicenseAsync(System.Guid,JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto)">
+            <summary>
+            更新租户许可证配额
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
+            <summary>
+            获取租户配置分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService.SwitchToIndependentDatabaseAsync(System.Guid)">
+            <summary>
+            将租户切换到独立数据库（异步后台执行）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantModuleGrantAppService">
+            <summary>
+            租户模块授权应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantModuleGrantAppService.GrantModulesAsync(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量授予模块权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantModuleGrantAppService.RevokeModuleAsync(System.Guid,System.Guid)">
+            <summary>
+            撤销单个模块权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantModuleGrantAppService.GetGrantedMenusAsync(System.Guid)">
+            <summary>
+            获取租户已授权的菜单列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto">
+            <summary>
+            模块授权信息数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto.ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto.ModuleCode">
+            <summary>
+            模块编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto.IsGranted">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto.GrantDate">
+            <summary>
+            授权日期
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto">
+            <summary>
+            租户配置数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.TenantId">
+            <summary>
+            关联租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.UnitCode">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.IsIndependentDatabase">
+            <summary>
+            是否使用独立数据库
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.ExpireDate">
+            <summary>
+            到期日期
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.Status">
+            <summary>
+            租户状态
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.MaxUserCount">
+            <summary>
+            最大用户数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.MaxProjectCount">
+            <summary>
+            最大工程数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.MaxPointCount">
+            <summary>
+            最大测点数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto.GrantedModules">
+            <summary>
+            已授权的模块列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto">
+            <summary>
+            租户数据库切换状态变更事件（用于 SignalR 实时推送）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.Status">
+            <summary>
+            状态：started / completed / failed
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.Message">
+            <summary>
+            状态消息
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.ConnectionString">
+            <summary>
+            独立数据库连接字符串（仅在 completed 时有值）
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantDatabaseSwitchStatusEto.Timestamp">
+            <summary>
+            事件时间戳
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto">
+            <summary>
+            租户许可证配额数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto.MaxUserCount">
+            <summary>
+            最大用户数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto.MaxProjectCount">
+            <summary>
+            最大工程数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto.MaxPointCount">
+            <summary>
+            最大测点数量
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto.MaxStorageBytes">
+            <summary>
+            最大存储容量（字节）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto">
+            <summary>
+            租户登录结果数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.Token">
+            <summary>
+            访问令牌
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.RefreshToken">
+            <summary>
+            刷新令牌
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.TenantName">
+            <summary>
+            租户名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.UnitCode">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.Menus">
+            <summary>
+            菜单列表
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto.ExpireDate">
+            <summary>
+            到期日期
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto">
+            <summary>
+            租户菜单数据传输对象
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Code">
+            <summary>
+            菜单编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.ParentCode">
+            <summary>
+            父级菜单编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Url">
+            <summary>
+            菜单地址
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto.Children">
+            <summary>
+            子菜单列表
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto">
+            <summary>
+            租户用户登录输入参数
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto.UnitCode">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
         <member name="T:JiaCeMonitorSystem.Interfaces.IAccountAppService">
             <summary>
             账号应用服务接口
@@ -4301,51 +4501,6 @@
         <member name="M:JiaCeMonitorSystem.Interfaces.IAccountAppService.GetEncryptKeyAsync">
             <summary>
             获取密码加密密钥（供前端 AES 加密使用）
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Interfaces.IAppRoleAppService">
-            <summary>
-            业务角色应用服务接口
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput)">
-            <summary>
-            获取分页列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetListAsync(System.String)">
-            <summary>
-            获取列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.AddAndEditRoleAsync(JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto)">
-            <summary>
-            新增或编辑角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto)">
-            <summary>
-            更新角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPermissionTreeAsync(System.Guid)">
-            <summary>
-            获取权限树
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IAppRoleAppService.GetPermissionFieldsTreeAsync(System.Guid,System.String)">
-            <summary>
-            获取权限字段树
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Interfaces.IClientCacheAppService">
@@ -4456,6 +4611,16 @@
         <member name="M:JiaCeMonitorSystem.Interfaces.IFileManageAppService.DeleteAsync(System.Guid)">
             <summary>
             删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.IIdentityRoleExtendedAppService">
+            <summary>
+            身份角色扩展应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.IIdentityRoleExtendedAppService.GetRoleUsersAsync(System.Guid)">
+            <summary>
+            获取角色下的用户列表
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Interfaces.IModuleButtonAppService">
@@ -4706,41 +4871,6 @@
             删除
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService">
-            <summary>
-            角色管理应用服务接口
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
-            <summary>
-            获取角色列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetAsync(System.Guid)">
-            <summary>
-            获取单个角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.CreateAsync(System.String)">
-            <summary>
-            创建角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.UpdateAsync(System.Guid,System.String)">
-            <summary>
-            更新角色名称
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Interfaces.IRoleManagementAppService.GetRoleUsersAsync(System.Guid)">
-            <summary>
-            获取角色用户列表
-            </summary>
-        </member>
         <member name="T:JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService">
             <summary>
             系统字典应用服务接口
@@ -4849,6 +4979,7 @@
         <member name="T:JiaCeMonitorSystem.Interfaces.ITenantAppService">
             <summary>
             租户管理应用服务接口（Host端专用）
+            <para>【已弃用】请使用 <see cref="!:ITenantConfigurationAppService"/> 替代。</para>
             </summary>
         </member>
         <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.CreateAsync(JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto)">
@@ -4874,6 +5005,26 @@
         <member name="M:JiaCeMonitorSystem.Interfaces.ITenantAppService.DeleteAsync(System.Guid)">
             <summary>
             删除租户
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Interfaces.ITenantMenuAppService">
+            <summary>
+            租户菜单应用服务接口
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantMenuAppService.GetCurrentTenantMenusAsync">
+            <summary>
+            获取当前租户可用菜单树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantMenuAppService.GetRolePermissionTreeAsync(System.Guid)">
+            <summary>
+            获取角色的模块权限树（基于 SystemModule，替代原 AppRole 权限树）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Interfaces.ITenantMenuAppService.GetRolePermissionFieldsTreeAsync(System.Guid,System.String)">
+            <summary>
+            获取角色的字段权限树（基于 SystemModule，替代原 AppRole 字段权限树）
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Interfaces.IWarningRecordAppService">

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using JiaCeMonitorSystem.Application.Contracts.TenantManagement;
 using JiaCeMonitorSystem.Dtos.Tenants;
 using JiaCeMonitorSystem.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -19,7 +20,9 @@ namespace JiaCeMonitorSystem.Services.Tenants
 {
     /// <summary>
     /// 租户管理应用服务（仅Host端可用）
+    /// <para>【已弃用】请使用 <see cref="ITenantConfigurationAppService"/> 替代，当前服务仅保留做兼容代理。</para>
     /// </summary>
+    [Obsolete("请使用 TenantConfigurationAppService 替代 TenantAppService，接口路由 /api/app/tenant-configuration")]
     [Authorize(Permissions.Permissions.Tenants_Default)]
     public class TenantAppService : ApplicationService, JiaCeMonitorSystem.Interfaces.ITenantAppService
     {
@@ -28,59 +31,54 @@ namespace JiaCeMonitorSystem.Services.Tenants
         private readonly IdentityUserManager _userManager;
         private readonly IDataSeeder _dataSeeder;
         private readonly ICurrentTenant _currentTenant;
+        private readonly ITenantConfigurationAppService _tenantConfigurationAppService;
 
         public TenantAppService(
             ITenantManager tenantManager,
             ITenantRepository tenantRepository,
             IdentityUserManager userManager,
             IDataSeeder dataSeeder,
-            ICurrentTenant currentTenant)
+            ICurrentTenant currentTenant,
+            ITenantConfigurationAppService tenantConfigurationAppService)
         {
             _tenantManager = tenantManager;
             _tenantRepository = tenantRepository;
             _userManager = userManager;
             _dataSeeder = dataSeeder;
             _currentTenant = currentTenant;
+            _tenantConfigurationAppService = tenantConfigurationAppService;
         }
 
         /// <summary>
         /// 创建租户并初始化管理员账号
+        /// <para>【代理实现】内部已统一调用 <see cref="TenantConfigurationAppService.CreateAsync"/></para>
         /// </summary>
         [Authorize(Permissions.Permissions.Tenants_Create)]
         public async Task<TenantDto> CreateAsync(TenantCreateDto input)
         {
-            // 使用DisableMultiTenancy在Host端创建租户
+            // 统一代理到 TenantConfigurationAppService，确保所有租户创建都走 SaaS 配置流程
             using (_currentTenant.Change(null))
             {
-                var tenant = await _tenantManager.CreateAsync(input.TenantName);
+                var configDto = await _tenantConfigurationAppService.CreateAsync(new CreateTenantWithConfigDto
+                {
+                    Name = input.TenantName,
+                    UnitCode = input.AdminAccount, // 兼容旧接口：使用管理员账号作为单位编码
+                    AdminEmail = input.AdminEmail,
+                    AdminPassword = input.AdminPassword,
+                    ExpireDate = input.ExpireDate,
+                    UseIndependentDatabase = !string.IsNullOrWhiteSpace(input.ConnectionString),
+                    GrantedModuleIds = new List<Guid>() // 旧接口默认不授予模块，由前端单独配置
+                });
+
+                // 如果提供了独立数据库连接字符串，额外写入 ABP 租户连接字符串表（兼容旧行为）
                 if (!string.IsNullOrWhiteSpace(input.ConnectionString))
                 {
+                    var tenant = await _tenantRepository.GetAsync(configDto.TenantId);
                     tenant.SetConnectionString("Default", input.ConnectionString);
-                }
-                await _tenantRepository.InsertAsync(tenant);
-
-                // 切换到新租户上下文，创建管理员账号
-                using (_currentTenant.Change(tenant.Id))
-                {
-                    await _dataSeeder.SeedAsync(new DataSeedContext(tenant.Id));
-
-                    var adminUser = new IdentityUser(
-                        GuidGenerator.Create(),
-                        input.AdminAccount,
-                        input.AdminEmail ?? $"{input.AdminAccount}@jcmonitor.com");
-
-                    adminUser.Name = "管理员";
-                    var result = await _userManager.CreateAsync(adminUser, input.AdminPassword);
-                    if (!result.Succeeded)
-                    {
-                        throw new UserFriendlyException($"创建管理员账号失败：{string.Join(", ", result.Errors)}");
-                    }
-
-                    // 分配管理员角色
-                    await _userManager.AddToRoleAsync(adminUser, "admin");
+                    await _tenantRepository.UpdateAsync(tenant);
                 }
 
-                return ObjectMapper.Map<Tenant, TenantDto>(tenant);
+                return ObjectMapper.Map<Tenant, TenantDto>(await _tenantRepository.GetAsync(configDto.TenantId));
             }
         }
 

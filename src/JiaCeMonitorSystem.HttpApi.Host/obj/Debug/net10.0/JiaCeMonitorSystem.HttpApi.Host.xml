@@ -4,6 +4,18 @@
         <name>JiaCeMonitorSystem.HttpApi.Host</name>
     </assembly>
     <members>
+        <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule.ConfigureApplicationCookie(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            cookie 认证配置，防止 API 请求触发登录重定向，改为返回 401 状态码
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule.OnApplicationInitialization(Volo.Abp.ApplicationInitializationContext)">
+            <summary>
+            swagger UI 配置，添加 OAuth2 认证支持，并且配置健康检查端点 /health，返回 JSON 格式的健康状态和检查详情
+            </summary>
+            <param name="context"></param>
+        </member>
         <member name="T:JiaCeMonitorSystem.Program">
             <summary>
             

@@ -4,322 +4,392 @@
         <name>JiaCeMonitorSystem.HttpApi</name>
     </assembly>
     <members>
-        <member name="T:JiaCeMonitorSystem.Controllers.AccountController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Authorization.PermissionController">
             <summary>
-            账号控制器
+            权限管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AccountController.#ctor(JiaCeMonitorSystem.Interfaces.IAccountAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Authorization.PermissionController.#ctor(JiaCeMonitorSystem.Interfaces.IPermissionAppService)">
             <summary>
-            初始化账号控制器
+            初始化权限控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AccountController.LoginAsync(JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto)">
-            <summary>
-            登录验证
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AccountController.GetCurrentUserAsync">
-            <summary>
-            获取当前登录用户信息
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AccountController.ResetPasswordAsync(JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput)">
-            <summary>
-            当前用户重置密码
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AccountController.GetEncryptKeyAsync">
-            <summary>
-            获取密码加密密钥
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.AppRoles.RoleAuthorizeController">
-            <summary>
-            角色权限控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleAuthorizeController.GetPermissionTreeAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Authorization.PermissionController.GetPermissionTreeAsync(System.String,System.String)">
             <summary>
             获取权限树
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleAuthorizeController.GetPermissionFieldsTreeAsync(System.Guid,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Authorization.PermissionController.GrantAsync(JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto)">
             <summary>
-            获取权限字段树
+            保存权限授权
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.AppRoles.RoleController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Common.AccountController">
             <summary>
-            角色管理控制器
+            账号控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.GetPageListAsync(JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.AccountController.#ctor(JiaCeMonitorSystem.Interfaces.IAccountAppService)">
             <summary>
-            获取分页列表
+            初始化账号控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.GetListAsync(System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.AccountController.LoginAsync(JiaCeMonitorSystem.Dtos.Accounts.LoginInputDto)">
             <summary>
-            获取列表
+            登录验证
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.AccountController.GetCurrentUserAsync">
             <summary>
-            获取单个角色
+            获取当前登录用户信息
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.AddAndEditRoleAsync(JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.AccountController.ResetPasswordAsync(JiaCeMonitorSystem.Dtos.Accounts.ResetPasswordInput)">
             <summary>
-            新增角色
+            当前用户重置密码
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.AccountController.GetEncryptKeyAsync">
             <summary>
-            更新角色
+            获取密码加密密钥
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.AppRoles.RoleController.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController">
             <summary>
             初始化缓存控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.InitializeDictionaryAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.InitializeDictionaryAsync">
             <summary>
             初始数据加载（系统字典、模块按钮、模型字段、菜单字段）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.ClearCacheAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.ClearCacheAsync">
             <summary>
             清空缓存
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.GetNoticeListAsync(System.Nullable{System.Int32})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.GetNoticeListAsync(System.Nullable{System.Int32})">
             <summary>
             获取公告列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.GetCurrentUserInfoAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.GetCurrentUserInfoAsync">
             <summary>
             获取当前用户信息
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.GetQuickModuleAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.GetQuickModuleAsync">
             <summary>
             获取首页快捷菜单
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ClientCaches.ClientCacheController.GetSysSatisfyAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.ClientCaches.ClientCacheController.GetSysSatisfyAsync">
             <summary>
             获取系统信息统计
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.CompanyDeviceController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Common.TenantAuthController">
             <summary>
-            单位设备控制器
+            租户认证控制器，提供租户用户登录接口
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.#ctor(JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.TenantAuthController.#ctor(JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantAuthAppService)">
             <summary>
-            初始化设备控制器
+            初始化租户认证控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.GetListAsync(JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.TenantAuthController.TenantLoginAsync(JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto)">
             <summary>
-            获取设备分页列表
+            租户用户登录（单位编码 + 用户名密码）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.GetDeviceListAsync(System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Common.TenantAuthController.RefreshTokenAsync(System.String)">
             <summary>
-            获取设备列表（非分页，支持筛选）
+            刷新租户用户 Token
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.GetSendDeviceAsync(System.Guid)">
+        <member name="T:JiaCeMonitorSystem.Controllers.Engineering.ProjectController">
             <summary>
-            获取设备分配信息（已借出记录）
+            监测工程控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.#ctor(JiaCeMonitorSystem.Interfaces.IProjectAppService)">
             <summary>
-            获取单个设备
+            初始化工程控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.CreateAsync(JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.GetListAsync(JiaCeMonitorSystem.Dtos.Projects.GetProjectListInput)">
             <summary>
-            创建设备
+            获取工程列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.GetAsync(System.Guid)">
             <summary>
-            更新设备
+            获取单个工程
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.CreateAsync(JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto)">
             <summary>
-            删除设备
+            创建工程
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.CalibrateAsync(JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto)">
             <summary>
-            设备校准
+            更新工程
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.LendAsync(System.Guid,System.Guid,System.DateTime,System.Nullable{System.Guid},System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.DeleteAsync(System.Guid)">
             <summary>
-            借出设备
+            删除工程
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.ReturnAsync(System.Guid,System.DateTime,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.GetParticipatedListAsync">
             <summary>
-            归还设备
+            获取已参加项目列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.CompanyDeviceController.ScrapAsync(System.Guid,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.ArchiveAsync(System.Guid)">
             <summary>
-            报废设备
+            归档项目
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.FileManageController">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectController.ChangeStatusAsync(System.Guid,System.Int32)">
             <summary>
-            文件管理控制器
+            变更项目状态
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.#ctor(JiaCeMonitorSystem.Interfaces.IFileManageAppService)">
+        <member name="T:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController">
             <summary>
-            初始化文件管理控制器
+            项目人员安排控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.GetPageListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.#ctor(JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService)">
+            <summary>
+            初始化项目人员安排控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.GetPageListAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput)">
             <summary>
             获取分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.GetListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.GetListByProjectAsync(System.Guid)">
             <summary>
-            获取列表（不分页）
+            按项目获取列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.GetListAsync(System.Guid,System.Nullable{System.Int32})">
+            <summary>
+            获取项目人员列表（非分页，支持角色筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.GetModelAsync(System.Guid)">
             <summary>
             获取单个模型
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.UploadAsync(Microsoft.AspNetCore.Http.IFormFile,System.String,System.String,System.Nullable{System.Guid})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.CreateAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto)">
             <summary>
-            上传文件
+            创建
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Engineering.ProjectPersonnelController.DeleteAsync(System.Guid)">
             <summary>
             删除
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.FileManageController.DownloadFileAsync(System.Guid)">
+        <member name="T:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController">
             <summary>
-            下载文件
+            单位设备控制器
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.IdentityRoleController">
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.#ctor(JiaCeMonitorSystem.Interfaces.ICompanyDeviceAppService)">
+            <summary>
+            初始化设备控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.GetListAsync(JiaCeMonitorSystem.Dtos.Devices.GetDeviceListInput)">
+            <summary>
+            获取设备分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.GetDeviceListAsync(System.Nullable{System.Guid},System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})">
+            <summary>
+            获取设备列表（非分页，支持筛选）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.GetSendDeviceAsync(System.Guid)">
+            <summary>
+            获取设备分配信息（已借出记录）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.GetAsync(System.Guid)">
+            <summary>
+            获取单个设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.CreateAsync(JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceCreateDto)">
+            <summary>
+            创建设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Devices.CompanyDeviceUpdateDto)">
+            <summary>
+            更新设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.DeleteAsync(System.Guid)">
+            <summary>
+            删除设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.CalibrateAsync(JiaCeMonitorSystem.Dtos.Devices.CalibrateDeviceInput)">
+            <summary>
+            设备校准
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.LendAsync(System.Guid,System.Guid,System.DateTime,System.Nullable{System.Guid},System.String)">
+            <summary>
+            借出设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.ReturnAsync(System.Guid,System.DateTime,System.String)">
+            <summary>
+            归还设备
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Equipment.CompanyDeviceController.ScrapAsync(System.Guid,System.String)">
+            <summary>
+            报废设备
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController">
             <summary>
             身份角色管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.#ctor(Volo.Abp.Identity.IIdentityRoleAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.#ctor(Volo.Abp.Identity.IIdentityRoleAppService,JiaCeMonitorSystem.Interfaces.IPermissionAppService,JiaCeMonitorSystem.Interfaces.IIdentityRoleExtendedAppService,JiaCeMonitorSystem.Interfaces.ITenantMenuAppService)">
             <summary>
             初始化角色管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.GetListAsync(Volo.Abp.Identity.GetIdentityRolesInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetListAsync(Volo.Abp.Identity.GetIdentityRolesInput)">
             <summary>
             获取角色列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.GetAllListAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetAllListAsync">
             <summary>
             获取所有角色（不分页）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetAsync(System.Guid)">
             <summary>
             获取单个角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.CreateAsync(Volo.Abp.Identity.IdentityRoleCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.CreateAsync(Volo.Abp.Identity.IdentityRoleCreateDto)">
             <summary>
             创建角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityRoleUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityRoleUpdateDto)">
             <summary>
             更新角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityRoleController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.DeleteAsync(System.Guid)">
             <summary>
             删除角色
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.IdentityUserController">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetPermissionsAsync(System.Guid)">
+            <summary>
+            获取角色权限树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdatePermissionsAsync(System.Guid,System.Collections.Generic.List{System.String})">
+            <summary>
+            更新角色权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRoleUsersAsync(System.Guid)">
+            <summary>
+            获取角色下的用户列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRoleModulePermissionsAsync(System.Guid)">
+            <summary>
+            获取角色的模块权限树（基于 SystemModule）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRoleFieldPermissionsAsync(System.Guid,System.String)">
+            <summary>
+            获取角色的字段权限树（基于 SystemModule）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController">
             <summary>
             身份用户管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.#ctor(Volo.Abp.Identity.IIdentityUserAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.#ctor(Volo.Abp.Identity.IIdentityUserAppService)">
             <summary>
             初始化用户管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.GetListAsync(Volo.Abp.Identity.GetIdentityUsersInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetListAsync(Volo.Abp.Identity.GetIdentityUsersInput)">
             <summary>
             获取用户列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetAsync(System.Guid)">
             <summary>
             获取单个用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.CreateAsync(Volo.Abp.Identity.IdentityUserCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.CreateAsync(Volo.Abp.Identity.IdentityUserCreateDto)">
             <summary>
             创建用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateDto)">
             <summary>
             更新用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.DeleteAsync(System.Guid)">
             <summary>
             删除用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.GetRolesAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetRolesAsync(System.Guid)">
             <summary>
             获取指定用户的角色列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.GetAssignableRolesAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetAssignableRolesAsync">
             <summary>
             获取可分配的角色列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.UpdateRolesAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateRolesDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateRolesAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateRolesDto)">
             <summary>
             更新用户角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.FindByUsernameAsync(System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindByUsernameAsync(System.String)">
             <summary>
             根据用户名查找用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.IdentityUserController.FindByEmailAsync(System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindByEmailAsync(System.String)">
             <summary>
             根据邮箱查找用户
             </summary>
@@ -334,625 +404,595 @@
             初始化控制器基类
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.ModuleButtonController">
-            <summary>
-            系统菜单按钮控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.#ctor(JiaCeMonitorSystem.Interfaces.IModuleButtonAppService)">
-            <summary>
-            初始化系统菜单按钮控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.GetPageListAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput)">
-            <summary>
-            获取分页列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个模型
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.CreateAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto)">
-            <summary>
-            创建
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto)">
-            <summary>
-            更新
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ModuleButtonController.DeleteAsync(System.Guid)">
-            <summary>
-            删除
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.MonitoringDataController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController">
             <summary>
             监测数据控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.#ctor(JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.#ctor(JiaCeMonitorSystem.Interfaces.IMonitoringDataAppService)">
             <summary>
             初始化监测数据控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.GetListAsync(JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.GetListAsync(JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput)">
             <summary>
             获取监测数据列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.GetHistoryListByPointIdAsync(System.Guid,System.Int32,System.Int32)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.GetHistoryListByPointIdAsync(System.Guid,System.Int32,System.Int32)">
             <summary>
             根据测点ID获取历史数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.GetAsync(System.Guid)">
             <summary>
             获取单条监测数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.CreateAsync(JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.CreateAsync(JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto)">
             <summary>
             创建监测数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.MonitoringData.UpdateMonitoringDataDto)">
             <summary>
             更新监测数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.DeleteAsync(System.Guid)">
             <summary>
             删除监测数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.BatchImportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto[])">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.BatchImportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.CreateMonitoringDataDto[])">
             <summary>
             批量导入监测数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.ApproveAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.ApproveAsync(System.Guid)">
             <summary>
             审核数据
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringDataController.ExportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringDataController.ExportAsync(JiaCeMonitorSystem.Dtos.MonitoringData.GetMonitoringDataListInput)">
             <summary>
             数据导出
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController">
             <summary>
             监测项目类型控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.#ctor(JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.#ctor(JiaCeMonitorSystem.Interfaces.IMonitoringItemTypeAppService)">
             <summary>
             初始化监测项目类型控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.GetPageListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.GetPageListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
             <summary>
             获取分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.GetListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.GetListAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.GetMonitoringItemTypeListInput)">
             <summary>
             获取列表（不分页）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.GetModelAsync(System.Guid)">
             <summary>
             获取单个模型
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.CreateAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.CreateAsync(JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeCreateDto)">
             <summary>
             创建（级联保存属性）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.MonitoringItemTypes.MonitoringItemTypeUpdateDto)">
             <summary>
             更新（级联更新属性）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.MonitoringItemTypeController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.MonitoringItemTypeController.DeleteAsync(System.Guid)">
             <summary>
             删除
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.NoticeController">
-            <summary>
-            系统通知控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.NoticeController.#ctor(JiaCeMonitorSystem.Interfaces.INoticeAppService)">
-            <summary>
-            初始化系统通知控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.NoticeController.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个模型
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.NoticeController.CreateAsync(JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto)">
-            <summary>
-            创建
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.NoticeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto)">
-            <summary>
-            更新
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.NoticeController.DeleteAsync(System.Guid)">
-            <summary>
-            删除
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.OrganizeController">
-            <summary>
-            系统组织控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.#ctor(JiaCeMonitorSystem.Interfaces.IOrganizeAppService)">
-            <summary>
-            初始化系统组织控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.GetOrganizeTreeAsync">
-            <summary>
-            获取组织树
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个模型
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.CreateAsync(JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto)">
-            <summary>
-            创建
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto)">
-            <summary>
-            更新
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.OrganizeController.DeleteAsync(System.Guid)">
-            <summary>
-            删除
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.PermissionController">
-            <summary>
-            权限管理控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PermissionController.#ctor(JiaCeMonitorSystem.Interfaces.IPermissionAppService)">
-            <summary>
-            初始化权限控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PermissionController.GetPermissionTreeAsync(System.String,System.String)">
-            <summary>
-            获取权限树
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PermissionController.GrantAsync(JiaCeMonitorSystem.Dtos.Permissions.PermissionGrantDto)">
-            <summary>
-            保存权限授权
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.PointController">
+        <member name="T:JiaCeMonitorSystem.Controllers.Monitoring.PointController">
             <summary>
             测点管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.#ctor(JiaCeMonitorSystem.Interfaces.IPointAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.#ctor(JiaCeMonitorSystem.Interfaces.IPointAppService)">
             <summary>
             初始化测点控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.GetListAsync(JiaCeMonitorSystem.Dtos.Points.GetPointListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.GetListAsync(JiaCeMonitorSystem.Dtos.Points.GetPointListInput)">
             <summary>
             获取测点分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.GetPointListAsync(System.Nullable{System.Guid})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.GetPointListAsync(System.Nullable{System.Guid})">
             <summary>
             获取测点列表（非分页，按项目筛选）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.GetAsync(System.Guid)">
             <summary>
             获取单个测点
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.CreateAsync(JiaCeMonitorSystem.Dtos.Points.PointCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.CreateAsync(JiaCeMonitorSystem.Dtos.Points.PointCreateDto)">
             <summary>
             创建测点
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Points.PointUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Points.PointUpdateDto)">
             <summary>
             更新测点
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.DeleteAsync(System.Guid)">
             <summary>
             删除测点
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.ConfigureThresholdAsync(System.Guid,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.ConfigureThresholdAsync(System.Guid,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
             <summary>
             配置测点阈值
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.GetHistoryAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.GetHistoryAsync(System.Guid)">
             <summary>
             获取测点历史数据简要
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.PointController.GetPropertiesAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Monitoring.PointController.GetPropertiesAsync(System.Guid)">
             <summary>
             获取测点可用属性列表
             根据测点关联的监测项目类型，返回所有属性
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.ProjectController">
+        <member name="T:JiaCeMonitorSystem.Controllers.System.FileManageController">
             <summary>
-            监测工程控制器
+            文件管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.#ctor(JiaCeMonitorSystem.Interfaces.IProjectAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.#ctor(JiaCeMonitorSystem.Interfaces.IFileManageAppService)">
             <summary>
-            初始化工程控制器
+            初始化文件管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.GetListAsync(JiaCeMonitorSystem.Dtos.Projects.GetProjectListInput)">
-            <summary>
-            获取工程列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.GetAsync(System.Guid)">
-            <summary>
-            获取单个工程
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.CreateAsync(JiaCeMonitorSystem.Dtos.Projects.ProjectCreateDto)">
-            <summary>
-            创建工程
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Projects.ProjectUpdateDto)">
-            <summary>
-            更新工程
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.DeleteAsync(System.Guid)">
-            <summary>
-            删除工程
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.GetParticipatedListAsync">
-            <summary>
-            获取已参加项目列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.ArchiveAsync(System.Guid)">
-            <summary>
-            归档项目
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectController.ChangeStatusAsync(System.Guid,System.Int32)">
-            <summary>
-            变更项目状态
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.ProjectPersonnelController">
-            <summary>
-            项目人员安排控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.#ctor(JiaCeMonitorSystem.Interfaces.IProjectPersonnelAppService)">
-            <summary>
-            初始化项目人员安排控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.GetPageListAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.GetProjectPersonnelListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.GetPageListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
             <summary>
             获取分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.GetListByProjectAsync(System.Guid)">
-            <summary>
-            按项目获取列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.GetListAsync(System.Guid,System.Nullable{System.Int32})">
-            <summary>
-            获取项目人员列表（非分页，支持角色筛选）
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个模型
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.CreateAsync(JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelCreateDto)">
-            <summary>
-            创建
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ProjectPersonnels.ProjectPersonnelUpdateDto)">
-            <summary>
-            更新
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.ProjectPersonnelController.DeleteAsync(System.Guid)">
-            <summary>
-            删除
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.RoleManagementController">
-            <summary>
-            角色管理控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.#ctor(JiaCeMonitorSystem.Interfaces.IRoleManagementAppService)">
-            <summary>
-            初始化角色管理控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
-            <summary>
-            获取角色列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.GetAsync(System.Guid)">
-            <summary>
-            获取单个角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.CreateAsync(System.String)">
-            <summary>
-            创建角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.UpdateAsync(System.Guid,System.String)">
-            <summary>
-            更新角色名称
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.RoleManagementController.GetRoleUsersAsync(System.Guid)">
-            <summary>
-            获取角色用户列表
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.SystemDictionaryController">
-            <summary>
-            系统字典控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService)">
-            <summary>
-            初始化系统字典控制器
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
-            <summary>
-            获取分页列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.GetListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.GetListAsync(JiaCeMonitorSystem.Dtos.FileManages.GetUploadFileListInput)">
             <summary>
             获取列表（不分页）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.GetModelAsync(System.Guid)">
             <summary>
             获取单个模型
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.UploadAsync(Microsoft.AspNetCore.Http.IFormFile,System.String,System.String,System.Nullable{System.Guid})">
             <summary>
-            创建
+            上传文件
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto)">
-            <summary>
-            更新
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.DeleteAsync(System.Guid)">
             <summary>
             删除
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.FileManageController.DownloadFileAsync(System.Guid)">
+            <summary>
+            下载文件
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.System.ModuleButtonController">
+            <summary>
+            系统菜单按钮控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.#ctor(JiaCeMonitorSystem.Interfaces.IModuleButtonAppService)">
+            <summary>
+            初始化系统菜单按钮控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.GetPageListAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.GetModuleButtonListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.CreateAsync(JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.ModuleButtonController.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.System.NoticeController">
+            <summary>
+            系统通知控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.NoticeController.#ctor(JiaCeMonitorSystem.Interfaces.INoticeAppService)">
+            <summary>
+            初始化系统通知控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.NoticeController.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.NoticeController.CreateAsync(JiaCeMonitorSystem.Dtos.Notices.NoticeCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.NoticeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Notices.NoticeUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.NoticeController.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.System.OrganizeController">
+            <summary>
+            系统组织控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.#ctor(JiaCeMonitorSystem.Interfaces.IOrganizeAppService)">
+            <summary>
+            初始化系统组织控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.GetOrganizeTreeAsync">
+            <summary>
+            获取组织树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.CreateAsync(JiaCeMonitorSystem.Dtos.Organizes.OrganizeCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.Organizes.OrganizeUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.OrganizeController.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController">
+            <summary>
+            系统字典控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemDictionaryAppService)">
+            <summary>
+            初始化系统字典控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
+            <summary>
+            获取分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.GetListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryListInput)">
+            <summary>
+            获取列表（不分页）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.GetModelAsync(System.Guid)">
+            <summary>
+            获取单个模型
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto)">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryUpdateDto)">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryController.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController">
             <summary>
             系统字典类型控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemDictionaryTypeAppService)">
             <summary>
             初始化系统字典类型控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.GetDictionaryTreeAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.GetDictionaryTreeAsync">
             <summary>
             获取字典树
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryTypeListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.GetPageListAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.GetSystemDictionaryTypeListInput)">
             <summary>
             获取分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.GetModelAsync(System.Guid)">
             <summary>
             获取单个模型
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeCreateDto)">
             <summary>
             创建
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryTypeUpdateDto)">
             <summary>
             更新
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemDictionaryTypeController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemDictionaryTypeController.DeleteAsync(System.Guid)">
             <summary>
             删除
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.SystemModuleController">
+        <member name="T:JiaCeMonitorSystem.Controllers.System.SystemModuleController">
             <summary>
             系统菜单模块控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemModuleAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.#ctor(JiaCeMonitorSystem.Interfaces.ISystemModuleAppService)">
             <summary>
             初始化系统菜单模块控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.GetTreeListAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.GetTreeListAsync">
             <summary>
             获取树形列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.GetListAsync(JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.GetListAsync(JiaCeMonitorSystem.Dtos.SystemModules.GetSystemModuleListInput)">
             <summary>
             获取分页列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.GetModelAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.GetModelAsync(System.Guid)">
             <summary>
             获取单个模型
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.CreateAsync(JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleCreateDto)">
             <summary>
             创建
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.SystemModules.SystemModuleUpdateDto)">
             <summary>
             更新
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.SystemModuleController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.SystemModuleController.DeleteAsync(System.Guid)">
             <summary>
             删除
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.TenantController">
+        <member name="T:JiaCeMonitorSystem.Controllers.System.TenantController">
             <summary>
             租户管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.#ctor(JiaCeMonitorSystem.Interfaces.ITenantAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.#ctor(JiaCeMonitorSystem.Interfaces.ITenantAppService)">
             <summary>
             初始化租户控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.GetListAsync(JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.GetListAsync(JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput)">
             <summary>
             获取租户列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.GetAsync(System.Guid)">
             <summary>
             获取单个租户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.CreateAsync(JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.CreateAsync(JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto)">
             <summary>
             创建租户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.UpdateConnectionStringAsync(System.Guid,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.UpdateConnectionStringAsync(System.Guid,System.String)">
             <summary>
             更新租户连接字符串
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.TenantController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.System.TenantController.DeleteAsync(System.Guid)">
             <summary>
             删除租户
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Controllers.WarningRecordController">
+        <member name="T:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController">
+            <summary>
+            租户按钮权限控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController.#ctor(JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantButtonPermissionAppService)">
+            <summary>
+            初始化按钮权限控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController.GrantButtonsAsync(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量授予角色按钮权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController.RevokeButtonsAsync(System.Guid,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            批量撤销角色按钮权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController.GetRoleButtonPermissionsAsync(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            获取角色的按钮权限列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController.GetMyAvailableButtonsAsync(System.Guid)">
+            <summary>
+            获取当前用户在指定模块下的可用按钮
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController">
+            <summary>
+            租户配置控制器，提供 SaaS 租户创建、许可证管理与独立数据库切换等功能
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.#ctor(JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService)">
+            <summary>
+            初始化租户配置控制器
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.CreateAsync(JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto)">
+            <summary>
+            创建租户并初始化配置（含模块授权、许可证配额、独立数据库选项）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.GetConfigurationAsync(System.Guid)">
+            <summary>
+            获取租户配置详情
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
+            <summary>
+            获取租户配置分页列表
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.UpdateLicenseAsync(System.Guid,JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto)">
+            <summary>
+            更新租户许可证配额
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController.SwitchToIndependentDatabaseAsync(System.Guid)">
+            <summary>
+            将租户切换到独立数据库（异步后台执行，通过 Hangfire 调度）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController">
             <summary>
             预警记录控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.#ctor(JiaCeMonitorSystem.Interfaces.IWarningRecordAppService)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.#ctor(JiaCeMonitorSystem.Interfaces.IWarningRecordAppService)">
             <summary>
             初始化预警记录控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.GetListAsync(JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.GetListAsync(JiaCeMonitorSystem.Dtos.WarningRecords.GetWarningListInput)">
             <summary>
             获取预警记录列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.GetAsync(System.Guid)">
             <summary>
             获取单条预警记录
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.CreateAsync(JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.CreateAsync(JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput)">
             <summary>
             创建预警记录
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput)">
             <summary>
             更新预警记录
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.DeleteAsync(System.Guid)">
             <summary>
             删除预警记录
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.AssignHandlerAsync(System.Guid,System.Guid,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.AssignHandlerAsync(System.Guid,System.Guid,System.String)">
             <summary>
             分配处理人
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.HandleAsync(JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.HandleAsync(JiaCeMonitorSystem.Dtos.WarningRecords.HandleWarningInput)">
             <summary>
             处理预警记录
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.ConfirmAsync(JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.ConfirmAsync(JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput)">
             <summary>
             确认预警处理结果
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.CloseAsync(System.Guid,System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.CloseAsync(System.Guid,System.String)">
             <summary>
             关闭预警
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.WarningRecordController.GetStatisticsAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Warning.WarningRecordController.GetStatisticsAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
             <summary>
             获取预警统计
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.EventHandlers.TenantDatabaseSwitchStatusEventHandler">
+            <summary>
+            租户数据库切换状态事件处理器，通过 SignalR 实时推送给前端
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Hubs.TenantDatabaseSwitchHub">
+            <summary>
+            租户数据库切换状态实时推送 Hub
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Hubs.TenantDatabaseSwitchHub.SubscribeTenant(System.Guid)">
+            <summary>
+            前端订阅指定租户的数据库切换状态
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Hubs.TenantDatabaseSwitchHub.UnsubscribeTenant(System.Guid)">
+            <summary>
+            前端取消订阅
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiModule">

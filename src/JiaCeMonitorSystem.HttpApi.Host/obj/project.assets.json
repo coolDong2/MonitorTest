@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "Asp.Versioning.Abstractions/8.1.0": {
@@ -4275,7 +4275,7 @@
         "dependencies": {
           "JiaCeMonitorSystem.Application.Contracts": "1.0.0",
           "JiaCeMonitorSystem.Domain": "1.0.0",
-          "OpenIddict.Abstractions": "6.0.0",
+          "OpenIddict.Abstractions": "7.2.0",
           "System.IdentityModel.Tokens.Jwt": "8.6.1",
           "Volo.Abp.Account.Application": "10.0.0",
           "Volo.Abp.AutoMapper": "10.0.0",
@@ -11344,7 +11344,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
@@ -11477,7 +11477,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -8,7 +8,9 @@ namespace JiaCeMonitorSystem.Interfaces
 {
     /// <summary>
     /// 租户管理应用服务接口（Host端专用）
+    /// <para>【已弃用】请使用 <see cref="ITenantConfigurationAppService"/> 替代。</para>
     /// </summary>
+    [Obsolete("请使用 ITenantConfigurationAppService 替代 ITenantAppService")]
     public interface ITenantAppService : IApplicationService
     {
         /// <summary>

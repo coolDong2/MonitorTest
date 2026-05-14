@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Volo.Abp;
 using Volo.Abp.Account.Web;
 using Volo.Abp.AspNetCore.MultiTenancy;
@@ -148,6 +149,13 @@ namespace JiaCeMonitorSystem
             ConfigureHangfire(context, context.Services.GetConfiguration());
             ConfigureHealthChecks(context, configuration);
             ConfigureAbpMvcLibs();
+            ConfigureSignalR(context);
+            ConfigureApplicationCookie(context);
+        }
+
+        private void ConfigureSignalR(ServiceConfigurationContext context)
+        {
+            context.Services.AddSignalR();
         }
         
         private void ConfigureMultiTenancy()
@@ -301,6 +309,29 @@ namespace JiaCeMonitorSystem
             });
         }
 
+
+        /// <summary>
+        /// cookie 认证配置，防止 API 请求触发登录重定向，改为返回 401 状态码
+        /// </summary>
+        /// <param name="context"></param>
+        private void ConfigureApplicationCookie(ServiceConfigurationContext context)
+        {
+            // 关键：防止 API 请求触发 Cookie 登录重定向
+            context.Services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = ctx =>
+                {
+                    if (ctx.Request.Path.StartsWithSegments("/api"))
+                    {
+                        ctx.Response.StatusCode = 401;
+                        return Task.CompletedTask;
+                    }
+                    ctx.Response.Redirect(ctx.RedirectUri);
+                    return Task.CompletedTask;
+                };
+            });
+        }
+
         private void ConfigureAntiForgery()
         {
             Configure<AbpAntiForgeryOptions>(options =>
@@ -347,6 +378,10 @@ namespace JiaCeMonitorSystem
         }
 
 
+        /// <summary>
+        /// swagger UI 配置，添加 OAuth2 认证支持，并且配置健康检查端点 /health，返回 JSON 格式的健康状态和检查详情
+        /// </summary>
+        /// <param name="context"></param>
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
         {
             var app = context.GetApplicationBuilder();
@@ -412,7 +447,10 @@ namespace JiaCeMonitorSystem
 
             app.UseAuditing();
             app.UseAbpSerilogEnrichers();
-            app.UseConfiguredEndpoints();
+            app.UseConfiguredEndpoints(endpoints =>
+            {
+                endpoints.MapHub<JiaCeMonitorSystem.Hubs.TenantDatabaseSwitchHub>("/hubs/tenant-database-switch");
+            });
         }
     }
 }

@@ -83,10 +83,58 @@ namespace JiaCeMonitorSystem.DbMigrator
                     throw new Exception("数据库迁移状态不一致，请查看日志并按指引修复。");
                 }
                 
+                // 自动创建数据库（若不存在），避免 ABP 模块初始化时因库不存在而产生 3D000 噪音
+                await EnsureDatabaseCreatedAsync(connectionString);
+                
                 await dbContext.Database.MigrateAsync();
             }
 
             _logger.LogInformation("主机数据库迁移完成");
+        }
+
+        private async Task EnsureDatabaseCreatedAsync(string? connectionString)
+        {
+            if (string.IsNullOrWhiteSpace(connectionString))
+            {
+                return;
+            }
+
+            try
+            {
+                var builder = new NpgsqlConnectionStringBuilder(connectionString);
+                var targetDatabase = builder.Database;
+                if (string.IsNullOrWhiteSpace(targetDatabase))
+                {
+                    _logger.LogWarning("连接字符串中未指定数据库名称，跳过自动创建。");
+                    return;
+                }
+                builder.Database = "postgres"; // 连接到默认管理库
+
+                await using var connection = new NpgsqlConnection(builder.ConnectionString);
+                await connection.OpenAsync();
+
+                await using var checkCmd = new NpgsqlCommand(
+                    "SELECT 1 FROM pg_database WHERE datname = @dbName", connection);
+                checkCmd.Parameters.AddWithValue("dbName", targetDatabase);
+                var exists = await checkCmd.ExecuteScalarAsync() != null;
+
+                if (!exists)
+                {
+                    _logger.LogInformation($"数据库 '{targetDatabase}' 不存在，正在自动创建...");
+                    await using var createCmd = new NpgsqlCommand(
+                        $"CREATE DATABASE \"{targetDatabase}\"", connection);
+                    await createCmd.ExecuteNonQueryAsync();
+                    _logger.LogInformation($"数据库 '{targetDatabase}' 创建成功。");
+                }
+            }
+            catch (PostgresException ex) when (ex.SqlState == "42P04")
+            {
+                // 数据库已存在（并发场景），忽略
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(ex, "检查或创建数据库时出错，将交由 MigrateAsync 自行处理。");
+            }
         }
 
         private async Task<bool> HasMigrationsHistoryAsync(string? connectionString)
@@ -141,6 +189,8 @@ namespace JiaCeMonitorSystem.DbMigrator
                         using (var scope = _serviceProvider.CreateScope())
                         {
                             var dbContext = scope.ServiceProvider.GetRequiredService<JiaCeMonitorSystemDbContext>();
+                            var tenantConnectionString = dbContext.Database.GetConnectionString();
+                            await EnsureDatabaseCreatedAsync(tenantConnectionString);
                             await dbContext.Database.MigrateAsync();
                         }
 

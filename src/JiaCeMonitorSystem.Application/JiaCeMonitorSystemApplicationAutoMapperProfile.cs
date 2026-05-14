@@ -1,9 +1,7 @@
 using System;
 using AutoMapper;
 using JiaCeMonitorSystem.Devices;
-using JiaCeMonitorSystem.AppRoles;
 using JiaCeMonitorSystem.Dtos.Accounts;
-using JiaCeMonitorSystem.Dtos.AppRoles;
 using JiaCeMonitorSystem.Dtos.Devices;
 using JiaCeMonitorSystem.Dtos.FileManages;
 using JiaCeMonitorSystem.Dtos.ModuleButtons;
@@ -14,7 +12,6 @@ using JiaCeMonitorSystem.Dtos.Organizes;
 using JiaCeMonitorSystem.Dtos.Points;
 using JiaCeMonitorSystem.Dtos.ProjectPersonnels;
 using JiaCeMonitorSystem.Dtos.Projects;
-using JiaCeMonitorSystem.Dtos.Roles;
 using JiaCeMonitorSystem.Dtos.SystemDictionaries;
 using JiaCeMonitorSystem.Dtos.SystemModules;
 using JiaCeMonitorSystem.Dtos.Tenants;
@@ -31,6 +28,8 @@ using JiaCeMonitorSystem.Projects;
 using JiaCeMonitorSystem.SystemDictionaries;
 using JiaCeMonitorSystem.SystemModules;
 using JiaCeMonitorSystem.WarningRecords;
+using JiaCeMonitorSystem.Application.Contracts.TenantManagement;
+using JiaCeMonitorSystem.TenantManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.TenantManagement;
 using MonitoringDataEntity = JiaCeMonitorSystem.MonitoringData.MonitoringData;
@@ -204,29 +203,7 @@ namespace JiaCeMonitorSystem
             CreateMap<TenantCreateDto, Tenant>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore());
 
-            // 业务角色模块
-            CreateMap<AppRole, AppRoleDto>();
-            CreateMap<AppRoleCreateDto, AppRole>()
-                .ForMember(dest => dest.Id, opt => opt.Ignore())
-                .ForMember(dest => dest.CreationTime, opt => opt.Ignore())
-                .ForMember(dest => dest.CreatorId, opt => opt.Ignore())
-                .ForMember(dest => dest.LastModificationTime, opt => opt.Ignore())
-                .ForMember(dest => dest.LastModifierId, opt => opt.Ignore())
-                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore())
-                .ForMember(dest => dest.DeleterId, opt => opt.Ignore())
-                .ForMember(dest => dest.DeletionTime, opt => opt.Ignore());
-            CreateMap<AppRoleUpdateDto, AppRole>()
-                .ForMember(dest => dest.Id, opt => opt.Ignore())
-                .ForMember(dest => dest.CreationTime, opt => opt.Ignore())
-                .ForMember(dest => dest.CreatorId, opt => opt.Ignore())
-                .ForMember(dest => dest.LastModificationTime, opt => opt.Ignore())
-                .ForMember(dest => dest.LastModifierId, opt => opt.Ignore())
-                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore())
-                .ForMember(dest => dest.DeleterId, opt => opt.Ignore())
-                .ForMember(dest => dest.DeletionTime, opt => opt.Ignore());
-
-            // ABP IdentityRole（保留原有映射）
-            CreateMap<IdentityRole, RoleDto>();
+            // ABP IdentityRole（通过 IdentityRoleController 直接使用 IdentityRoleDto）
 
             // 系统菜单模块
             CreateMap<SystemModule, SystemModuleDto>();
@@ -469,6 +446,15 @@ namespace JiaCeMonitorSystem
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore())
                 .ForMember(dest => dest.DeleterId, opt => opt.Ignore())
                 .ForMember(dest => dest.DeletionTime, opt => opt.Ignore());
+
+            // Phase 4 租户管理映射
+            CreateMap<TenantConfiguration, TenantConfigurationDto>()
+                .ForMember(dest => dest.TenantName, opt => opt.MapFrom(src => src.UnitCode ?? string.Empty));
+            CreateMap<TenantLicenseDto, TenantConfiguration>()
+                .ForMember(dest => dest.MaxUserCount, opt => opt.MapFrom(src => src.MaxUserCount))
+                .ForMember(dest => dest.MaxProjectCount, opt => opt.MapFrom(src => src.MaxProjectCount))
+                .ForMember(dest => dest.MaxPointCount, opt => opt.MapFrom(src => src.MaxPointCount))
+                .ForMember(dest => dest.MaxStorageBytes, opt => opt.MapFrom(src => src.MaxStorageBytes));
         }
 
         /// <summary>

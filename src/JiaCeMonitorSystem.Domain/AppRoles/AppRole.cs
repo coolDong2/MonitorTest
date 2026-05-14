@@ -5,9 +5,10 @@ using Volo.Abp.Domain.Entities.Auditing;
 namespace JiaCeMonitorSystem.AppRoles
 {
     /// <summary>
-    /// 业务角色聚合根
+    /// 业务角色聚合根（已废弃，请使用 ABP IdentityRole）
     /// 表名：JC_AppRoles
     /// </summary>
+    [Obsolete("请使用 ABP IdentityRole 替代 AppRole，权限体系已迁移至标准 ABP Permission 体系")]
     public class AppRole : FullAuditedAggregateRoot<Guid>
     {
         /// <summary>

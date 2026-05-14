@@ -1568,6 +1568,254 @@
         }
       }
     },
+    "/api/identity/roles/{id}/permissions": {
+      "get": {
+        "tags": [
+          "IdentityRole"
+        ],
+        "summary": "获取角色权限树",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Permissions.PermissionTreeDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "IdentityRole"
+        ],
+        "summary": "更新角色权限",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/identity/roles/{id}/users": {
+      "get": {
+        "tags": [
+          "IdentityRole"
+        ],
+        "summary": "获取角色下的用户列表",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Volo.Abp.Identity.IdentityUserDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Volo.Abp.Identity.IdentityUserDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Volo.Abp.Identity.IdentityUserDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/identity/roles/{id}/module-permissions": {
+      "get": {
+        "tags": [
+          "IdentityRole"
+        ],
+        "summary": "获取角色的模块权限树（基于 SystemModule）",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/identity/roles/{id}/field-permissions": {
+      "get": {
+        "tags": [
+          "IdentityRole"
+        ],
+        "summary": "获取角色的字段权限树（基于 SystemModule）",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "moduleIds",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/identity/users": {
       "get": {
         "tags": [
@@ -4696,674 +4944,6 @@
         }
       }
     },
-    "/api/app/role/page-list": {
-      "get": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "获取分页列表",
-        "parameters": [
-          {
-            "name": "Keyword",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "CompanyId",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "Category",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "EnabledMark",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "Sorting",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "SkipCount",
-            "in": "query",
-            "schema": {
-              "maximum": 2147483647,
-              "minimum": 0,
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "MaxResultCount",
-            "in": "query",
-            "schema": {
-              "maximum": 2147483647,
-              "minimum": 1,
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role/list": {
-      "get": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "获取列表",
-        "parameters": [
-          {
-            "name": "keyword",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role/model": {
-      "get": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "获取单个角色",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role/add-and-edit": {
-      "post": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "新增角色",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role/update": {
-      "put": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "更新角色",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role/delete": {
-      "delete": {
-        "tags": [
-          "Role"
-        ],
-        "summary": "删除角色",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/app/role-authorize/permission-tree": {
-      "get": {
-        "tags": [
-          "RoleAuthorize"
-        ],
-        "summary": "获取权限树",
-        "parameters": [
-          {
-            "name": "roleId",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role-authorize/permission-fields-tree": {
-      "get": {
-        "tags": [
-          "RoleAuthorize"
-        ],
-        "summary": "获取权限字段树",
-        "parameters": [
-          {
-            "name": "roleId",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "moduleIds",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role-management": {
-      "get": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "获取角色列表",
-        "parameters": [
-          {
-            "name": "Sorting",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "SkipCount",
-            "in": "query",
-            "schema": {
-              "maximum": 2147483647,
-              "minimum": 0,
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "MaxResultCount",
-            "in": "query",
-            "schema": {
-              "maximum": 2147483647,
-              "minimum": 1,
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.Roles.RoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.Roles.RoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.Roles.RoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "创建角色",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/app/role-management/{id}": {
-      "get": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "获取单个角色",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "更新角色名称",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "删除角色",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/app/role-management/{roleId}/users": {
-      "get": {
-        "tags": [
-          "RoleManagement"
-        ],
-        "summary": "获取角色用户列表",
-        "parameters": [
-          {
-            "name": "roleId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleUserDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleUserDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleUserDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/app/system-dictionary/page-list": {
       "get": {
         "tags": [
@@ -6457,6 +6037,104 @@
         }
       }
     },
+    "/api/tenant-auth/login": {
+      "post": {
+        "tags": [
+          "TenantAuth"
+        ],
+        "summary": "租户用户登录（单位编码 + 用户名密码）",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tenant-auth/refresh-token": {
+      "post": {
+        "tags": [
+          "TenantAuth"
+        ],
+        "summary": "刷新租户用户 Token",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/app/warning-record": {
       "get": {
         "tags": [
@@ -6824,25 +6502,26 @@
           "WarningRecord"
         ],
         "summary": "确认预警处理结果",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.WarningRecords.ConfirmWarningInput"
-              }
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "ConfirmRemark",
+            "in": "query",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 0,
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -6932,6 +6611,135 @@
   },
   "components": {
     "schemas": {
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "访问令牌",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "刷新令牌",
+            "nullable": true
+          },
+          "tenantId": {
+            "type": "string",
+            "description": "租户Id",
+            "format": "uuid"
+          },
+          "tenantName": {
+            "type": "string",
+            "description": "租户名称",
+            "nullable": true
+          },
+          "unitCode": {
+            "type": "string",
+            "description": "单位编码",
+            "nullable": true
+          },
+          "userType": {
+            "$ref": "#/components/schemas/JiaCeMonitorSystem.TenantManagement.UserType"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "权限列表",
+            "nullable": true
+          },
+          "menus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto"
+            },
+            "description": "菜单列表",
+            "nullable": true
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "到期日期",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "租户登录结果数据传输对象"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "菜单编码",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "菜单名称",
+            "nullable": true
+          },
+          "parentCode": {
+            "type": "string",
+            "description": "父级菜单编码",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "description": "菜单地址",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "description": "菜单图标",
+            "nullable": true
+          },
+          "sort": {
+            "type": "integer",
+            "description": "排序号",
+            "format": "int32"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantMenuDto"
+            },
+            "description": "子菜单列表",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "租户菜单数据传输对象"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantUserLoginDto": {
+        "required": [
+          "password",
+          "unitCode",
+          "userName"
+        ],
+        "type": "object",
+        "properties": {
+          "unitCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "单位编码"
+          },
+          "userName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "用户名"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string",
+            "description": "密码"
+          }
+        },
+        "additionalProperties": false,
+        "description": "租户用户登录输入参数"
+      },
       "JiaCeMonitorSystem.Dtos.Accounts.CurrentUserDto": {
         "type": "object",
         "properties": {
@@ -7113,255 +6921,6 @@
         },
         "additionalProperties": false,
         "description": "重置密码输入参数"
-      },
-      "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto": {
-        "required": [
-          "enCode",
-          "fullName"
-        ],
-        "type": "object",
-        "properties": {
-          "companyId": {
-            "type": "string",
-            "description": "所属公司ID",
-            "format": "uuid",
-            "nullable": true
-          },
-          "companyName": {
-            "type": "string",
-            "description": "所属公司名称",
-            "nullable": true
-          },
-          "enCode": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "description": "角色编号"
-          },
-          "fullName": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "description": "角色名称"
-          },
-          "category": {
-            "type": "integer",
-            "description": "角色类型",
-            "format": "int32"
-          },
-          "type": {
-            "type": "string",
-            "description": "角色类型名称",
-            "nullable": true
-          },
-          "allowEdit": {
-            "type": "boolean",
-            "description": "允许编辑"
-          },
-          "allowDelete": {
-            "type": "boolean",
-            "description": "允许删除"
-          },
-          "sortCode": {
-            "type": "integer",
-            "description": "排序码",
-            "format": "int32"
-          },
-          "enabledMark": {
-            "type": "boolean",
-            "description": "是否启用"
-          },
-          "description": {
-            "maxLength": 500,
-            "minLength": 0,
-            "type": "string",
-            "description": "描述",
-            "nullable": true
-          },
-          "permissionButtonIds": {
-            "type": "string",
-            "description": "权限按钮ID",
-            "nullable": true
-          },
-          "permissionFieldsIds": {
-            "type": "string",
-            "description": "权限字段ID",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "创建业务角色输入"
-      },
-      "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "creationTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "creatorId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "lastModificationTime": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "lastModifierId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "companyId": {
-            "type": "string",
-            "description": "所属公司ID",
-            "format": "uuid",
-            "nullable": true
-          },
-          "companyName": {
-            "type": "string",
-            "description": "所属公司名称",
-            "nullable": true
-          },
-          "enCode": {
-            "type": "string",
-            "description": "角色编号",
-            "nullable": true
-          },
-          "fullName": {
-            "type": "string",
-            "description": "角色名称",
-            "nullable": true
-          },
-          "category": {
-            "type": "integer",
-            "description": "角色类型",
-            "format": "int32"
-          },
-          "type": {
-            "type": "string",
-            "description": "角色类型名称",
-            "nullable": true
-          },
-          "allowEdit": {
-            "type": "boolean",
-            "description": "允许编辑"
-          },
-          "allowDelete": {
-            "type": "boolean",
-            "description": "允许删除"
-          },
-          "sortCode": {
-            "type": "integer",
-            "description": "排序码",
-            "format": "int32"
-          },
-          "enabledMark": {
-            "type": "boolean",
-            "description": "是否启用"
-          },
-          "description": {
-            "type": "string",
-            "description": "描述",
-            "nullable": true
-          },
-          "permissionButtonIds": {
-            "type": "string",
-            "description": "权限按钮ID",
-            "nullable": true
-          },
-          "permissionFieldsIds": {
-            "type": "string",
-            "description": "权限字段ID",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "业务角色数据传输对象"
-      },
-      "JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto": {
-        "required": [
-          "enCode",
-          "fullName"
-        ],
-        "type": "object",
-        "properties": {
-          "companyId": {
-            "type": "string",
-            "description": "所属公司ID",
-            "format": "uuid",
-            "nullable": true
-          },
-          "companyName": {
-            "type": "string",
-            "description": "所属公司名称",
-            "nullable": true
-          },
-          "enCode": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "description": "角色编号"
-          },
-          "fullName": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "description": "角色名称"
-          },
-          "category": {
-            "type": "integer",
-            "description": "角色类型",
-            "format": "int32"
-          },
-          "type": {
-            "type": "string",
-            "description": "角色类型名称",
-            "nullable": true
-          },
-          "allowEdit": {
-            "type": "boolean",
-            "description": "允许编辑"
-          },
-          "allowDelete": {
-            "type": "boolean",
-            "description": "允许删除"
-          },
-          "sortCode": {
-            "type": "integer",
-            "description": "排序码",
-            "format": "int32"
-          },
-          "enabledMark": {
-            "type": "boolean",
-            "description": "是否启用"
-          },
-          "description": {
-            "maxLength": 500,
-            "minLength": 0,
-            "type": "string",
-            "description": "描述",
-            "nullable": true
-          },
-          "permissionButtonIds": {
-            "type": "string",
-            "description": "权限按钮ID",
-            "nullable": true
-          },
-          "permissionFieldsIds": {
-            "type": "string",
-            "description": "权限字段ID",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "更新业务角色输入"
       },
       "JiaCeMonitorSystem.Dtos.AppRoles.PermissionTreeDto": {
         "type": "object",
@@ -10823,86 +10382,6 @@
         "additionalProperties": false,
         "description": "更新监测工程输入参数"
       },
-      "JiaCeMonitorSystem.Dtos.Roles.RoleDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "creationTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "creatorId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "lastModificationTime": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "lastModifierId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "description": "角色名称",
-            "nullable": true
-          },
-          "isDefault": {
-            "type": "boolean",
-            "description": "是否默认角色"
-          },
-          "isPublic": {
-            "type": "boolean",
-            "description": "是否公开角色"
-          },
-          "description": {
-            "type": "string",
-            "description": "角色描述",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "角色数据传输对象"
-      },
-      "JiaCeMonitorSystem.Dtos.Roles.RoleUserDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "用户ID",
-            "format": "uuid"
-          },
-          "userName": {
-            "type": "string",
-            "description": "用户名",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "description": "姓名",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "description": "邮箱",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "type": "string",
-            "description": "手机号",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "角色用户简要信息DTO"
-      },
       "JiaCeMonitorSystem.Dtos.SystemDictionaries.SystemDictionaryCreateDto": {
         "required": [
           "itemCode",
@@ -12098,6 +11577,15 @@
         "additionalProperties": false,
         "description": "预警统计数据传输对象"
       },
+      "JiaCeMonitorSystem.TenantManagement.UserType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "Volo.Abp.Application.Dtos.ListResultDto`1[[Volo.Abp.Identity.IdentityRoleDto, Volo.Abp.Identity.Application.Contracts, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
         "type": "object",
         "properties": {
@@ -12107,23 +11595,6 @@
               "$ref": "#/components/schemas/Volo.Abp.Identity.IdentityRoleDto"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.AppRoles.AppRoleDto"
-            },
-            "nullable": true
-          },
-          "totalCount": {
-            "type": "integer",
-            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -12271,23 +11742,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Projects.ProjectDto"
-            },
-            "nullable": true
-          },
-          "totalCount": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Dtos.Roles.RoleDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.Roles.RoleDto"
             },
             "nullable": true
           },

@@ -1,7 +1,10 @@
 using System;
+using JiaCeMonitorSystem.EntityFrameworkCore.TenantManagement;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.PostgreSql;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
@@ -48,6 +51,11 @@ namespace JiaCeMonitorSystem.EntityFrameworkCore
                     ctx.UseNpgsql();
                 });
             });
+
+            // 替换连接串解析器，支持自定义 TenantConfiguration 中的独立数据库配置
+            context.Services.Replace(
+                ServiceDescriptor.Transient<IConnectionStringResolver, JiaCeTenantConnectionStringResolver>()
+            );
         }
     }
 }

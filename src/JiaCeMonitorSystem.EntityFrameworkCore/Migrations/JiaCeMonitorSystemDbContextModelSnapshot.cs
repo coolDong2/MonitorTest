@@ -57,7 +57,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -69,7 +69,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -105,7 +105,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -156,7 +156,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("设备精度");
 
                     b.Property<DateTime?>("CalibrationDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("最近校准日期");
 
                     b.Property<Guid?>("CompanyId")
@@ -176,7 +176,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("联系方式");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -188,7 +188,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -228,7 +228,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -256,11 +256,11 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("设备型号");
 
                     b.Property<DateTime?>("NextCalibrationDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("下次校准日期");
 
                     b.Property<DateTime?>("PurchaseDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("购置日期");
 
                     b.Property<Guid?>("ResponsiblePersonId")
@@ -278,7 +278,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("序列号");
 
                     b.Property<DateTime?>("UseDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("启用日期");
 
                     b.HasKey("Id");
@@ -305,7 +305,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime?>("ActualReturnDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("实际归还日期");
 
                     b.Property<Guid?>("AssignerId")
@@ -318,7 +318,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("分配人姓名");
 
                     b.Property<DateTime>("AssignmentDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("分配日期");
 
                     b.Property<int>("AssignmentStatus")
@@ -333,7 +333,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -345,7 +345,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<Guid>("DeviceId")
@@ -353,7 +353,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("设备ID");
 
                     b.Property<DateTime?>("ExpectedReturnDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("预计归还日期");
 
                     b.Property<string>("ExtraProperties")
@@ -368,7 +368,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -425,7 +425,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -437,7 +437,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -498,7 +498,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -546,7 +546,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -558,7 +558,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -608,7 +608,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("JS事件");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -674,7 +674,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -699,7 +699,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<Guid?>("DeviceId")
@@ -736,7 +736,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("监测项目类型名称（冗余）");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -744,7 +744,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("LastModifierId");
 
                     b.Property<DateTime>("MonitoringTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("监测时间");
 
                     b.Property<decimal>("MonitoringValue")
@@ -833,7 +833,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -853,7 +853,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -881,7 +881,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("所属监测项目类型ID");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -947,7 +947,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -959,7 +959,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -983,7 +983,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1033,7 +1033,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("内容");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1045,7 +1045,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1069,7 +1069,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1121,7 +1121,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1133,7 +1133,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1179,7 +1179,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1262,7 +1262,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1290,7 +1290,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1323,7 +1323,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("监测项目类型名称（冗余）");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1331,11 +1331,11 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("LastModifierId");
 
                     b.Property<DateTime?>("LastMonitoringTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("最后监测时间");
 
                     b.Property<DateTime?>("LastWarningTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("最后预警时间");
 
                     b.Property<decimal?>("LocationX")
@@ -1422,7 +1422,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("联系方式");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1434,11 +1434,11 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<DateTime?>("EndDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("结束日期");
 
                     b.Property<string>("ExtraProperties")
@@ -1453,7 +1453,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1485,7 +1485,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("角色类型：0=项目经理 1=技术负责人 2=监测员 3=数据分析员 4=安全员 5=设备管理员");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("开始日期");
 
                     b.Property<Guid>("UserId")
@@ -1525,7 +1525,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("负责人联系方式");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1537,7 +1537,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1546,7 +1546,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("项目描述");
 
                     b.Property<DateTime?>("EndDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("项目结束日期");
 
                     b.Property<string>("ExtraProperties")
@@ -1561,7 +1561,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1591,7 +1591,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("项目负责人");
 
                     b.Property<DateTime?>("StartDate")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("项目开始日期");
 
                     b.Property<int>("Status")
@@ -1623,7 +1623,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1635,7 +1635,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1679,7 +1679,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("字典名称");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1724,7 +1724,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1736,7 +1736,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1776,7 +1776,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("是否树形");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1833,7 +1833,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -1845,7 +1845,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -1902,7 +1902,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("是否公共");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -1942,6 +1942,277 @@ namespace JiaCeMonitorSystem.Migrations
                     b.ToTable("JC_SystemModules", "public");
                 });
 
+            modelBuilder.Entity("JiaCeMonitorSystem.TenantManagement.TenantButtonPermission", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ButtonId")
+                        .HasColumnType("uuid")
+                        .HasComment("按钮Id");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<bool>("IsGranted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasComment("是否已授权");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<Guid?>("RoleId")
+                        .HasColumnType("uuid")
+                        .HasComment("角色Id");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("TenantId")
+                        .HasComment("关联租户Id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TenantId", "ButtonId", "RoleId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_JC_TenantButtonPermissions_TenantId_ButtonId_RoleId");
+
+                    b.ToTable("JC_TenantButtonPermissions", "public");
+                });
+
+            modelBuilder.Entity("JiaCeMonitorSystem.TenantManagement.TenantConfiguration", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CertificateInfo")
+                        .HasColumnType("text")
+                        .HasComment("证书信息");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("ConcurrencyStamp");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<Guid?>("DeleterId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("DeleterId");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("DeletionTime");
+
+                    b.Property<DateTime?>("ExpireDate")
+                        .HasColumnType("timestamp without time zone")
+                        .HasComment("到期日期");
+
+                    b.Property<string>("ExtraProperties")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("ExtraProperties");
+
+                    b.Property<string>("IndependentConnectionString")
+                        .HasColumnType("text")
+                        .HasComment("独立数据库连接字符串");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<bool>("IsIndependentDatabase")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasComment("是否使用独立数据库");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<string>("LicenseKey")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
+                        .HasComment("许可证密钥");
+
+                    b.Property<int?>("MaxPointCount")
+                        .HasColumnType("integer")
+                        .HasComment("最大测点数量");
+
+                    b.Property<int?>("MaxProjectCount")
+                        .HasColumnType("integer")
+                        .HasComment("最大工程数量");
+
+                    b.Property<long?>("MaxStorageBytes")
+                        .HasColumnType("bigint")
+                        .HasComment("最大存储容量（字节）");
+
+                    b.Property<int?>("MaxUserCount")
+                        .HasColumnType("integer")
+                        .HasComment("最大用户数量");
+
+                    b.Property<DateTime?>("RemindDate")
+                        .HasColumnType("timestamp without time zone")
+                        .HasComment("提醒日期");
+
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(1)
+                        .HasComment("租户状态");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("TenantId")
+                        .HasComment("关联租户Id");
+
+                    b.Property<string>("UnitCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasComment("单位编码");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TenantId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_JC_TenantConfigurations_TenantId");
+
+                    b.HasIndex("UnitCode")
+                        .IsUnique()
+                        .HasDatabaseName("IX_JC_TenantConfigurations_UnitCode");
+
+                    b.ToTable("JC_TenantConfigurations", "public");
+                });
+
+            modelBuilder.Entity("JiaCeMonitorSystem.TenantManagement.TenantModuleGrant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<DateTime?>("ExpireDate")
+                        .HasColumnType("timestamp without time zone")
+                        .HasComment("授权到期日期");
+
+                    b.Property<DateTime?>("GrantDate")
+                        .HasColumnType("timestamp without time zone")
+                        .HasComment("授权日期");
+
+                    b.Property<bool>("IsGranted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasComment("是否已授权");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<Guid>("ModuleId")
+                        .HasColumnType("uuid")
+                        .HasComment("系统模块Id");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("TenantId")
+                        .HasComment("关联租户Id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TenantId", "ModuleId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_JC_TenantModuleGrants_TenantId_ModuleId");
+
+                    b.ToTable("JC_TenantModuleGrants", "public");
+                });
+
+            modelBuilder.Entity("JiaCeMonitorSystem.TenantManagement.TenantUserExtension", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("CreationTime");
+
+                    b.Property<Guid?>("CreatorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("CreatorId");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("LastModificationTime");
+
+                    b.Property<Guid?>("LastModifierId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("LastModifierId");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("TenantId")
+                        .HasComment("关联租户Id");
+
+                    b.Property<string>("UnitCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasComment("单位编码");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasComment("关联用户Id");
+
+                    b.Property<int>("UserType")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(2)
+                        .HasComment("用户类型");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_JC_TenantUserExtensions_UserId");
+
+                    b.ToTable("JC_TenantUserExtensions", "public");
+                });
+
             modelBuilder.Entity("JiaCeMonitorSystem.WarningRecords.WarningRecord", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1969,7 +2240,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("确认备注");
 
                     b.Property<DateTime?>("ConfirmTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("确认时间");
 
                     b.Property<Guid?>("ConfirmerId")
@@ -1982,7 +2253,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("确认人姓名");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -2007,7 +2278,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("ExtraProperties")
@@ -2030,7 +2301,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("处理状态：0=未处理 1=处理中 2=已处理 3=已确认 4=已关闭");
 
                     b.Property<DateTime?>("HandleTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("处理完成时间");
 
                     b.Property<Guid?>("HandlerId")
@@ -2058,7 +2329,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("监测项目类型名称（冗余）");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -2070,7 +2341,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("触发该预警的监测数据ID");
 
                     b.Property<DateTime>("MonitoringTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("触发监测时间");
 
                     b.Property<decimal>("MonitoringValue")
@@ -2146,7 +2417,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasComment("预警级别：0=提示 1=一级预警 2=二级预警 3=三级预警");
 
                     b.Property<DateTime>("WarningTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasComment("预警时间");
 
                     b.Property<int>("WarningType")
@@ -2232,7 +2503,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ExecutionDuration");
 
                     b.Property<DateTime>("ExecutionTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ExtraProperties")
                         .IsRequired()
@@ -2313,7 +2584,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ExecutionDuration");
 
                     b.Property<DateTime>("ExecutionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("ExecutionTime");
 
                     b.Property<string>("ExtraProperties")
@@ -2355,7 +2626,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -2387,7 +2658,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("AuditLogId");
 
                     b.Property<DateTime>("ChangeTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("ChangeTime");
 
                     b.Property<byte>("ChangeType")
@@ -2485,7 +2756,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<string>("ExtraProperties")
@@ -2509,10 +2780,10 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("character varying(128)");
 
                     b.Property<DateTime?>("LastTryTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime>("NextTryTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<byte>("Priority")
                         .ValueGeneratedOnAdd()
@@ -2666,7 +2937,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<string>("Description")
@@ -2745,7 +3016,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<int>("EntityVersion")
@@ -2855,7 +3126,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("character varying(64)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ExtraProperties")
                         .IsRequired()
@@ -2922,7 +3193,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("character varying(2048)");
 
                     b.Property<DateTime?>("LastAccessed")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("SessionId")
                         .IsRequired()
@@ -2930,7 +3201,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("character varying(128)");
 
                     b.Property<DateTime>("SignedIn")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<Guid?>("TenantId")
                         .HasColumnType("uuid")
@@ -2970,7 +3241,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -2982,7 +3253,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Email")
@@ -3022,7 +3293,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsExternal");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -3152,13 +3423,13 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("EndTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<Guid>("SourceUserId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<Guid>("TargetUserId")
                         .HasColumnType("uuid");
@@ -3210,7 +3481,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3292,7 +3563,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3304,7 +3575,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("DisplayName")
@@ -3328,7 +3599,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -3360,7 +3631,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3414,7 +3685,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("character varying(50)");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3426,7 +3697,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("DisplayName")
@@ -3453,7 +3724,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -3505,7 +3776,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime?>("CreationDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ExtraProperties")
                         .IsRequired()
@@ -3551,7 +3822,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3563,7 +3834,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<string>("Description")
@@ -3590,7 +3861,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")
@@ -3634,10 +3905,10 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime?>("CreationDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime?>("ExpirationDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ExtraProperties")
                         .IsRequired()
@@ -3651,7 +3922,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("RedemptionDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ReferenceId")
                         .HasMaxLength(100)
@@ -3889,7 +4160,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("ConcurrencyStamp");
 
                     b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("CreationTime");
 
                     b.Property<Guid?>("CreatorId")
@@ -3901,7 +4172,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("DeleterId");
 
                     b.Property<DateTime?>("DeletionTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("DeletionTime");
 
                     b.Property<int>("EntityVersion")
@@ -3919,7 +4190,7 @@ namespace JiaCeMonitorSystem.Migrations
                         .HasColumnName("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("LastModificationTime");
 
                     b.Property<Guid?>("LastModifierId")

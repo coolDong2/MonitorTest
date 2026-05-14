@@ -4,6 +4,22 @@
         <name>JiaCeMonitorSystem.Application</name>
     </assembly>
     <members>
+        <member name="T:JiaCeMonitorSystem.EventHandlers.TenantUserExtensionCreationEventHandler">
+            <summary>
+            当 IdentityUser 被创建时，自动创建对应的 TenantUserExtension 记录。
+            确保租户登录时能够正确获取 UnitCode 和 UserType 生成 JWT Claim。
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.EventHandlers.TenantUserExtensionCreationEventHandler.CreateTenantUserExtensionAsync(Volo.Abp.Identity.IdentityUser)">
+            <summary>
+            创建租户用户的扩展记录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.EventHandlers.TenantUserExtensionCreationEventHandler.CreateHostUserExtensionAsync(Volo.Abp.Identity.IdentityUser)">
+            <summary>
+            创建 Host 环境用户的扩展记录
+            </summary>
+        </member>
         <member name="T:JiaCeMonitorSystem.JiaCeMonitorSystemApplicationAutoMapperProfile">
             <summary>
             Application层AutoMapper配置，映射实体与DTO
@@ -22,6 +38,26 @@
         <member name="T:JiaCeMonitorSystem.Seeds.IdentityDataSeedContributor">
             <summary>
             身份数据种子，创建默认管理员角色与用户
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Seeds.TenantManagementDataSeedContributor">
+            <summary>
+            租户管理数据种子，创建 Host 租户配置、模块授权与用户扩展
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Seeds.TenantManagementDataSeedContributor.SeedHostTenantConfigurationAsync">
+            <summary>
+            为 Host 创建默认租户配置
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Seeds.TenantManagementDataSeedContributor.SeedHostModuleGrantsAsync">
+            <summary>
+            为 Host 授予所有已有系统模块权限
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Seeds.TenantManagementDataSeedContributor.SeedAdminUserExtensionAsync">
+            <summary>
+            为默认 admin 用户创建租户扩展信息
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Seeds.TestDataSeedContributor">
@@ -61,51 +97,6 @@
         <member name="M:JiaCeMonitorSystem.Services.Accounts.AccountAppService.GenerateTokenAsync(Volo.Abp.Identity.IdentityUser)">
             <summary>
             生成标准 JWT Token（开发环境使用，生产环境推荐使用 /connect/token 端点）
-            </summary>
-        </member>
-        <member name="T:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService">
-            <summary>
-            业务角色应用服务
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.GetPageListAsync(JiaCeMonitorSystem.Dtos.AppRoles.GetAppRoleListInput)">
-            <summary>
-            获取分页列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.GetListAsync(System.String)">
-            <summary>
-            获取列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.GetModelAsync(System.Guid)">
-            <summary>
-            获取单个角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.AddAndEditRoleAsync(JiaCeMonitorSystem.Dtos.AppRoles.AppRoleCreateDto)">
-            <summary>
-            新增角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.UpdateAsync(System.Guid,JiaCeMonitorSystem.Dtos.AppRoles.AppRoleUpdateDto)">
-            <summary>
-            更新角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.GetPermissionTreeAsync(System.Guid)">
-            <summary>
-            获取权限树
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.AppRoles.AppRoleAppService.GetPermissionFieldsTreeAsync(System.Guid,System.String)">
-            <summary>
-            获取权限字段树
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Services.ClientCaches.ClientCacheAppService">
@@ -222,6 +213,26 @@
         <member name="M:JiaCeMonitorSystem.Services.FileManages.FileManageAppService.IsImage(System.String)">
             <summary>
             判断是否为图片
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Services.Identity.AppRoleMigrationService">
+            <summary>
+            AppRole 到 IdentityRole 的迁移服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.Identity.AppRoleMigrationService.MigrateAsync">
+            <summary>
+            将所有 AppRole 迁移到 IdentityRole（幂等）
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Services.Identity.IdentityRoleExtendedAppService">
+            <summary>
+            身份角色扩展应用服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.Identity.IdentityRoleExtendedAppService.GetRoleUsersAsync(System.Guid)">
+            <summary>
+            获取角色下的用户列表
             </summary>
         </member>
         <member name="T:JiaCeMonitorSystem.Services.ModuleButtons.ModuleButtonAppService">
@@ -466,41 +477,6 @@
             删除项目
             </summary>
         </member>
-        <member name="T:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService">
-            <summary>
-            角色管理应用服务
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.GetListAsync(Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto)">
-            <summary>
-            获取角色列表
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.GetAsync(System.Guid)">
-            <summary>
-            获取单个角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.CreateAsync(System.String)">
-            <summary>
-            创建角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.UpdateAsync(System.Guid,System.String)">
-            <summary>
-            更新角色名称
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.DeleteAsync(System.Guid)">
-            <summary>
-            删除角色
-            </summary>
-        </member>
-        <member name="M:JiaCeMonitorSystem.Services.Roles.RoleManagementAppService.GetRoleUsersAsync(System.Guid)">
-            <summary>
-            获取角色用户列表
-            </summary>
-        </member>
         <member name="T:JiaCeMonitorSystem.Services.SystemDictionaries.SystemDictionaryAppService">
             <summary>
             系统字典应用服务
@@ -586,14 +562,49 @@
             构建树形结构
             </summary>
         </member>
+        <member name="T:JiaCeMonitorSystem.Services.TenantManagement.TenantDatabaseSwitchService">
+            <summary>
+            租户数据库切换服务，负责将租户从共享数据库迁移到独立数据库
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.TenantManagement.TenantDatabaseSwitchService.SwitchToIndependentDatabaseAsync(System.Guid,System.String)">
+            <summary>
+            切换租户到独立数据库
+            </summary>
+            <param name="tenantId">租户Id</param>
+            <param name="tenantName">租户名称</param>
+            <returns>新数据库的连接字符串</returns>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Services.TenantManagement.TenantMenuAppService">
+            <summary>
+            租户菜单应用服务
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.TenantManagement.TenantMenuAppService.GetCurrentTenantMenusAsync">
+            <summary>
+            获取当前租户可用菜单树
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.TenantManagement.TenantMenuAppService.GetRolePermissionTreeAsync(System.Guid)">
+            <summary>
+            获取角色的模块权限树（替代原 AppRole 权限树）
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Services.TenantManagement.TenantMenuAppService.GetRolePermissionFieldsTreeAsync(System.Guid,System.String)">
+            <summary>
+            获取角色的字段权限树（替代原 AppRole 字段权限树）
+            </summary>
+        </member>
         <member name="T:JiaCeMonitorSystem.Services.Tenants.TenantAppService">
             <summary>
             租户管理应用服务（仅Host端可用）
+            <para>【已弃用】请使用 <see cref="T:JiaCeMonitorSystem.Application.Contracts.TenantManagement.ITenantConfigurationAppService"/> 替代，当前服务仅保留做兼容代理。</para>
             </summary>
         </member>
         <member name="M:JiaCeMonitorSystem.Services.Tenants.TenantAppService.CreateAsync(JiaCeMonitorSystem.Dtos.Tenants.TenantCreateDto)">
             <summary>
             创建租户并初始化管理员账号
+            <para>【代理实现】内部已统一调用 <see cref="!:TenantConfigurationAppService.CreateAsync"/></para>
             </summary>
         </member>
         <member name="M:JiaCeMonitorSystem.Services.Tenants.TenantAppService.GetListAsync(JiaCeMonitorSystem.Dtos.Tenants.GetTenantListInput)">
@@ -644,6 +655,41 @@
         <member name="M:JiaCeMonitorSystem.Services.WarningRecords.WarningRecordAppService.GetStatisticsAsync(System.Nullable{System.Guid},System.Nullable{System.Guid})">
             <summary>
             获取预警统计
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantAuthAppService">
+            <summary>
+            租户认证应用服务，实现租户用户的双轨登录
+            </summary>
+        </member>
+        <member name="M:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantAuthAppService.CreateTenantTokenAsync(Volo.Abp.Identity.IdentityUser,JiaCeMonitorSystem.TenantManagement.TenantConfiguration,JiaCeMonitorSystem.TenantManagement.UserType)">
+            <summary>
+            创建包含租户信息的 JWT Token
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantButtonPermissionAppService">
+            <summary>
+            租户按钮权限应用服务
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantConfigurationAppService">
+            <summary>
+            租户配置应用服务
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantDatabaseSwitchJob">
+            <summary>
+            租户数据库切换后台任务
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantModuleGrantAppService">
+            <summary>
+            租户模块授权应用服务
+            </summary>
+        </member>
+        <member name="T:JiaCeMonitorSystem.Application.Services.TenantManagement.TenantStatusCheckJob">
+            <summary>
+            租户状态检查后台任务
             </summary>
         </member>
     </members>
