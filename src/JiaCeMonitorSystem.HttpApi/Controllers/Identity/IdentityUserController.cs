@@ -9,7 +9,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
     /// <summary>
     /// 身份用户管理控制器
     /// </summary>
-    [Route("api/identity/users")]
+    [Route("api/app/identity/users")]
     public class IdentityUserController : JiaCeMonitorSystemController
     {
         private readonly IIdentityUserAppService _identityUserAppService;
@@ -26,7 +26,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 获取用户列表
         /// </summary>
         [HttpGet]
-        public virtual Task<PagedResultDto<IdentityUserDto>> GetListAsync([FromQuery] GetIdentityUsersInput input)
+        public virtual Task<PagedResultDto<IdentityUserDto>> GetUserPageListAsync([FromQuery] GetIdentityUsersInput input)
         {
             return _identityUserAppService.GetListAsync(input);
         }
@@ -35,7 +35,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 获取单个用户
         /// </summary>
         [HttpGet("{id}")]
-        public virtual Task<IdentityUserDto> GetAsync(Guid id)
+        public virtual Task<IdentityUserDto> GetUserByIdAsync(Guid id)
         {
             return _identityUserAppService.GetAsync(id);
         }
@@ -44,7 +44,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 创建用户
         /// </summary>
         [HttpPost]
-        public virtual Task<IdentityUserDto> CreateAsync([FromBody] IdentityUserCreateDto input)
+        public virtual Task<IdentityUserDto> CreateUserAsync([FromBody] IdentityUserCreateDto input)
         {
             return _identityUserAppService.CreateAsync(input);
         }
@@ -53,7 +53,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 更新用户
         /// </summary>
         [HttpPut("{id}")]
-        public virtual Task<IdentityUserDto> UpdateAsync(Guid id, [FromBody] IdentityUserUpdateDto input)
+        public virtual Task<IdentityUserDto> UpdateUserAsync(Guid id, [FromBody] IdentityUserUpdateDto input)
         {
             return _identityUserAppService.UpdateAsync(id, input);
         }
@@ -62,7 +62,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 删除用户
         /// </summary>
         [HttpDelete("{id}")]
-        public virtual Task DeleteAsync(Guid id)
+        public virtual Task DeleteUserAsync(Guid id)
         {
             return _identityUserAppService.DeleteAsync(id);
         }
@@ -71,7 +71,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 获取指定用户的角色列表
         /// </summary>
         [HttpGet("{id}/roles")]
-        public virtual Task<ListResultDto<IdentityRoleDto>> GetRolesAsync(Guid id)
+        public virtual Task<ListResultDto<IdentityRoleDto>> GetUserRolesAsync(Guid id)
         {
             return _identityUserAppService.GetRolesAsync(id);
         }
@@ -89,7 +89,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 更新用户角色
         /// </summary>
         [HttpPut("{id}/roles")]
-        public virtual Task UpdateRolesAsync(Guid id, [FromBody] IdentityUserUpdateRolesDto input)
+        public virtual Task UpdateUserRolesAsync(Guid id, [FromBody] IdentityUserUpdateRolesDto input)
         {
             return _identityUserAppService.UpdateRolesAsync(id, input);
         }
@@ -98,7 +98,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 根据用户名查找用户
         /// </summary>
         [HttpGet("find-by-username")]
-        public virtual Task<IdentityUserDto> FindByUsernameAsync([FromQuery] string userName)
+        public virtual Task<IdentityUserDto> FindUserByNameAsync([FromQuery] string userName)
         {
             return _identityUserAppService.FindByUsernameAsync(userName);
         }
@@ -107,7 +107,7 @@ namespace JiaCeMonitorSystem.Controllers.Identity
         /// 根据邮箱查找用户
         /// </summary>
         [HttpGet("find-by-email")]
-        public virtual Task<IdentityUserDto> FindByEmailAsync([FromQuery] string email)
+        public virtual Task<IdentityUserDto> FindUserByEmailAsync([FromQuery] string email)
         {
             return _identityUserAppService.FindByEmailAsync(email);
         }

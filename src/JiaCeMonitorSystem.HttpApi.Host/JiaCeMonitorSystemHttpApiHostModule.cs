@@ -4,6 +4,8 @@ using JiaCeMonitorSystem.EntityFrameworkCore;
 using JiaCeMonitorSystem.Swagger;
 using Medallion.Threading;
 using Medallion.Threading.Postgres;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -14,9 +16,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OpenIddict.Abstractions;
 using OpenIddict.Server.AspNetCore;
+using System.Text;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -151,6 +155,7 @@ namespace JiaCeMonitorSystem
             ConfigureAbpMvcLibs();
             ConfigureSignalR(context);
             ConfigureApplicationCookie(context);
+            ConfigureJwtBearerAuthentication(context, configuration);
         }
 
         private void ConfigureSignalR(ServiceConfigurationContext context)
@@ -311,20 +316,73 @@ namespace JiaCeMonitorSystem
 
 
         /// <summary>
-        /// cookie 认证配置，防止 API 请求触发登录重定向，改为返回 401 状态码
+        /// JWT Bearer 认证配置，验证 AccountAppService / TenantAuthAppService 自定义签发的 JWT Token
         /// </summary>
-        /// <param name="context"></param>
+        private void ConfigureJwtBearerAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
+        {
+            var keyString = configuration["Jwt:SecurityKey"] ?? "JiaCeMonitorSystem_DevSecretKey_2026_!@#";
+            var issuer = configuration["Jwt:Issuer"] ?? "JiaCeMonitorSystem";
+            var audience = configuration["Jwt:Audience"] ?? "JiaCeMonitorSystem";
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
+
+            context.Services.AddAuthentication()
+                .AddJwtBearer("CustomJwt", options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = issuer,
+                        ValidAudience = audience,
+                        IssuerSigningKey = key,
+                        ClockSkew = TimeSpan.FromMinutes(5)
+                    };
+                });
+        }
+
+        /// <summary>
+        /// Cookie 认证配置：检测到 Bearer Token 时自动转发到 CustomJwt 方案；
+        /// API 请求触发登录/权限拒绝时返回 401/403 JSON 而非 302 重定向。
+        /// 使用 PostConfigure 确保覆盖 ABP AbpAccountWebModule 的默认配置。
+        /// </summary>
         private void ConfigureApplicationCookie(ServiceConfigurationContext context)
         {
-            // 关键：防止 API 请求触发 Cookie 登录重定向
-            context.Services.ConfigureApplicationCookie(options =>
+            // ABP Identity 默认 Cookie 方案名称为 IdentityConstants.ApplicationScheme ("Identity.Application")
+            context.Services.PostConfigure<CookieAuthenticationOptions>("Identity.Application", options =>
             {
+                // 当请求携带 Bearer Token 时，Cookie 方案自动转发到 CustomJwt 方案进行验证
+                options.ForwardDefaultSelector = ctx =>
+                {
+                    var authHeader = ctx.Request.Headers["Authorization"].FirstOrDefault();
+                    if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                    {
+                        return "CustomJwt";
+                    }
+                    return null; // 保持默认 Cookie 行为
+                };
+
+                // API 请求或携带 Authorization 头的请求不触发 302 重定向
                 options.Events.OnRedirectToLogin = ctx =>
                 {
-                    if (ctx.Request.Path.StartsWithSegments("/api"))
+                    if (ctx.Request.Path.StartsWithSegments("/api") || ctx.Request.Headers.ContainsKey("Authorization"))
                     {
                         ctx.Response.StatusCode = 401;
-                        return Task.CompletedTask;
+                        ctx.Response.ContentType = "application/json";
+                        return ctx.Response.WriteAsync("{\"error\":\"Unauthorized\",\"message\":\"请先登录\"}");
+                    }
+                    ctx.Response.Redirect(ctx.RedirectUri);
+                    return Task.CompletedTask;
+                };
+
+                options.Events.OnRedirectToAccessDenied = ctx =>
+                {
+                    if (ctx.Request.Path.StartsWithSegments("/api") || ctx.Request.Headers.ContainsKey("Authorization"))
+                    {
+                        ctx.Response.StatusCode = 403;
+                        ctx.Response.ContentType = "application/json";
+                        return ctx.Response.WriteAsync("{\"error\":\"Forbidden\",\"message\":\"无权访问\"}");
                     }
                     ctx.Response.Redirect(ctx.RedirectUri);
                     return Task.CompletedTask;
@@ -349,7 +407,7 @@ namespace JiaCeMonitorSystem
             {
                 var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]!);
                 dataProtectionBuilder.PersistKeysToStackExchangeRedis(redis, "JiaCeMonitorSystem-Protection-Keys");
-            }
+            } 
         }
 
         private void ConfigureLocalization()

@@ -4182,6 +4182,252 @@
     ]
   },
   {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController",
+    "Method": "GrantButtonsAsync",
+    "RelativePath": "api/app/tenant-button-permission/grant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "buttonIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController",
+    "Method": "GetMyAvailableButtonsAsync",
+    "RelativePath": "api/app/tenant-button-permission/my-available-buttons/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController",
+    "Method": "RevokeButtonsAsync",
+    "RelativePath": "api/app/tenant-button-permission/revoke",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "buttonIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantButtonPermissionController",
+    "Method": "GetRoleButtonPermissionsAsync",
+    "RelativePath": "api/app/tenant-button-permission/role-permissions/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/app/tenant-configuration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController",
+    "Method": "GetListAsync",
+    "RelativePath": "api/app/tenant-configuration",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sorting",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SkipCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxResultCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Volo.Abp.Application.Dtos.PagedResultDto\u00601[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController",
+    "Method": "GetConfigurationAsync",
+    "RelativePath": "api/app/tenant-configuration/{tenantId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tenantId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController",
+    "Method": "UpdateLicenseAsync",
+    "RelativePath": "api/app/tenant-configuration/{tenantId}/license",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tenantId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "input",
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JiaCeMonitorSystem.Controllers.TenantManagement.TenantConfigurationController",
+    "Method": "SwitchToIndependentDatabaseAsync",
+    "RelativePath": "api/app/tenant-configuration/{tenantId}/switch-to-independent-db",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tenantId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "JiaCeMonitorSystem.Controllers.System.TenantController",
     "Method": "GetAsync",
     "RelativePath": "api/app/tenant/{id}",

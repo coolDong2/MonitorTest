@@ -4,11 +4,17 @@
         <name>JiaCeMonitorSystem.HttpApi.Host</name>
     </assembly>
     <members>
+        <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule.ConfigureJwtBearerAuthentication(Volo.Abp.Modularity.ServiceConfigurationContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            JWT Bearer 认证配置，验证 AccountAppService / TenantAuthAppService 自定义签发的 JWT Token
+            </summary>
+        </member>
         <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule.ConfigureApplicationCookie(Volo.Abp.Modularity.ServiceConfigurationContext)">
             <summary>
-            cookie 认证配置，防止 API 请求触发登录重定向，改为返回 401 状态码
+            Cookie 认证配置：检测到 Bearer Token 时自动转发到 CustomJwt 方案；
+            API 请求触发登录/权限拒绝时返回 401/403 JSON 而非 302 重定向。
+            使用 PostConfigure 确保覆盖 ABP AbpAccountWebModule 的默认配置。
             </summary>
-            <param name="context"></param>
         </member>
         <member name="M:JiaCeMonitorSystem.JiaCeMonitorSystemHttpApiHostModule.OnApplicationInitialization(Volo.Abp.ApplicationInitializationContext)">
             <summary>

@@ -279,42 +279,42 @@
             初始化角色管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetListAsync(Volo.Abp.Identity.GetIdentityRolesInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRolePageListAsync(Volo.Abp.Identity.GetIdentityRolesInput)">
             <summary>
             获取角色列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetAllListAsync">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetAllRolesAsync">
             <summary>
             获取所有角色（不分页）
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRoleByIdAsync(System.Guid)">
             <summary>
             获取单个角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.CreateAsync(Volo.Abp.Identity.IdentityRoleCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.CreateRoleAsync(Volo.Abp.Identity.IdentityRoleCreateDto)">
             <summary>
             创建角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityRoleUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdateRoleAsync(System.Guid,Volo.Abp.Identity.IdentityRoleUpdateDto)">
             <summary>
             更新角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.DeleteRoleAsync(System.Guid)">
             <summary>
             删除角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetPermissionsAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.GetRolePermissionsAsync(System.Guid)">
             <summary>
             获取角色权限树
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdatePermissionsAsync(System.Guid,System.Collections.Generic.List{System.String})">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityRoleController.UpdateRolePermissionsAsync(System.Guid,System.Collections.Generic.List{System.String})">
             <summary>
             更新角色权限
             </summary>
@@ -344,32 +344,32 @@
             初始化用户管理控制器
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetListAsync(Volo.Abp.Identity.GetIdentityUsersInput)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetUserPageListAsync(Volo.Abp.Identity.GetIdentityUsersInput)">
             <summary>
             获取用户列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetUserByIdAsync(System.Guid)">
             <summary>
             获取单个用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.CreateAsync(Volo.Abp.Identity.IdentityUserCreateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.CreateUserAsync(Volo.Abp.Identity.IdentityUserCreateDto)">
             <summary>
             创建用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateUserAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateDto)">
             <summary>
             更新用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.DeleteAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.DeleteUserAsync(System.Guid)">
             <summary>
             删除用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetRolesAsync(System.Guid)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.GetUserRolesAsync(System.Guid)">
             <summary>
             获取指定用户的角色列表
             </summary>
@@ -379,17 +379,17 @@
             获取可分配的角色列表
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateRolesAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateRolesDto)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.UpdateUserRolesAsync(System.Guid,Volo.Abp.Identity.IdentityUserUpdateRolesDto)">
             <summary>
             更新用户角色
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindByUsernameAsync(System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindUserByNameAsync(System.String)">
             <summary>
             根据用户名查找用户
             </summary>
         </member>
-        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindByEmailAsync(System.String)">
+        <member name="M:JiaCeMonitorSystem.Controllers.Identity.IdentityUserController.FindUserByEmailAsync(System.String)">
             <summary>
             根据邮箱查找用户
             </summary>

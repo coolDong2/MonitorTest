@@ -6135,6 +6135,453 @@
         }
       }
     },
+    "/api/app/tenant-button-permission/grant": {
+      "post": {
+        "tags": [
+          "TenantButtonPermission"
+        ],
+        "summary": "批量授予角色按钮权限",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/app/tenant-button-permission/revoke": {
+      "post": {
+        "tags": [
+          "TenantButtonPermission"
+        ],
+        "summary": "批量撤销角色按钮权限",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/app/tenant-button-permission/role-permissions/{roleId}": {
+      "get": {
+        "tags": [
+          "TenantButtonPermission"
+        ],
+        "summary": "获取角色的按钮权限列表",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "moduleId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/app/tenant-button-permission/my-available-buttons/{moduleId}": {
+      "get": {
+        "tags": [
+          "TenantButtonPermission"
+        ],
+        "summary": "获取当前用户在指定模块下的可用按钮",
+        "parameters": [
+          {
+            "name": "moduleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/JiaCeMonitorSystem.Dtos.ModuleButtons.ModuleButtonDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/app/tenant-configuration": {
+      "post": {
+        "tags": [
+          "TenantConfiguration"
+        ],
+        "summary": "创建租户并初始化配置（含模块授权、许可证配额、独立数据库选项）",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "TenantConfiguration"
+        ],
+        "summary": "获取租户配置分页列表",
+        "parameters": [
+          {
+            "name": "Sorting",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SkipCount",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MaxResultCount",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/app/tenant-configuration/{tenantId}": {
+      "get": {
+        "tags": [
+          "TenantConfiguration"
+        ],
+        "summary": "获取租户配置详情",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/app/tenant-configuration/{tenantId}/license": {
+      "put": {
+        "tags": [
+          "TenantConfiguration"
+        ],
+        "summary": "更新租户许可证配额",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/app/tenant-configuration/{tenantId}/switch-to-independent-db": {
+      "post": {
+        "tags": [
+          "TenantConfiguration"
+        ],
+        "summary": "将租户切换到独立数据库（异步后台执行，通过 Hangfire 调度）",
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/app/warning-record": {
       "get": {
         "tags": [
@@ -6611,6 +7058,223 @@
   },
   "components": {
     "schemas": {
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.ButtonPermissionDto": {
+        "type": "object",
+        "properties": {
+          "buttonId": {
+            "type": "string",
+            "description": "按钮ID",
+            "format": "uuid"
+          },
+          "enCode": {
+            "type": "string",
+            "description": "按钮编码",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "description": "按钮名称",
+            "nullable": true
+          },
+          "moduleId": {
+            "type": "string",
+            "description": "所属模块ID",
+            "format": "uuid"
+          },
+          "isGranted": {
+            "type": "boolean",
+            "description": "是否已授权"
+          }
+        },
+        "additionalProperties": false,
+        "description": "按钮权限数据传输对象"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.CreateTenantWithConfigDto": {
+        "required": [
+          "name",
+          "unitCode"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "description": "租户名称"
+          },
+          "unitCode": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "description": "单位编码，用于租户用户登录"
+          },
+          "adminEmail": {
+            "type": "string",
+            "description": "管理员邮箱",
+            "format": "email",
+            "nullable": true
+          },
+          "adminPassword": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "description": "管理员初始密码",
+            "nullable": true
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "到期日期",
+            "format": "date-time",
+            "nullable": true
+          },
+          "useIndependentDatabase": {
+            "type": "boolean",
+            "description": "是否使用独立数据库"
+          },
+          "grantedModuleIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "授予的模块Id列表",
+            "nullable": true
+          },
+          "license": {
+            "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto"
+          }
+        },
+        "additionalProperties": false,
+        "description": "创建租户并附带配置信息的输入参数"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto": {
+        "type": "object",
+        "properties": {
+          "moduleId": {
+            "type": "string",
+            "description": "模块Id",
+            "format": "uuid"
+          },
+          "moduleName": {
+            "type": "string",
+            "description": "模块名称",
+            "nullable": true
+          },
+          "moduleCode": {
+            "type": "string",
+            "description": "模块编码",
+            "nullable": true
+          },
+          "isGranted": {
+            "type": "boolean",
+            "description": "是否已授权"
+          },
+          "grantDate": {
+            "type": "string",
+            "description": "授权日期",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "模块授权信息数据传输对象"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "tenantId": {
+            "type": "string",
+            "description": "关联租户Id",
+            "format": "uuid"
+          },
+          "tenantName": {
+            "type": "string",
+            "description": "租户名称",
+            "nullable": true
+          },
+          "unitCode": {
+            "type": "string",
+            "description": "单位编码",
+            "nullable": true
+          },
+          "isIndependentDatabase": {
+            "type": "boolean",
+            "description": "是否使用独立数据库"
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "到期日期",
+            "format": "date-time",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/JiaCeMonitorSystem.TenantManagement.TenantStatus"
+          },
+          "maxUserCount": {
+            "type": "integer",
+            "description": "最大用户数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxProjectCount": {
+            "type": "integer",
+            "description": "最大工程数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxPointCount": {
+            "type": "integer",
+            "description": "最大测点数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "grantedModules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.ModuleGrantDto"
+            },
+            "description": "已授权的模块列表",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "租户配置数据传输对象"
+      },
+      "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLicenseDto": {
+        "type": "object",
+        "properties": {
+          "maxUserCount": {
+            "type": "integer",
+            "description": "最大用户数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxProjectCount": {
+            "type": "integer",
+            "description": "最大工程数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxPointCount": {
+            "type": "integer",
+            "description": "最大测点数量",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxStorageBytes": {
+            "type": "integer",
+            "description": "最大存储容量（字节）",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "租户许可证配额数据传输对象"
+      },
       "JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantLoginResultDto": {
         "type": "object",
         "properties": {
@@ -11577,6 +12241,16 @@
         "additionalProperties": false,
         "description": "预警统计数据传输对象"
       },
+      "JiaCeMonitorSystem.TenantManagement.TenantStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "JiaCeMonitorSystem.TenantManagement.UserType": {
         "enum": [
           0,
@@ -11595,6 +12269,23 @@
               "$ref": "#/components/schemas/Volo.Abp.Identity.IdentityRoleDto"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Volo.Abp.Application.Dtos.PagedResultDto`1[[JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto, JiaCeMonitorSystem.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JiaCeMonitorSystem.Application.Contracts.TenantManagement.TenantConfigurationDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
